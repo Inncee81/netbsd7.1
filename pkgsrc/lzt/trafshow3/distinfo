@@ -1,0 +1,15 @@
+$NetBSD$
+
+SHA1 (trafshow-3.1.tgz) = 6d8b65d265c76cb85ecc26104cf9ec56db853cbc
+RMD160 (trafshow-3.1.tgz) = 37cd1460b1136a15d4667e464bcc25ae4723b295
+SHA512 (trafshow-3.1.tgz) = f2298ac9440d22e59d37c845822b91aaa8264d19f370b113ba840a6aa7875bcfa43ef9350970b3e11b18bc5a9381b0f58dda3a78b1ecc044ef91dac50b6b0bb4
+Size (trafshow-3.1.tgz) = 72342 bytes
+SHA1 (patch-Makefile.in) = 703a8a2d87c04b532104782ed40051a178120275
+SHA1 (patch-color.c) = 5f140ed0acdb29573759d1db8ac293b3b44b4b56
+SHA1 (patch-configure) = 7fdc502c92d3cbfac6388cd7c2f7b488f47baf8e
+SHA1 (patch-display.c) = 111cacb0abc03b17fae60a7f7d8b37e6ce5ced4c
+SHA1 (patch-getarptab.c) = f8ed0ef375f7ce172afc6cf5262b13afa5189007
+SHA1 (patch-interfaces.c) = 032d86830766f3b84702647cd6f657c8692df095
+SHA1 (patch-trafshow.1) = 52207319e1d772398c3fe19a33dfbb4995d9fa39
+SHA1 (patch-trafshow.c) = 3f3cb61736c7ba2d82e2774d72280428ab445d0e
+SHA1 (patch-util.c) = 188a84f0225cbbba30b54457f0d4c3a204f9da28

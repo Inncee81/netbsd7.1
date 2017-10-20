@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- gfx/ycbcr/moz.build.orig	2016-10-31 20:15:32.000000000 +0000
++++ gfx/ycbcr/moz.build
+@@ -53,7 +53,7 @@ else:
+ 
+ if CONFIG['CPU_ARCH'] == 'arm' and CONFIG['HAVE_ARM_NEON']:
+     SOURCES += [
+-        'yuv_row_arm.s',
++        'yuv_row_arm.S',
+     ]
+     SOURCES += [
+         'yuv_convert_arm.cpp',

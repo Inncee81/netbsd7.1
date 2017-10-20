@@ -1,0 +1,15 @@
+/patch-common_gdm-config.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-config_Makefile.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-config_PostSession.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-configure/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-daemon_fstype.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-daemon_gdm-daemon-config.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-daemon_gdm-xdmcp-manager.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-daemon_gdmconsolekit.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-daemon_getvt.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-daemon_getvt.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-daemon_server.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-daemon_slave.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-gui_gdmchooser.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-gui_greeter_Makefile.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+D

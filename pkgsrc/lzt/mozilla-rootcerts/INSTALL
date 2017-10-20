@@ -1,0 +1,25 @@
+case ${STAGE} in
+POST-INSTALL)
+mkdir -p /etc/openssl/certs /usr/pkg/etc/gnupg
+(
+	echo INSTALLING PEM FILES and REHASH
+	cp /usr/pkg/etc/openssl/openssl.cnf /etc/openssl
+	cd /etc/openssl/certs
+	for i in extract rehash install
+	do
+		mozilla-rootcerts $i > /dev/null 2>&1
+		echo "$i ..."
+	done
+	echo DONE
+	echo now install trustlist....
+	cd /usr/pkg/etc/gnupg
+	for TRUST in /etc/openssl/certs/*.pem
+	do
+		openssl x509 -in ${TRUST} -noout -fingerprint | \
+			sed 's|^.*=\(.*\)|\1 S|'
+	done > trustlist.txt
+	echo DONE
+	echo
+)
+;;
+esac

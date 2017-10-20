@@ -1,0 +1,19 @@
+echo running ${STAGE}
+case ${STAGE} in
+POST-INSTALL)
+	rm -f /etc/X11/xdm/lzt
+	ln -s ${PKG_SYSCONFDIR}/xdm/lzt /etc/X11/xdm
+	if [ ! -f /etc/X11/xinit/xmodmaps ]
+	then
+		ln -sf ${PKG_SYSCONFDIR}/xdm/xmodmaps /etc/X11/xinit || true
+	fi
+	(
+	cd /etc/X11/xdm
+	if [ ! -s xdm-config.bak ]
+	then
+		cp xdm-config xdm-config.bak
+	fi
+	)
+	cp ${PKG_SYSCONFDIR}/xdm/xdm-config /etc/X11/xdm
+;;
+esac

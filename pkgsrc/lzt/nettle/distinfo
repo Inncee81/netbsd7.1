@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.14 2016/02/01 13:27:36 wiz Exp $
+
+SHA1 (nettle-3.2.tar.gz) = b2eb5b36e65a8d3ed60ff81ec897044dead6dae0
+RMD160 (nettle-3.2.tar.gz) = 84b1bc8c1103ef825c614bf7e95d9a8dad10490e
+SHA512 (nettle-3.2.tar.gz) = 9f2c802e8b683d1c2fd8d16ab33b2a1efda33a1bf33196be39031a2d0677f2e78d67221a718997780e157aa72973da7d9d549429e706fcfcdff97ee3bbef615a
+Size (nettle-3.2.tar.gz) = 1879604 bytes
+SHA1 (patch-Makefile.in) = 585dedd965b66f9acd38e3696855ec1857a8a76b
+SHA1 (patch-config.make.in) = 0601f5076bd4a0f8733184e88a77c3a3d7914664
+SHA1 (patch-configure) = fe13e1c710a00d5513ec5cb08732770b33f37030
+SHA1 (patch-testsuite_Makefile.in) = e160a952ff0681852a667e103ef0ae3956c1e2f5
+SHA1 (patch-tools_Makefile.in) = 1e9dc5c98b014f4a42a145e80a72a4e3cf813fc5

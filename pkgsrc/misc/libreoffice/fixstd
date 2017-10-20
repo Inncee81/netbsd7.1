@@ -1,0 +1,26 @@
+set -e
+VER=libreoffice-5.4.1.2
+BASE=/usr/tmp
+if [ ! -d ${BASE}/$VER ]
+then
+	echo save SOURCES on /usr${BASE}/$VER
+	(cd $(makevar WRKDIR)
+	find $VER \! -name "*.orig" | cpio -pdvm ${BASE})
+fi
+if [ $# -ne 2 ]
+then
+	echo use $o from to
+	exit 1
+fi
+t=/tmp/$$
+cd $(makevar WRKSRC)
+find * \! -name "*.orig" -type f -print0 | \
+xargs -0 grep "$1" | \
+awk -F: '{print $1}' | \
+sort -u | \
+while read f
+do
+	sed "s/$1/$2/g" "$f" > $t
+	mv $t "$f"
+	echo $f DONE
+done

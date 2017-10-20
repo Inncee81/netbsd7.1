@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.51 2007/10/11 09:36:06 hauke Exp $
+
+SHA1 (gdm-2.18.4.tar.bz2) = 8bf2c8745d7c38f5f08641abed4ca103cad0ecb8
+RMD160 (gdm-2.18.4.tar.bz2) = 4922af1321f707279c1eb6354d1c56cc39bce20e
+Size (gdm-2.18.4.tar.bz2) = 3459899 bytes
+SHA1 (patch-config_Makefile.in) = 4bb292a181895bf19005d41c0a86c181172c97eb
+SHA1 (patch-configure) = 7f0aecc61d07c597ca10f2135db3e815c1363b0e
+SHA1 (patch-configure.ac) = e641882fabef9366cf136ec2d1f780d0a9c92f63
+SHA1 (patch-daemon_fstype.c) = 59af14e93866b840d8016a214a7ec1c492061bd6
+SHA1 (patch-daemon_gdmconfig.c) = a1ec3fa1c3778fc1fe4dbb6f6fecc8273b8233f8
+SHA1 (patch-daemon_server.c) = e6230daaa8826b3deb2e596754ed76c35deec1f8
+SHA1 (patch-daemon_slave.c) = f5a3e9d47488e5b51e4f077de400f8715799548e
+SHA1 (patch-daemon_verify-crypt.c) = d5cd82ea6e226d3bbc2ad353e398e84e40a0185b
+SHA1 (patch-daemon_verify-shadow.c) = 78bcdb86a706a854c6b5d42ed88e9076789155ce
+SHA1 (patch-gui_greeter_Makefile.in) = 4ee084f57d2c8c73101ad2f75e20631eadd70cec
+SHA1 (patch-session) = 9b3773d6590e4946fb7d8815cf7fd6bca442819d

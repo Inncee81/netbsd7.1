@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/dance
+bin/grid
+bin/stickman
+bin/stickread
+bin/xmeltdown

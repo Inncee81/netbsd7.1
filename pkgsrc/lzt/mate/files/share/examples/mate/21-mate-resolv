@@ -1,0 +1,17 @@
+(while read x
+do
+	if [ -z "$x" ]
+	then
+		continue
+	fi
+	set $x
+	case $1 in
+	domain)
+		echo "search $2 k1.com.br"
+	;;
+	*) 
+		echo $x
+	;;
+	esac
+done) < /etc/resolv.conf > /etc/resolv.conf.new
+mv /etc/resolv.conf.new /etc/resolv.conf

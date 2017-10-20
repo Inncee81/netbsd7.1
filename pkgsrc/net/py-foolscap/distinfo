@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.17 2017/01/18 20:46:34 wiz Exp $
+
+SHA1 (foolscap-0.12.6.tar.gz) = b516272996aab15ce4b65e125ede661fd407b51d
+RMD160 (foolscap-0.12.6.tar.gz) = d8d4bd09ed0c797331da1f19d54273c28de2aa96
+SHA512 (foolscap-0.12.6.tar.gz) = def08309ac1c69e274aef4913f30b247de002e938efce84ac9eaf9955bc0033561da9257f958352b1ddfc56dc82c3b049f3c6c208af7f7bc081ac4e6fd568fec
+Size (foolscap-0.12.6.tar.gz) = 517752 bytes

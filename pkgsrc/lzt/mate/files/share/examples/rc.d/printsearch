@@ -1,0 +1,55 @@
+#!/bin/sh
+#
+# $NetBSD: printsearch.in,v 1.1 2008/12/05 18:55:22 cube Exp $
+#
+
+# PROVIDE: printsearch
+# REQUIRE: LOGIN 
+# KEYWORD: shutdown
+
+$_rc_subr_loaded . /etc/rc.subr
+
+name="printsearch"
+pidfile="/var/run/${name}.pid"
+start_cmd="printsearch_start"
+stop_cmd="printsearch_stop"
+timer=${printsearch_timer:-30}
+CLIENTCONF="/usr/pkg/etc/cups/client.conf"
+
+configcupsclient() {
+	if ! /usr/pkg/bin/nc -z printer 631 2>/dev/null
+	then
+		rm -f ${CLIENTCONF}
+	fi
+	if /usr/pkg/bin/nc -z 127.0.0.1 631 2>/dev/null
+	then
+		rm -f ${CLIENTCONF}
+	fi
+	mkdir -p /usr/pkg/etc/cups
+	PRINTERIP=$(ping -c 1 printer 2>/dev/null | head -1 | grep -oE '\b([0-9]{1,3}\.){3}[0-9]{1,3}\b')
+	if [ -n "${PRINTERIP}" ]
+	then
+		echo "ServerName ${PRINTERIP}" > ${CLIENTCONF}
+	fi
+}
+
+printsearch_start() {
+	while :
+	do
+		configcupsclient
+		sleep ${timer}
+	done&
+	echo $! > $pidfile
+	echo $name STARTED
+}
+
+printsearch_stop() {
+	if [ -s $pidfile ]
+	then
+		kill $(cat $pidfile)
+		echo $name STOPPED
+	fi
+}
+
+load_rc_config $name
+run_rc_command "$1"

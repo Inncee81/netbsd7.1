@@ -1,0 +1,104 @@
+doservice() {
+SERVICE=$(which service)
+if [ -n "${SERVICE}" ]
+then
+	eval ${SERVICE} $1 $2
+else
+	/etc/rc.d/$1 $2
+fi
+}
+
+t=/tmp/$$
+WIFIMGRBASE=/usr/pkg/share/examples/wifimgr
+WIFIMGRDB=${WIFIMGRBASE}/wifimgr.sqlite3
+
+case ${STAGE} in
+POST-INSTALL)
+	(
+	crontab -l | \
+	sed -e "/findprinter/d" -e "s,^\*/10,\*," 
+	printf "@reboot\t\t\t\t\t/usr/pkg/bin/findprinter\n"
+	printf "*\t*\t*\t*\t*\t/usr/pkg/bin/findprinter\n"
+	) > $t
+	crontab $t
+	rm -rf $t
+	printf "NEW CRONTAB INSTALLED\n"
+	/usr/bin/sqlite3 ${WIFIMGRDB}  < ${WIFIMGRBASE}/wifimgr.sql
+	/sbin/chown -R root:operator ${WIFIMGRBASE}
+	/bin/chmod -R g+w ${WIFIMGRBASE}
+	printf "WIFIMGR DATABASE INSTALLED\n"
+	if ! id ftp > /dev/null 2>&1
+	then
+		echo create user ftp ...
+		(groupadd ftp || true
+		useradd -m -d /var/ftp -g ftp ftp) > /dev/null 2>&1
+		chown -R ftp:ftp /var/ftp
+		echo DONE
+	fi
+	if grep -q "#default:" /etc/login.conf
+	then
+		set $(uname -r | tr "." " ")
+		VER=$1
+		cd @LOCALBASE@/share/examples/netbsd-extras/etc/${VER}
+		echo INSTALL ETC FILES...
+		install -m 644 * /etc
+		echo DONE
+	fi
+	if ! grep -q kern.maxfiles /etc/sysctl.conf
+	then
+		echo "kern.maxfiles=64000" >> /etc/sysctl.conf
+	fi
+	cap_mkdb /etc/login.conf
+	services_mkdb
+	gsed -i "/^rfb /d" /etc/inetd.conf
+	echo "rfb stream tcp nowait:4 nobody /usr/pkg/bin/Xvnc Xvnc -inetd -query localhost -once -geometry 1164x652 -depth 16 -deferupdate 120" >> /etc/inetd.conf
+	touch /etc/rc.local
+	if ! grep -q "/usr/pkg/etc/rc.d" /etc/rc.local
+	then
+		echo FIX RC.LOCAL
+		(
+		echo "if [ -d /usr/pkg/etc/rc.d ]"
+		echo "then"
+		echo "	find /usr/pkg/etc/rc.d -type f | \\"
+		echo "	while read p"
+		echo "	do"
+		echo "		if [ -x \${p} ]"
+		echo "		then"
+		echo "			eval \${p} start"
+		echo "		fi"
+		echo "	done"
+		echo "fi"
+		) >> /etc/rc.local 
+	fi
+	sed -e "s/dhclient/dhcpcd/" < /etc/rc.d/wpa_supplicant > $t
+	cp $t /etc/rc.d/wpa_supplicant
+
+	if [ ! -s /etc/wpa_supplicant.conf ]
+	then
+		mkdir -p /var/run/wpa_supplicant
+		(
+		echo "#created by MATE/INSTALL
+		echo "ctrl_interface=/var/run/wpa_supplicant
+		echo "ctrl_interface_group=wheel
+		echo "update_config=1
+		echo
+		echo "network={
+		echo "	ssid=\"\"" 
+		echo "	key_mgmt=NONE"
+		echo "}"
+		) > /etc/wpa_supplicant.conf
+	fi
+	chmod 755 /usr/pkg/etc
+	if ! grep -q /var/tmp /etc/fstab
+	then
+		(
+		echo "tmpfs		/var/shm	tmpfs	rw,-m1777,-sram%25
+		echo "tmpfs		/tmp		tmpfs	rw,-m1777,-s64m
+		echo "tmpfs		/var/tmp	tmpfs	rw,-m1777,-s64m,-o=union
+		) >> /etc/fstab
+	fi
+	doservice inetd restart
+	doservice local restart
+	rm -f $t
+;;
+esac

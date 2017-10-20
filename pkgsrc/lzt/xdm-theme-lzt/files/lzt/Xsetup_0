@@ -1,0 +1,38 @@
+#!/bin/sh
+
+getres() {
+	set $(ifconfig | grep address: | head -1)
+	MAC=$2
+	RES="1024x768"
+	while read M R
+	do
+		case $M in
+		${MAC})
+			echo $R
+			break
+		;;
+		esac
+	done < xrandrtable
+}
+cd /usr/pkg/etc/xdm/lzt
+touch xrandrtable
+RES="$(getres)"
+xhost +
+xrandr | grep connected | \
+while read DATA
+do
+	set ${DATA}
+	xrandr --output $1 --mode ${RES}
+done
+cd /etc/X11/xdm/lzt/images
+for IMAGEFILE in $(domainname).png netbsd_color_50.png netbsd_color.png
+do
+	if [ -s ${IMAGEFILE} ]
+	then
+		/usr/pkg/bin/xv -root -quit -max ${IMAGEFILE} 
+		break
+	fi
+done
+/etc/X11/xdm/lzt/messagemyip&
+/etc/X11/xdm/lzt/buttons &
+xclock &

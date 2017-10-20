@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.63 2015/11/04 03:28:29 agc Exp $
+
+SHA1 (gdm-2.20.11.tar.bz2) = be23bdf32b7a4254ac80983f4edf25cafa847ff3
+RMD160 (gdm-2.20.11.tar.bz2) = e400bb8a0b78a2e8b0da98edd2e0f3a7a0267f04
+SHA512 (gdm-2.20.11.tar.bz2) = ca8ce81161c640ef2753a35b8eb0fd8669a7e42dc6272b2aa7b4a9f525b4d03dc46bb5aa8d41b69aaba36c8715a220c92e75c169ce9d5af39b25853505abeb39
+Size (gdm-2.20.11.tar.bz2) = 4013059 bytes
+SHA1 (patch-common_gdm-config.h) = 741872b9cd10aa298a192bb2cdde40f8de7d5cf2
+SHA1 (patch-config_Makefile.in) = 625c9d51068f6ef95b8296eb21de18690b31f077
+SHA1 (patch-config_PostSession.in) = 382da6b4a918ff4a0e15cd28935a9bbbba7405bf
+SHA1 (patch-configure) = 4c8f33f063ce7ec50d5d99092dbfdcaabc3d0025
+SHA1 (patch-daemon_fstype.c) = 08e04ed5eab99326c1a64c1c303fee56c14df540
+SHA1 (patch-daemon_gdm-daemon-config.c) = 3fc8089179cb5ee73f72a55ff5b9e3f0c16c0e2b
+SHA1 (patch-daemon_gdm-xdmcp-manager.c) = 47ac1eb3912354ae6c0cc42004db62a8608a1451
+SHA1 (patch-daemon_gdmconsolekit.c) = 13ab5e320f556330060a648bf7bce329b37ba09e
+SHA1 (patch-daemon_getvt.c) = 1a3c6889ae7b2e83c95513d9faea42485b550983
+SHA1 (patch-daemon_getvt.h) = de3f53b50ecb73ad3de56aebd5d73f3375224157
+SHA1 (patch-daemon_server.c) = 91fa3e34c2187fad6f580c53cca965d1dc8bc792
+SHA1 (patch-daemon_slave.c) = e0fd45fae8d8960e2ae6341505843d951423737d
+SHA1 (patch-gui_gdmchooser.c) = 913970dc88512e5d57e6a6e102b27e4714fe5068
+SHA1 (patch-gui_greeter_Makefile.in) = 5c7186404e0e3b692bcf420091cc76364a1bfe36

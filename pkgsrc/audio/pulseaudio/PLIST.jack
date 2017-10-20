@@ -1,0 +1,6 @@
+lib/pulse-${PKGVERSION}/modules/module-jack-sink.a
+lib/pulse-${PKGVERSION}/modules/module-jack-sink.so
+lib/pulse-${PKGVERSION}/modules/module-jack-source.a
+lib/pulse-${PKGVERSION}/modules/module-jack-source.so
+lib/pulse-${PKGVERSION}/modules/module-jackdbus-detect.a
+lib/pulse-${PKGVERSION}/modules/module-jackdbus-detect.so

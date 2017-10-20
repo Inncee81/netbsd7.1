@@ -1,0 +1,8 @@
+/patch-libavcodec_x86_ac3dsp_init.c/1.2/Fri Jun 12 01:16:42 2015//
+/patch-Makefile/1.2/Sun Jan 17 01:00:38 2016//
+/patch-libavutil_common.h/1.2/Sun Jan 17 01:00:38 2016//
+/patch-libavutil_x86_asm.h/1.2/Sun Jan 17 01:00:38 2016//
+/patch-libavutil_x86_cpu.c/1.4/Sun Jan 17 01:00:38 2016//
+/patch-doc_Makefile/1.1/Thu Apr 28 09:20:53 2016//
+/patch-configure/1.10/Thu Aug  4 01:00:48 2016//
+D

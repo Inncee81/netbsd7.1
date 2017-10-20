@@ -1,0 +1,21 @@
+/README/1.2/Sun Jul 29 09:24:33 2007//
+/bsdi.mk/1.1/Sun Jul 29 05:19:42 2007//
+/merge-distinfo.awk/1.1/Sun Jul 29 05:19:43 2007//
+/pkg-plain.mk/1.1/Sun Jul 29 05:19:43 2007//
+/darwin-opendarwin.mk/1.1/Wed Aug  1 16:28:08 2007//
+/osf1-netscape.mk/1.1/Wed Aug  1 17:19:23 2007//
+/darwin.mk/1.3/Sun Oct 14 01:06:25 2007//
+/freebsd.mk/1.3/Sun Oct 14 01:06:25 2007//
+/irix.mk/1.3/Sun Oct 14 01:06:25 2007//
+/netbsd.mk/1.3/Sun Oct 14 01:06:25 2007//
+/osf1.mk/1.4/Sun Oct 14 01:06:25 2007//
+/solaris.mk/1.3/Sun Oct 14 01:06:25 2007//
+/sunos.mk/1.3/Sun Oct 14 01:06:25 2007//
+/aix.mk/1.1/Sun Mar 22 22:31:46 2009//
+/linux-suse.mk/1.8/Fri Dec  6 01:04:04 2013//
+/emulator.mk/1.12/Fri Jan  2 01:04:10 2015//
+/emulator-vars.mk/1.9/Wed Sep  9 01:08:48 2015//
+/netbsd-compat.mk/1.6/Fri Jun  2 01:00:55 2017//
+/linux.mk/1.30/Tue Aug 22 01:00:45 2017//
+/pkg-rpm.mk/1.7/Tue Aug 22 01:00:45 2017//
+D

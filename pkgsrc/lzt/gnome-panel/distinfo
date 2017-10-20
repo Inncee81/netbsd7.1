@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.63 2015/11/04 03:28:30 agc Exp $
+
+SHA1 (gnome-panel-2.32.1.tar.bz2) = 561ec56307854b5cbd6b0d0a0b7f9e0e6c2a0127
+RMD160 (gnome-panel-2.32.1.tar.bz2) = 03a440cee7e219b42a0375ae2d2d53fbd17b604b
+SHA512 (gnome-panel-2.32.1.tar.bz2) = ceae445cb64db89143b1d5aab46d5cd5e4b4c3333e67c03a54238bb55b396532a159bf13291f617c831664a699a6a323c69c471b534abf54ac697eb9923ef2e0
+Size (gnome-panel-2.32.1.tar.bz2) = 3132156 bytes
+SHA1 (patch-applets_clock_calendar-client.c) = 4d4e67de3f74380af4c63df9475bd60505ce1cd1
+SHA1 (patch-applets_clock_clock-location.c) = 8ae2e5ac31a53123c62df84f4be3024aaa08fa40
+SHA1 (patch-applets_clock_clock.c) = ca7fd4409138a57ed3825b13e9afb6ddd81f8d55
+SHA1 (patch-libpanel-applet_panel-applet-factory.c) = 74fd13f0621634962a3f0c565f0e24e1023dbbbd
+SHA1 (patch-po_it.po) = ca6947149c9cb2557814da51122fe5ce202469b1

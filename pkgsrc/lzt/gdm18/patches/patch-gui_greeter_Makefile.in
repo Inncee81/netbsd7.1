@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- gui/greeter/Makefile.in.orig	2007-07-30 20:11:18.000000000 +0000
++++ gui/greeter/Makefile.in
+@@ -397,9 +397,8 @@ gdmgreeter_SOURCES = \
+ 	greeter_system.h 
+ 
+ gdmgreeter_LDADD = \
+-	-L$(top_builddir)/gui	\
+-	-lgdmwm			\
+-	-lgdmcommon		\
++	$(top_builddir)/gui/libgdmwm.a \
++	$(top_builddir)/gui/libgdmcommon.a \
+ 	$(top_builddir)/vicious-extensions/libviciousui-minimal.a \
+ 	$(GLIB_LIBS)		\
+ 	$(GOBJECT_LIBS)		\

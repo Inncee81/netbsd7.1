@@ -1,0 +1,47 @@
+#!/bin/sh
+
+set -e
+. /etc/profile
+
+test_desktop_inited() {
+	for i in $(jot 10 1 10)
+	do
+		echo ${i}0
+		sleep 1
+	done | zenity \
+		--text="INITIAL CONFIG... LOGOUT" \
+		--no-cancel \
+		--auto-close \
+		--progress
+
+	xfce4-session-logout -l
+}
+
+xfce4_config=/usr/pkg/etc/gdm/xfce4.config.tar.gz
+
+if [ `id -u` = 0 ]
+then
+	zenity --error --text "USUARIO NAO PERMITIDO"
+	exit 0
+fi
+t=/tmp/$$
+cd $HOME
+xhost +
+setxkbmap -option "terminate:ctrl_alt_bksp"
+if [ ! -f .xfce_inited ]
+then
+	tar -xpzf ${xfce4_config}
+	chown -R ${USER} .
+	rm -rf .dmrc
+	echo "[Desktop]" > .dmrc
+	echo "Session=xfce" >> .dmrc
+	if [ -n "$LANG" ]
+	then
+		echo "Language=$LANG" >> .dmrc
+	else
+		echo "Language=pt_BR.UTF-8" >>  .dmrc
+	fi
+	date > .xfce_inited
+	test_desktop_inited&
+	exec xfce4-session
+fi

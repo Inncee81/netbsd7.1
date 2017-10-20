@@ -1,0 +1,16 @@
+@comment $NetBSD$
+${PYSITELIB}/lztlib-${PKGVERSION}${EGG_FILE}
+${PYSITELIB}/lztlib/__init__.py
+${PYSITELIB}/lztlib/__init__.pyc
+${PYSITELIB}/lztlib/__init__.pyo
+${PYSITELIB}/lztlib/bancos.py
+${PYSITELIB}/lztlib/bancos.pyc
+${PYSITELIB}/lztlib/bancos.pyo
+${PYSITELIB}/lztlib/entry.py
+${PYSITELIB}/lztlib/entry.pyc
+${PYSITELIB}/lztlib/entry.pyo
+${PYSITELIB}/lztlib/glade/proto.glade
+${PYSITELIB}/lztlib/glade/proto.gladep
+${PYSITELIB}/lztlib/widgets.py
+${PYSITELIB}/lztlib/widgets.pyc
+${PYSITELIB}/lztlib/widgets.pyo

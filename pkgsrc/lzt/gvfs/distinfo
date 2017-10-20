@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.25 2015/11/04 01:32:16 agc Exp $
+
+SHA1 (gvfs-1.6.7.tar.bz2) = 285a810772dce8b37289cbe0aaab8354f2b6717a
+RMD160 (gvfs-1.6.7.tar.bz2) = e833fdbc9dc503cdde8e0ab5a7a8fa5403ec1aa1
+SHA512 (gvfs-1.6.7.tar.bz2) = 68fa29bb2c272e4167f17b1383d7758b5eb235e566df0e11a2413503e5b3052ed02e0101228f5f668631480ad2fd18fa682e3c1d38b7b65a34122b1271fd3218
+Size (gvfs-1.6.7.tar.bz2) = 1404372 bytes
+SHA1 (patch-client_gvfsfusedaemon.c) = e1f4d20956ff2cd80c9a5d08021e9cbf662bb153
+SHA1 (patch-configure) = 2b7da9a385b32a8596271eb8d1c6334040993b4d
+SHA1 (patch-daemon_gvfsbackendcdda.c) = 45e7d172fe4839018b64babdca2f8c60c7eeec70
+SHA1 (patch-daemon_gvfsbackendtest.c) = 9b8f994671ba01c84e49354046836a476ee55f8c
+SHA1 (patch-metadata_metatree.c) = 9b2b1b966bca96f5e3a67951132299c6d76c8673
+SHA1 (patch-monitor_hal_ghaldrive.c) = a842a273b0e6198f053bebeee3920fe01f6f7e64
+SHA1 (patch-monitor_hal_ghalvolumemonitor.c) = 7b56f9ec706294876a66d091ccd25cbee11087cd

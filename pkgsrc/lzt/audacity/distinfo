@@ -1,0 +1,36 @@
+$NetBSD: distinfo,v 1.33 2016/07/16 01:32:51 markd Exp $
+
+SHA1 (audacity-minsrc-2.1.2.tar.xz) = d0b8924b846f833182e674d621b28eb666cc97d6
+RMD160 (audacity-minsrc-2.1.2.tar.xz) = 47fccf8b96b6db95a677045bf122084d233bd80c
+SHA512 (audacity-minsrc-2.1.2.tar.xz) = 46bc68825d29e88b14a674749532345ab63673ea1b85ad0d2a1b72b0974c74d2175e0ef307dad735592d18e56c1e0c65f994f4ee05d9e0f1aec194cd02c930da
+Size (audacity-minsrc-2.1.2.tar.xz) = 7233500 bytes
+SHA1 (patch-Makefile.in) = d91dfadeeae86ced604b14248da1864a8edbae83
+SHA1 (patch-lib-src_FileDialog_Makefile.am) = 382e9e23fa5d75b6f7d04afb2e5ed8da6a88c852
+SHA1 (patch-lib-src_FileDialog_Makefile.in) = c2fe6c7e25e8d08e4aa877794ad3bf5ea131391b
+SHA1 (patch-lib-src_lib-widget-extra_Makefile.am) = 257a1ac7933ea85adca8a484434beb3092ce3ce3
+SHA1 (patch-lib-src_libnyquist_nyquist_cmt_cext.h) = 64af9b396326d377fee789af25b3146bb29e23ac
+SHA1 (patch-lib-src_libnyquist_nyquist_nyqsrc_sndread.c) = 8ed9e32cdb8bf72f01f519b4e46de72b2d46c42e
+SHA1 (patch-lib-src_libnyquist_nyquist_sys_unix_switches.h) = cddc300bbc6a638a0d9c4199e34b78053a48e639
+SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = 1718cd271995463b5b326333864c1da518c5ae62
+SHA1 (patch-lib-src_lv2_configure) = d273e9ee05cc804ce08064855c63b9c9d9d5a27e
+SHA1 (patch-lib-src_lv2_lilv_waflib_extras_autowaf.py) = a3780930919a5f18e65107c41a9a5feb50a70a58
+SHA1 (patch-lib-src_lv2_lv2_plugins_eg-amp.lv2_waflib_extras_autowaf.py) = 28358ef7dbd6a608bc7d1ad869cc55cb14d920e5
+SHA1 (patch-lib-src_lv2_lv2_plugins_eg-fifths.lv2_waflib_extras_autowaf.py) = fb9f97cf063b63985f7d80c0ccef7ce4557c0834
+SHA1 (patch-lib-src_lv2_lv2_plugins_eg-metro.lv2_waflib_extras_autowaf.py) = 5aaa19c333c5591e3ea69d3c6bee83de472a4e06
+SHA1 (patch-lib-src_lv2_lv2_plugins_eg-midigate.lv2_waflib_extras_autowaf.py) = bfc1e192ff1a53d0d50e1ae377922fd320ae35b7
+SHA1 (patch-lib-src_lv2_lv2_plugins_eg-sampler.lv2_waflib_extras_autowaf.py) = eb69d141becd1eb0b70b761447c2c6b1c6f63f27
+SHA1 (patch-lib-src_lv2_lv2_waflib_extras_autowaf.py) = 924f2f3011593c5da8b639b64b0308c5ef2c29ee
+SHA1 (patch-lib-src_lv2_serd_waflib_extras_autowaf.py) = 22c30a21f10bd2665eb275bec50a1d38f8af07cf
+SHA1 (patch-lib-src_lv2_sord_waflib_extras_autowaf.py) = 9a3c876861e149e92915a2a7251dc318ff27726a
+SHA1 (patch-lib-src_lv2_sratom_waflib_extras_autowaf.py) = 61b589c8c9017d511be363d010b50e8c8f4f65d0
+SHA1 (patch-lib-src_lv2_suil_waflib_extras_autowaf.py) = cd892727971359b93f2d3d397e4df07920b94a83
+SHA1 (patch-lib-src_lv2_unpack-waf) = a89c1f2bc72a0e711c71029b438f1b30a0408c62
+SHA1 (patch-lib-src_portaudio-v19_Makefile.in) = 913430caba2698ef29ce54f104614b11f6842183
+SHA1 (patch-lib-src_portmixer_src_Makefile.am) = dfad61ffdfd4fc2d6e66d706e17551866ed4e9dd
+SHA1 (patch-lib-src_sbsms_src_Makefile.am) = 143a8137b8ee8a99e82098cbb904e48b1428ffc0
+SHA1 (patch-src_AudacityApp.cpp) = f73155f54be5f30110bf12000b7b16388688c10f
+SHA1 (patch-src_FFmpeg.h) = 696c4aece06041d71d9d76e2c951433823a20f46
+SHA1 (patch-src_effects_NoiseRemoval.cpp) = 1fbce7e28041ed8469224ce0e65b319788a73c5c
+SHA1 (patch-src_effects_VST_VSTEffect.cpp) = e0a779544cca0870da3fb8755fbe5f8828033b76
+SHA1 (patch-src_effects_vamp_LoadVamp.cpp) = 8f47dd8e8a9bd0ed175b0ec6f9ab377ce68b2df7
+SHA1 (patch-src_import_ImportFLAC.cpp) = b9480805bb6e4fe1132151ab2725665c52d5e625

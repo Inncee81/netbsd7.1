@@ -1,0 +1,43 @@
+--- /tmp/libreoffice/desktop/source/lib/init.cxx	2017-01-26 20:22:46.000000000 -0200
++++ desktop/source/lib/init.cxx	2017-07-17 01:18:22.000000000 -0300
+@@ -102,7 +102,7 @@
+ using namespace desktop;
+ using namespace utl;
+ 
+-#if defined(ANDROID)
++#if defined(__NetBSD__)
+ namespace std
+ {
+ template<typename T>
+--- /tmp/libreoffice/sc/source/core/data/attrib.cxx	2017-01-26 20:22:46.000000000 -0200
++++ sc/source/core/data/attrib.cxx	2017-07-17 01:29:04.000000000 -0300
+@@ -40,7 +40,7 @@
+ 
+ using namespace com::sun::star;
+ 
+-#ifdef ANDROID
++#if defined(__NetBSD__)
+ namespace std
+ {
+ template <typename T> std::string to_string(const T& rNumber)
+--- /tmp/libreoffice/sc/source/core/opencl/formulagroupcl.cxx	2017-01-26 20:22:46.000000000 -0200
++++ sc/source/core/opencl/formulagroupcl.cxx	2017-07-17 01:57:45.000000000 -0300
+@@ -30,6 +30,18 @@
+ #include "op_spreadsheet.hxx"
+ #include "op_addin.hxx"
+ 
++#if defined(__NetBSD__)
++namespace std
++{
++template <typename T> std::string to_string(const T& rNumber)
++{
++    std::ostringstream aStream;
++    aStream << rNumber;
++    return aStream.str();
++}
++}
++#endif
++
+ /// CONFIGURATIONS
+ #define REDUCE_THRESHOLD 201  // set to 4 for correctness testing. priority 1
+ #define UNROLLING_FACTOR 16  // set to 4 for correctness testing (if no reduce)

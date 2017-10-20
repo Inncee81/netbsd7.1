@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/07/30 15:53:49 adam Exp $
+
+SHA1 (pydocstyle-2.0.0.zip) = 95eced658be8891eb1192e32f49283b4fecda47d
+RMD160 (pydocstyle-2.0.0.zip) = a7160186e96cc4caebf2b120791fc67f81cfb436
+SHA512 (pydocstyle-2.0.0.zip) = e0d7b4547135eb2a43f0f303eef91a1cfb41cdd868ac2f8b8583c74a6697a3bf3442a9b641b7f7d2ffea9fec4219185e06e4cae2df37873d0f936fe3a9915662
+Size (pydocstyle-2.0.0.zip) = 33343 bytes

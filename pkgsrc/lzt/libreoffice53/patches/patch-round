@@ -1,0 +1,51 @@
+--- /tmp/libreoffice/drawinglayer/qa/unit/border.cxx	2017-01-26 20:22:46.000000000 -0200
++++ drawinglayer/qa/unit/border.cxx	2017-07-17 00:43:29.000000000 -0300
+@@ -136,7 +136,7 @@
+             nHeight = rPolyPolygon.GetBoundRect().getHeight();
+         }
+     }
+-    sal_Int32 nExpectedHeight = std::round(fRightWidth);
++    sal_Int32 nExpectedHeight = round(fRightWidth);
+     // This was 2, and should be 1: if the logical requested width is 1.47,
+     // then that must be 1 px on the screen, not 2.
+     CPPUNIT_ASSERT_EQUAL(nExpectedHeight, nHeight);
+--- /tmp/libreoffice/drawinglayer/source/primitive2d/borderlineprimitive2d.cxx	2017-01-26 20:22:46.000000000 -0200
++++ drawinglayer/source/primitive2d/borderlineprimitive2d.cxx	2017-07-17 00:43:29.000000000 -0300
+@@ -214,7 +214,7 @@
+                             getStart(), getEnd(), aVector, getRGBColorLeft(), 0.0));
+                     else
+                     {
+-                        double fWidth = bPixelCorrection ? std::round(fLeftWidth) : fLeftWidth;
++                        double fWidth = bPixelCorrection ? round(fLeftWidth) : fLeftWidth;
+                         rContainer.push_back(makeSolidLinePrimitive(
+                             aClipRegion, aTmpStart, aTmpEnd, aVector, getRGBColorLeft(), fWidth, -fLeftWidth/2.0));
+                     }
+@@ -226,7 +226,7 @@
+                             getStart(), getEnd(), aVector, getRGBColorRight(), fLeftWidth+mfDistance));
+                     else
+                     {
+-                        double fWidth = bPixelCorrection ? std::round(fRightWidth) : fRightWidth;
++                        double fWidth = bPixelCorrection ? round(fRightWidth) : fRightWidth;
+                         rContainer.push_back(makeSolidLinePrimitive(
+                             aClipRegion, aTmpStart, aTmpEnd, aVector, getRGBColorRight(), fWidth, mfDistance+fRightWidth/2.0));
+                     }
+--- /tmp/libreoffice/libreofficekit/qa/gtktiledviewer/gtktiledviewer.cxx	2017-01-26 20:22:46.000000000 -0200
++++ libreofficekit/qa/gtktiledviewer/gtktiledviewer.cxx	2017-07-17 00:43:29.000000000 -0300
+@@ -327,7 +327,7 @@
+         {
+             for (boost::property_tree::ptree::value_type& rValue : aTree.get_child("rows"))
+             {
+-                int nSize = std::round(lok_doc_view_twip_to_pixel(LOK_DOC_VIEW(pDocView), std::atof(rValue.second.get<std::string>("size").c_str())));
++                int nSize = round(lok_doc_view_twip_to_pixel(LOK_DOC_VIEW(pDocView), std::atof(rValue.second.get<std::string>("size").c_str())));
+                 if (nSize >= rWindow.m_pRowBar->m_nPositionPixel)
+                 {
+                     int nScrolledSize = nSize - rWindow.m_pRowBar->m_nPositionPixel;
+@@ -348,7 +348,7 @@
+         {
+             for (boost::property_tree::ptree::value_type& rValue : aTree.get_child("columns"))
+             {
+-                int nSize = std::round(lok_doc_view_twip_to_pixel(LOK_DOC_VIEW(pDocView), std::atof(rValue.second.get<std::string>("size").c_str())));
++                int nSize = round(lok_doc_view_twip_to_pixel(LOK_DOC_VIEW(pDocView), std::atof(rValue.second.get<std::string>("size").c_str())));
+                 if (nSize >= rWindow.m_pColumnBar->m_nPositionPixel)
+                 {
+                     int nScrolledSize = nSize - rWindow.m_pColumnBar->m_nPositionPixel;

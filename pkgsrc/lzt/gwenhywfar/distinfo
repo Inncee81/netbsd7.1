@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (gwenhywfar.4.5.3.tar.gz) = 2a600cb4708fb470d5b3f874470df21f3653d6d1
+RMD160 (gwenhywfar.4.5.3.tar.gz) = f6ad9e6a4cc24156399f5308adafe93e221e1b99
+SHA512 (gwenhywfar.4.5.3.tar.gz) = a14d625518d94c94491df149f9e746ed8d769f4e43b6df24f51f4269f29005f7431e33e85de0bde0a81a2e876fea8ddad5ed4191114295d6c9ea2e94aba08799
+Size (gwenhywfar.4.5.3.tar.gz) = 2249350 bytes
+SHA1 (patch-configure) = 6936dce3ca54007a2d653c961418b17236087fd0

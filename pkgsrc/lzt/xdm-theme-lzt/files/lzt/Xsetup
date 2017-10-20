@@ -1,0 +1,11 @@
+#!/bin/sh
+cd /etc/X11/xdm/lzt/images
+for IMAGEFILE in $(domainname).png netbsd_color_50.png netbsd_color.png
+do
+	if [ -s ${IMAGEFILE} ]
+	then
+		/usr/pkg/bin/xv -root -quit -max ${IMAGEFILE} 
+		break
+	fi
+done
+xclock &

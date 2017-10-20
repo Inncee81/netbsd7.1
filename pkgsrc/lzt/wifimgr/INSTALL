@@ -1,0 +1,5 @@
+case ${STAGE} in
+POST-INSTALL)
+	touch /etc/wpa_supplicant.conf /etc/hostapd.conf
+;;
+esac

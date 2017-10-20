@@ -1,0 +1,29 @@
+set -e
+config_model=/usr/pkg/etc/gdm/dconf.proto
+if [ `id -u` = 0 ]
+then
+	exit 0
+fi
+t=/tmp/$$
+if [ ! -f .gnome_inited  -a -f $config_model ]
+then
+	dconf load / < ${config_model}
+	date > .gnome_inited
+	rm -rf .dmrc
+	echo "[Desktop]" > .dmrc
+	echo "Session=gnome" >> .dmrc
+	if [ -n "$LANG" ]
+	then
+		echo "Language=$LANG" >> .dmrc
+	else
+		echo "Language=pt_BR.UTF-8" >>  .dmrc
+	fi
+	for i in $(jot 10 1 10)
+	do
+		echo ${i}0
+		sleep 1
+	done | zenity --text=INSTALL --no-cancel --auto-close --progress
+	exit 0
+fi
+xhost +
+setxkbmap -option "terminate:ctrl_alt_bksp"

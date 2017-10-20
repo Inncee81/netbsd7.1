@@ -1,0 +1,50 @@
+# $NetBSD: INSTALL,v 1.10 2003/08/30 20:23:06 jlam Exp $
+
+DIRS="/etc /etc/ssh ${PKG_PREFIX}/etc ${PKG_PREFIX}/etc/ssh"
+FILES="sshd.conf sshd_config"
+
+case ${STAGE} in
+PRE-INSTALL)
+	cd /etc/rc.d
+	if [ ! -s sshd.orig ]
+	then
+		/etc/rc.d/sshd stop
+		mv sshd sshd.orig
+	fi
+;;
+POST-INSTALL)
+	for dir in $DIRS; do
+		if [ "@PKG_SYSCONFDIR@" != "$dir" ]; then
+			for file in $FILES; do
+				path=$dir/$file
+				if [ -f $path ]; then
+					${CAT} <<EOF
+===========================================================================
+
+                           *===* NOTICE *===*
+
+WARNING: previous configuration file $path found.
+
+The config files for ${PKGNAME} must be located in:
+
+	@PKG_SYSCONFDIR@
+
+You will need to ensure your configuration files and/or keys are
+placed in the correct directory before using ${PKGNAME}.
+
+===========================================================================
+EOF
+
+					exit
+				fi
+			done
+		fi
+	done
+	if [ ! -s /etc/rc.d/sshd ]
+	then
+		install -m 755 /usr/pkg/share/examples/rc.d/sshd /etc/rc.d
+		
+	fi
+	/etc/rc.d/sshd start
+	;;
+esac

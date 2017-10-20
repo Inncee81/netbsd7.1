@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- Makefile.in.orig	2011-06-16 14:36:04.000000000 +0000
++++ Makefile.in
+@@ -890,10 +890,6 @@ uninstall-am: uninstall-aclocalDATA unin
+ 
+ 
+ install-data-local:
+-	-mkdir -p $(DESTDIR)$(sysgconfdir)/gconf.xml.defaults
+-	-chmod 755 $(DESTDIR)$(sysgconfdir)/gconf.xml.defaults
+-	-mkdir -p $(DESTDIR)$(sysgconfdir)/gconf.xml.mandatory
+-	-chmod 755 $(DESTDIR)$(sysgconfdir)/gconf.xml.mandatory
+ 
+ install-schemas:
+ 	(cd standard-schemas && $(MAKE) $(AM_MAKEFLAGS) install-schemas)

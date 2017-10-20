@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- configure.orig	2017-09-20 20:23:42.000000000 +0000
++++ configure
+@@ -14851,6 +14851,7 @@ if test -n "$XKB_LIBS"; then
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
++  pkg_failed=no
+   pkg_cv_XKB_LIBS=`$PKG_CONFIG --libs "xkbcommon-x11" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else

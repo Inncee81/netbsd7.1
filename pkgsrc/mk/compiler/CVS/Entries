@@ -1,0 +1,17 @@
+/ccc.mk/1.19/Wed Jun  3 01:07:31 2009//
+/hp.mk/1.7/Wed Jun  3 01:07:31 2009//
+/ido.mk/1.8/Wed Jun  3 01:07:32 2009//
+/mipspro-ucode.mk/1.5/Mon May  9 01:02:05 2011//
+/icc.mk/1.8/Fri May 20 01:01:10 2011//
+/mipspro.mk/1.42/Tue Aug 23 01:05:35 2011//
+/xlc.mk/1.26/Mon Oct 31 01:01:49 2011//
+/sunpro.mk/1.49/Mon May  4 02:13:36 2015//
+/pcc.mk/1.8/Sat Oct 10 01:42:25 2015//
+/distcc.mk/1.32/Thu Nov 26 01:48:07 2015//
+/g95.mk/1.6/Sun Jul 10 01:00:48 2016//
+/gfortran.mk/1.9/Tue Sep 13 01:00:50 2016//
+/f2c.mk/1.18/Mon Mar  6 01:00:57 2017//
+/ccache.mk/1.37/Sun Jun 18 01:00:52 2017//
+/clang.mk/1.18/Wed Jul 12 01:00:58 2017//
+/gcc.mk/1.184/Tue Sep 12 01:00:54 2017//
+D

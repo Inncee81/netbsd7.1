@@ -1,0 +1,10 @@
+$NetBSD$
+
+--- lib-src/portmixer/src/Makefile.am.orig	2016-01-13 14:31:21.000000000 +0000
++++ lib-src/portmixer/src/Makefile.am
+@@ -1,4 +1,4 @@
+-lib_LTLIBRARIES = libportmixer.la
++noinst_LTLIBRARIES = libportmixer.la
+ 
+ libportmixer_la_CPPFLAGS = -I$(top_srcdir)/include $(PORTAUDIO_CFLAGS)
+ libportmixer_la_SOURCES = \

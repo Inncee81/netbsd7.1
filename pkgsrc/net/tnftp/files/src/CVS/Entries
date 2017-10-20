@@ -1,0 +1,20 @@
+/Makefile.in/1.9/Sat Nov  1 01:10:01 2014//
+/cmdtab.c/1.7/Sat Nov  1 01:10:01 2014//
+/complete.c/1.6/Sat Nov  1 01:10:01 2014//
+/domacro.c/1.6/Sat Nov  1 01:10:01 2014//
+/extern.h/1.8/Sat Nov  1 01:10:01 2014//
+/progressbar.c/1.8/Sat Nov  1 01:10:06 2014//
+/progressbar.h/1.6/Sat Nov  1 01:10:06 2014//
+/ruserpass.c/1.6/Sat Nov  1 01:10:06 2014//
+/util.c/1.10/Sat Nov  1 01:10:06 2014//
+/Makefile.am/1.2/Mon Oct  5 01:04:42 2015//
+/cmds.c/1.11/Mon Oct  5 01:04:42 2015//
+/fetch.c/1.10/Mon Oct  5 01:04:42 2015//
+/ftp.1/1.6/Mon Oct  5 01:04:42 2015//
+/ftp.c/1.11/Mon Oct  5 01:04:42 2015//
+/ftp_var.h/1.10/Mon Oct  5 01:04:42 2015//
+/main.c/1.11/Mon Oct  5 01:04:42 2015//
+/ssl.c/1.2/Mon Oct  5 01:04:42 2015//
+/ssl.h/1.2/Mon Oct  5 01:04:42 2015//
+/version.h/1.9/Mon Oct  5 01:04:42 2015//
+D

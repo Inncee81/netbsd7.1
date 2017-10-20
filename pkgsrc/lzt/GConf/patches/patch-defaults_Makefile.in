@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- defaults/Makefile.in.orig	2011-06-16 14:36:04.000000000 +0000
++++ defaults/Makefile.in
+@@ -318,7 +318,7 @@ gconf_defaults_mechanism_LDADD = \
+ 
+ BUILT_SOURCES = gconf-defaults-glue.h
+ dbus_servicesdir = $(datadir)/dbus-1/system-services
+-dbus_confdir = $(sysconfdir)/dbus-1/system.d
++dbus_confdir = $(PREFIX)/share/examples/GConf
+ polkitdir = $(datadir)/polkit-1/actions
+ dbus_services_in_files = org.gnome.GConf.Defaults.service.in
+ polkit_in_files = org.gnome.gconf.defaults.policy.in

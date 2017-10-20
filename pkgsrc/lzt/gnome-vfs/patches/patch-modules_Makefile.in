@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- modules/Makefile.in.orig	2010-09-28 09:35:22.000000000 +0000
++++ modules/Makefile.in
+@@ -468,7 +468,6 @@ INCLUDES = \
+ 	-D_POSIX_PTHREAD_SEMANTICS		\
+ 	-D_REENTRANT				\
+ 	-DSSH_PROGRAM=\"$(SSH_PROGRAM)\"	\
+-	-DG_DISABLE_DEPRECATED			\
+ 	-DGNOME_VFS_PREFIX=\"$(prefix)\"	\
+ 	-DGNOME_VFS_DATADIR=\"$(datadir)\"	\
+ 	-DGNOME_VFS_LIBDIR=\"$(libdir)\"	\

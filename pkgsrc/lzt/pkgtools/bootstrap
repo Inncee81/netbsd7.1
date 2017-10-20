@@ -1,0 +1,21 @@
+set -ex
+unset PKG_PATH
+cd /usr/pkgsrc/pkgtools/cwrappers;make install || make replace;make clean
+cd /usr/pkgsrc/pkgtools/digest;make install || make replace;make clean
+cd /usr/pkgsrc/devel/m4;make install || make replace;make clean
+cd /usr/pkgsrc/devel/libtool-base;make install || make replace;make clean
+cd /usr/pkgsrc/devel/gettext-lib;make install || make replace;make clean
+cd /usr/pkgsrc/devel/pkgconf;make install || make replace;make clean
+cd /usr/pkgsrc/devel/libffi;make install || make replace;make clean
+cd /usr/pkgsrc/devel/gmake;make install || make replace;make clean
+cd /usr/pkgsrc/lang/perl5;make install || make replace;make clean
+cd /usr/pkgsrc/devel/p5-Scalar-List-Utils;make install || make replace;make clean
+cd /usr/pkgsrc/devel/p5-CPAN-Meta;make install || make replace;make clean
+cd /usr/pkgsrc/devel/p5-inc-latest;make install || make replace;make clean
+cd /usr/pkgsrc/devel/p5-Module-Build;make install || make replace;make clean
+cd /usr/pkgsrc/devel/p5-Perl4-CoreLibs;make install || make replace;make clean
+cd /usr/pkgsrc/security/openssl;make install || make replace;make clean
+cd /usr/pkgsrc/lzt/mozilla-rootcerts;make install || make replace;make clean
+cd /usr/pkgsrc/devel/readline;make install || make replace;make clean
+cd /usr/pkgsrc/lang/python27;make install || make replace;make clean
+cd /usr/pkgsrc/databases/py-sqlite3;make install || make replace;make clean

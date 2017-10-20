@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- configure.orig	2016-01-28 20:02:21.000000000 +0000
++++ configure
+@@ -7072,6 +7072,7 @@ else
+ 	solaris*)	CCPIC="-fPIC" ;;
+ 	cygwin*)	CCPIC="" ;;
+ 	mingw32*)	CCPIC="" ;;
++	*netbsd*)	CCPIC="-fPIC" ;;
+ 	*)		CCPIC="-fpic" ;;
+       esac
+     else
+@@ -7591,7 +7592,7 @@ fi
+     enable_documentation=yes
+ 
+   else
+-    if test "x$enable_documentation" == "xauto" ; then
++    if test "x$enable_documentation" = "xauto" ; then
+       enable_documentation=no
+     else
+       as_fn_error $? "Cannot find 'makeinfo', required for documentation." "$LINENO" 5

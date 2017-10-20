@@ -1,0 +1,5 @@
+$NetBSD$
+
+SHA1 (patch-Makefile) = f33e6cb673e2d9656f2082db7c40dd79626d4ec2
+SHA1 (patch-dxf.thumbnailer) = 69306d27a1f09fa5d5c872fc34b999d4f49bcc31
+SHA1 (patch-dxf__thumbnailer.c) = 93830ce66e3b280a8e289dca07343f1e525f53c3

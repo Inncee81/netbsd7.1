@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/gpg-error-config.in.orig	2014-01-24 18:57:44.000000000 +0000
++++ src/gpg-error-config.in
+@@ -80,7 +80,7 @@ while test $# -gt 0; do
+ 	    case "$libdir" in
+ 		/usr/lib|/usr/lib64|/lib|/lib64) ;;
+ 		*)
+-		    output="$output -L$libdir"
++		    output="$output -Wl,-R$libdir -L$libdir"
+ 		    ;;
+ 	    esac
+ 	    output="$output @GPG_ERROR_CONFIG_LIBS@"

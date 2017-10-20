@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.25 2017/01/21 01:56:13 dmcmahill Exp $
+
+SHA1 (pcb-4.0.0.tar.gz) = f401802b95a7f70c54a56ad98c4aa3961ba55cba
+RMD160 (pcb-4.0.0.tar.gz) = 27302f64fb9f8e980285235b10b9d7ab9170f68f
+SHA512 (pcb-4.0.0.tar.gz) = b77077d7ae93fbbd3cd2f57e85921336257af73bb90776139968c40523ff2b136a56e844a9eae161a0b14b92dc58d390274ef0b4a99e1d8007c12b117f087ada
+Size (pcb-4.0.0.tar.gz) = 4676879 bytes

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+case ${STAGE} in
+POST-INSTALL)
+	sysrc lighttpd_enable=YES
+	mkdir -p /var/spool/lighttpd
+	chown -R www:www /var/spool/lighttpd
+	mkdir -p /var/cache/lighttpd @LOCALBASE@/www/data
+	chown -R www:www /var/cache/lighttpd @LOCALBASE@/www/data
+	cd @LOCALBASE@/etc/lighttpd
+	if [ -s .inited ]
+	then
+		echo
+		echo "************** $1 INITED *****************"
+		echo
+		echo "service lighttpd restart"  | su - root -c batch
+		exit 0
+	fi
+	date > .inited
+;;
+esac
+exit 0

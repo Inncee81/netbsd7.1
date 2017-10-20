@@ -1,0 +1,28 @@
+--- vcl/source/gdi/CommonSalLayout.cxx	2017-07-16 23:38:58.000000000 -0300
++++ /tmp/libreoffice/vcl/source/gdi/CommonSalLayout.cxx	2017-01-26 20:22:46.000000000 -0200
+@@ -647,9 +647,9 @@
+                     nYOffset = -pHbPositions[i].y_offset;
+                 }
+ 
+-                nAdvance = std::lround(nAdvance * nXScale);
+-                nXOffset = std::lround(nXOffset * nXScale);
+-                nYOffset = std::lround(nYOffset * nYScale);
++                nAdvance = lround(nAdvance * nXScale);
++                nXOffset = lround(nXOffset * nXScale);
++                nYOffset = lround(nYOffset * nYScale);
+ 
+                 Point aNewPos(aCurrPos.X() + nXOffset, aCurrPos.Y() + nYOffset);
+                 const GlyphItem aGI(nCharPos, nGlyphIndex, aNewPos, nGlyphFlags,
+--- writerfilter/source/rtftok/rtfsdrimport.cxx	2017-07-16 23:38:58.000000000 -0300
++++ /tmp/libreoffice/writerfilter/source/rtftok/rtfsdrimport.cxx	2017-01-26 20:22:46.000000000 -0200
+@@ -922,8 +922,8 @@
+             nTop = static_cast< sal_Int32 >(rShape.nTop + fHeightRatio * (*oRelTop - *oGroupTop));
+ 
+             // See lclGetAbsRect() in the VML import.
+-            aSize.Width = std::lround(fWidthRatio * (*oRelRight - *oRelLeft));
+-            aSize.Height = std::lround(fHeightRatio * (*oRelBottom - *oRelTop));
++            aSize.Width = lround(fWidthRatio * (*oRelRight - *oRelLeft));
++            aSize.Height = lround(fHeightRatio * (*oRelBottom - *oRelTop));
+         }
+ 
+         if (m_bTextFrame)

@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.57 2016/04/12 21:33:49 adam Exp $
+
+SHA1 (inkscape-0.91.tar.bz2) = 9941ee467af570ac71a70f965cd9c48d4993b8f3
+RMD160 (inkscape-0.91.tar.bz2) = 77421bcb96c6ad4fe17e775e86b77d576b90cf32
+SHA512 (inkscape-0.91.tar.bz2) = 3778ef7d4a1c759a7afc093e55eefb69a78dcb60332655cc8ab8c481f54a3e6550df6070178390eb08588245531906b8bef33301f0765a4d28d6c7506fcf3bc7
+Size (inkscape-0.91.tar.bz2) = 25858909 bytes
+SHA1 (patch-configure) = 2d19e8bcd84ae380c5f3ccad632e4ab7c81c3767
+SHA1 (patch-src_extension_implementation_script.cpp) = ebeeb6ece9aefdc491cc259453209dd6170cfcb4
+SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = fe1b4ec43e1c0a4fd0e83e615c8ffebfc442d557
+SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = e51037a2aa30439fc2438abef7fffc00a0c7b6c7
+SHA1 (patch-src_io_inkjar.cpp) = 3c7f530fd21bbcf8354c74382e372a74187a96d2
+SHA1 (patch-src_io_uristream.cpp) = 11bc2cad5767427cf4bc700125c28c516da9fd30
+SHA1 (patch-src_live__effects_lpe-dynastroke.cpp) = 31d6cc8bb179629023bd04bcac0fd935b2c9636d
+SHA1 (patch-src_trace_siox.cpp) = 660d45a1c717f00d401f1d3e9012dcaf7e0ae438
+SHA1 (patch-src_ui_clipboard.cpp) = 45e6dbf073c506be470ebcd9e304983397124974
+SHA1 (patch-src_ui_tool_node.h) = 2900ab737d6b9245aabefee5e79564bdbaec57bc
+SHA1 (patch-src_widgets_sp-xmlview-attr-list.cpp) = cb738d1192fb94ecbb511661af94dbf970729db2

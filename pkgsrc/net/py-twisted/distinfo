@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.33 2017/06/21 18:35:35 adam Exp $
+
+SHA1 (Twisted-17.5.0.tar.bz2) = 51e8b9ea7573f1f1154fb4fb7b04ba84af654647
+RMD160 (Twisted-17.5.0.tar.bz2) = ce39147fb5db15edbc09632492e1d4744ba07bef
+SHA512 (Twisted-17.5.0.tar.bz2) = 0fd10e5db7c87daf0d2225cec9929f1040f0c67e9605bfb1a5bc84db8b825e943cfa08e094c32c25c680bddc6587bfdc525a994ad7b785396e5ddb2621649379
+Size (Twisted-17.5.0.tar.bz2) = 2993816 bytes

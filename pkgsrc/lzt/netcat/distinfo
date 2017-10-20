@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.12 2015/11/04 00:35:15 agc Exp $
+
+SHA1 (nc110.tgz) = f8ec3a39796b141b6654d39b7957b863c7f79a95
+RMD160 (nc110.tgz) = 3e891fa094d921940e53035fb6721e2f0c04efdb
+SHA512 (nc110.tgz) = c9a7f5045f76d9ffef4e83fcc3e82f69ac4eb05e061686db51e9367949bfe0b90226b290a059dc68dcf3bf2040b95b5c78545199674da57a7c73e2f9145cf812
+Size (nc110.tgz) = 75267 bytes
+SHA1 (patch-Makefile) = f42804a5b9c8be3dd1dae92e524d5d40222af888
+SHA1 (patch-data_Makefile) = a6421e07896fd490a3db0d73bdbc079e565896bf
+SHA1 (patch-data_data.c) = d6a7bc9e31cc70254ee4f8e9832acfbe80832f4c
+SHA1 (patch-data_rservice.c) = 3d5ee1dd67f117d698e58e6fabb20b72ff14dab5
+SHA1 (patch-data_xor.c) = 6ff00616b844ba47ec0dfc503edb5dafee124cda
+SHA1 (patch-netcat.c) = a15fd024923fecf0b3fa22eb15e03df64a2dcf42

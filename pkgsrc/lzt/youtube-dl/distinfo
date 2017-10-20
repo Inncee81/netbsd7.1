@@ -1,0 +1,12 @@
+$NetBSD$
+
+SHA1 (youtube-dl-2017.03.10.tar.gz) = 44453e71129e9df493d68ea8891491251abb0c75
+RMD160 (youtube-dl-2017.03.10.tar.gz) = 6d92164693db482b64e3f4772595f8be0391e456
+SHA512 (youtube-dl-2017.03.10.tar.gz) = cdebb72d3bb05c773c4bd6e689d654192ab752ba4f4eb023b60e06c6181f827b096ce3c27181f6f6b19e559bf91e6e1e6d3e08fef5ae8866d4db08489f77f47f
+Size (youtube-dl-2017.03.10.tar.gz) = 2628943 bytes
+SHA1 (patch-Makefile) = 6bd3691611b58208c5726002420a8ec886fdf2ab
+SHA1 (patch-setup.py) = bdb82a36ec35ebbfe765c3c380a03db81fbd979a
+SHA1 (patch-youtube-dl.1) = af3fce76739023c99bfce38f43f3c86f17f0125c
+SHA1 (patch-youtube__dl_postprocessor_ffmpeg.py) = c7c589af2d8472378fea64aa26afa7a2417f1412
+SHA1 (patch-youtube_dl____init__.py) = dc0666a3704e255adc21b028e48c9c83c95aca99
+SHA1 (patch-youtube_dl__options.py) = ec03ceec4cda0d58a67f1146df39a66c3fdac66d

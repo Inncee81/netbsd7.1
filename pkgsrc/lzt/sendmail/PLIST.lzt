@@ -1,0 +1,8 @@
+lib/sasl2/Sendmail.conf
+../../etc/mail/sendmail.mc
+../../etc/mail/Makefile
+../../etc/mail/aliases
+../../etc/mail/virtusertable
+../../etc/mail/mailertable
+../../etc/mail/access
+../../etc/mail/authinfo

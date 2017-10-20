@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (kmymoney/4.8.0.tar.gz) = dc36f9aa9c9351b93c78c5ecf7bf5d01c6835dd6
+RMD160 (kmymoney/4.8.0.tar.gz) = f65bb563c025ed775e65f8d49baf07b0fe1acd5f
+SHA512 (kmymoney/4.8.0.tar.gz) = 659bb5aa3ad68f9739972c1687e7976adee2467980673350df596fe0cacb4c64cad59cf2c5daf25d190522f204a4b21835e4a3518feb9f71fc1ebfeb1152607d
+Size (kmymoney/4.8.0.tar.gz) = 13225158 bytes
+SHA1 (patch-aa) = c1aed312853900d9bbeaa2ce02e81bad4e4943be
+SHA1 (patch-kmymoney_CMakeLists.txt) = c7d3c4ec0a4f2298e64fce9251e37e5664fd51dc

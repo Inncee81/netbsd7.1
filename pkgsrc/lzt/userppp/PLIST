@@ -1,0 +1,33 @@
+@comment $NetBSD$
+man/man8/ppp.8
+man/man8/pppctl.8
+sbin/ppp
+sbin/pppctl
+share/examples/ppp/gateways
+share/examples/ppp/adsl.conf
+share/examples/ppp/chap-auth
+share/examples/ppp/fixpf
+share/examples/ppp/isdnd.rc
+share/examples/ppp/login-auth
+share/examples/ppp/modem.conf
+share/examples/ppp/parseiface
+share/examples/ppp/ppp.3g
+share/examples/ppp/ppp.conf
+share/examples/ppp/ppp.conf.isdn
+share/examples/ppp/ppp.conf.sample
+share/examples/ppp/ppp.conf.span-isp
+share/examples/ppp/ppp.conf.span-isp.working
+share/examples/ppp/ppp.linkdown.sample
+share/examples/ppp/ppp.linkdown.span-isp
+share/examples/ppp/ppp.linkdown.span-isp.working
+share/examples/ppp/ppp.linkup
+share/examples/ppp/ppp.linkup.sample
+share/examples/ppp/ppp.linkup.span-isp
+share/examples/ppp/ppp.linkup.span-isp.working
+share/examples/ppp/ppp.secret.sample
+share/examples/ppp/ppp.secret.span-isp
+share/examples/ppp/ppp.secret.span-isp.working
+share/examples/ppp/ppptun
+share/examples/ppp/ppptun.conf
+@pkgdir man/cat8
+@pkgdir etc/ppp

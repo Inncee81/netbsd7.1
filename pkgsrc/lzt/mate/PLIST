@@ -1,0 +1,6 @@
+@comment $NetBSD$
+etc/rc.d/matefixes
+share/examples/mate/21-mate-resolv
+share/examples/rc.d/diskless
+share/examples/rc.d/printsearch
+share/examples/rc.d/resize_disklabel

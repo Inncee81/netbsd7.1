@@ -1,0 +1,11 @@
+if=tun0 no_rip
+if=tun1 no_rip
+if=tun2 no_rip
+if=tun3 no_rip
+if=tun4 no_rip
+if=tun5 no_rip
+if=tun6 no_rip
+if=tun7 no_rip
+if=tun8 no_rip
+if=tun9 no_rip
+rdisc_interval=30

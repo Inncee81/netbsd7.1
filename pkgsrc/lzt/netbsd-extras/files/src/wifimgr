@@ -1,0 +1,261 @@
+#!/usr/local/bin/python
+# coding: utf-8
+
+from lztlib import *
+import sysctl
+
+wifinetworks={}
+wpanetworks={}
+
+class wifimgr:
+	def __init__(
+		self,
+		GLADEFILE="/usr/pkg/etc/glade/wifimgr/wifimgr.glade",
+		DBFILE="/usr/pkg/share/examples/wifimgr/wifimgr.sqlite3"
+		):
+		self.clockvl=0
+		self.interface=None
+		gtk.timeout_add(1000,self.clock)
+		signals={
+			"on_window1_delete_event":self.ignore,
+			"on_treeview1_row_activated":self.tv1_activate,
+			"on_treeview1_cursor_changed":self.tv1_select_row,
+			"on_button4_clicked": self.rescan,
+			"on_button5_clicked": self.disconnect,
+			"on_button6_clicked": self.close,
+			"on_button8_clicked": self.connect,
+			"on_button9_clicked": self.connect_cancel
+		}
+		self.conn=sqlite3.connect(DBFILE)
+		self.loadwpanetworks()
+		self.mainprog= gtk.glade.XML(GLADEFILE)
+		self.mainprog.signal_autoconnect(signals)
+		self.tv1=lzt_treeview(self.mainprog.get_widget("treeview1"),
+			[ "BSSID          ","FLAGS               ","SSID        ","ACTIVE"]
+			);
+		self.window1_title("0000 STARTING")
+		self.message=""
+		self.rescan()
+
+	def ignore(*args):
+		print "DONT CLOSE MAIN WINDOW!"
+		return gtk.TRUE
+
+	def tv1_select_row(self,tv):
+		key=self.tv1.get_data()
+		print "SELECT ROW, key:",key
+
+	def disconnect(self,bt=None):
+		c=self.conn.cursor()
+		bssid=self.tv1.get_data()
+		c.execute("update networks set active='' where interface=? and bssid=?",(self.interface,bssid))
+		self.conn.commit()
+		c.close()
+		self.write_wpa_supplicant_conf()
+
+	def connect(self,bt=None):
+		w=self.mainprog.get_widget("window2")
+		w.hide()
+		l=self.mainprog.get_widget("entry1")
+		password=l.get_text()
+		bssid=self.tv1.get_data()
+		c=self.conn.cursor()
+		c.execute("update networks set active='' where interface=?", (self.interface,))
+		c.execute("update networks set active='X', psk=? where interface=? and bssid=?", (password,self.interface,bssid))
+		self.conn.commit()
+		c.close()
+		self.write_wpa_supplicant_conf()
+		self.clockvl=0
+
+
+	def window1_title(self,txt):
+		w=self.mainprog.get_widget("window1")
+		w.set_title(txt)
+
+	def tv1_activate(self,tv,a,b):
+		c=self.conn.cursor()
+		bssid=self.tv1.get_data()
+		c.execute("select ssid,bssid,psk from networks where interface=? and bssid=?",(self.interface,bssid));
+		ssid,bssid,psk=c.fetchone()
+		l=self.mainprog.get_widget("label7")
+		l.set_markup("%s\n\n%s" % (ssid,bssid))
+		p=self.mainprog.get_widget("entry1")
+		if not psk:
+			psk=""
+		p.set_text(psk)
+		w=self.mainprog.get_widget("window2")
+		w.show()
+
+	def connect_cancel(self,bt):
+		w=self.mainprog.get_widget("window2")
+		w.hide()
+
+	def rescan(self,bt=None):
+		if not self.interface:
+			return
+		self.message="SCANNING NETWORKS"
+		os.system("sudo wpa_cli scan > /dev/null")
+		time.sleep(3)
+		ifile=os.popen("sudo wpa_cli scan_results","r")
+		k=0
+		c=self.conn.cursor()
+		c.execute("update networks set scanned=0 where interface=?",(self.interface,));
+		for x in ifile.readlines():
+			if k > 1:
+				x=x.strip().split()
+				if x:
+					bssid=x[0]
+					flags=x[3]
+					ssid=x[-1]
+					c.execute("select rowid from networks where interface=? and bssid=?",(self.interface,bssid)) 
+					if c.fetchone():
+						if not "WPA" in flags:
+							c.execute ("update networks set key_mgmt='NONE' where interface=? and bssid=?",
+								(self.interface,bssid))
+					else:
+						if not "WPA" in flags:
+							c.execute("insert into networks (interface,ssid,bssid,flags,key_mgmt) values(?,?,?,?,'NONE')",
+								(self.interface,ssid,bssid,flags))
+						else:
+							c.execute("insert into networks (interface,ssid,bssid,flags) values(?,?,?,?)",
+								(self.interface,ssid,bssid,flags))
+					c.execute ("update networks set scanned=1 where interface=? and bssid=?", (self.interface,bssid))
+			k+=1
+		ifile.close()
+		self.conn.commit()
+		c.execute("select bssid,flags,ssid,active from networks where interface=? and scanned order by ssid",(self.interface,))
+		self.tv1.show(c.fetchall())
+		c.close()
+		self.write_wpa_supplicant_conf()
+		self.message="RUNNING"
+
+	def write_wpa_supplicant_conf(self):
+		ofile=open("/etc/wpa_supplicant.conf.new","w")
+		os.chmod("/etc/wpa_supplicant.conf.new",0o600);
+		ofile.write("ctrl_interface=/var/run/wpa_supplicant\n")
+		ofile.write("ctrl_interface_group=wheel\n")
+		c=self.conn.cursor()
+		c.execute("select ssid,bssid,key_mgmt,psk,active,flags from networks where interface=? order by ssid",(self.interface,));
+		for i in c.fetchall():
+			ssid,bssid,key,psk,active,flags=i
+			ofile.write("network={\n")
+			ofile.write("\tssid=\"%s\"\n" % (ssid))
+			ofile.write("\tbssid=%s\n" % (bssid))
+			if not "PSK" in flags:
+				ofile.write("\tkey_mgmt=NONE\n")
+			else:
+				if psk:
+					ofile.write("\tpsk=\"%s\"\n" % (psk))
+			if not active:
+				ofile.write("\tdisabled=1\n")
+			ofile.write("}\n\n")
+		c.close()
+		ofile.close()
+		os.system("mv /etc/wpa_supplicant.conf.new /etc/wpa_supplicant.conf");
+		os.system("sudo wpa_cli reconfigure")
+
+	def isactive(self,bssid):
+		return ""
+
+	def loadwpanetworks(self):
+		ifile=os.popen("sudo wpa_cli list_networks","r")
+		k=0
+		for x in ifile.readlines():
+			if k > 1:
+				x=x.strip().split()
+				if x:
+					id=x[0]
+					bssid=x[1]
+					wpanetworks[bssid]=id
+			k+=1
+		ifile.close()
+
+	def show_networks(self):
+		if not wifinetworks:
+			return
+		print "**************networks on wpa.supplicant.conf"
+		ifile=os.popen("sudo wpa_cli list_networks","r")
+		k=0
+		for x in ifile.readlines():
+			if k > 1:
+				print x.strip()
+			k+=1
+		ifile.close
+		print "***********************"
+		for i in wifinetworks.keys():
+			keytype,ssid=wifinetworks[i]
+			print "%s %-40s %s" % (i,keytype,ssid)
+		print "===============%.2d====================" %(len(wifinetworks))
+
+	def addnetworktowpa(self,bssid,psk=None):
+		if not bssid in wpanetworks:
+			ifile=os.popen("sudo wpa_cli add_network","r")
+			k=0
+			for x in ifile.readlines():
+				if k == 1:
+					print x
+					time,id=x.strip().split()
+				k+=1
+			ifile.close
+			os.system("sudo wpa_cli set_network %s bssid %s" % (id,bssid))
+		else:
+			id=wpanetworks[bssid]
+		if not psk:
+			os.system("sudo wpa_cli set_network %s key_mgmt NONE" % (id))
+		else:
+			os.system("sudo wpa_cli set_network %s psk '\"%s\"'" % (id,psk))
+		os.system("sudo wpa_cli disable_network %s" % (id))
+		return id
+
+	def clock(self):
+		try:
+			self.interface=sysctl.read("net.link.ieee80211.vap0.parent")
+		except:
+			self.interface=None
+			self.clockvl=0
+			self.message="NO WIFI INTERFACES"
+			self.window1_title("%.4d %s" % (self.clockvl,self.message))
+			self.clockvl=0
+			return gtk.TRUE
+
+		if not self.message:
+			self.message="STARTING"
+		self.window1_title("%.4d %s" % (self.clockvl,self.message))
+		if self.clockvl == 1:
+			self.rescan()
+		ifile=os.popen("ifconfig %s" % (self.interface),"r")
+		area=""
+		for i in ifile.readlines():
+			i=i.strip().split()
+			if not i:
+				continue
+			if i[0] == "status:":
+				area=area +"%s " % (i[1])
+				if i[1] == "no":
+					area=area +"%s " % (i[2])
+			elif i[0] == "ssid":
+				if i[1] != '""':
+					area=area +"%s " % (i[1])
+			elif i[0] == "inet":
+				area=area +"%s " % (i[1])
+		rc=ifile.close()
+		if rc:
+			self.message("%s CONFIG ERROR" % (self.interface))
+			self.clockvl=0
+			return gtk.TRUE
+		self.message=area
+		self.clockvl+=1
+		return gtk.TRUE
+
+	def close(self,bt):
+		self.conn.close()
+		gtk.main_quit()
+
+if __name__ == "__main__":
+	x=wifimgr()
+	if len(sys.argv) == 2:
+		x.addnetworktowpa(sys.argv[1])
+	elif len(sys.argv) == 3:
+		x.addnetworktowpa(sys.argv[1],sys.argv[2])
+	gtk.main()
+

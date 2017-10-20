@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.39 2015/11/03 01:12:48 agc Exp $
+
+SHA1 (rhythmbox-0.12.8.tar.bz2) = 5d27923cc29b81d7bfbc73d867d7976a5295f964
+RMD160 (rhythmbox-0.12.8.tar.bz2) = 072d4fa06408ebc181b40147db1575d0ef4c99fe
+SHA512 (rhythmbox-0.12.8.tar.bz2) = 12a462086724ceb19f037f9b10dcf87d81f1c948b6ce27416d37e1b700e4c2a226e18b8ae05550587dd5bcb79e2824836f100fa6901a0b13ccc560bcafbbcae1
+Size (rhythmbox-0.12.8.tar.bz2) = 5358950 bytes
+SHA1 (patch-plugins_coherence_upnp__coherence_MediaPlayer.py) = 367a6014863472ec73fccd47a32437632a4492a2
+SHA1 (patch-plugins_coherence_upnp__coherence_MediaStore.py) = 8babe8d7e5912f0fbd3a12d0c39dfecf75fef4af
+SHA1 (patch-plugins_coherence_upnp__coherence_UpnpSource.py) = 19d7de592f340639b45120d0d0e75bc5debb8d73
+SHA1 (patch-plugins_coherence_upnp__coherence_____init____.py) = 95bc80c0b6e760613f2e1ad715e05de7b45af0bb
+SHA1 (patch-plugins_status-icon_rb-status-icon-plugin.c) = 5ccc11f29d246d5d05ee3440164194a5bed06a93
+SHA1 (patch-remote_dbus_rb-client.c) = de1b458b7a8510f9aded9763947e878597e28b43
+SHA1 (patch-shell_rb-python-module.c) = 009e782c46e37d9621bd4f4751695b13e3f44e72

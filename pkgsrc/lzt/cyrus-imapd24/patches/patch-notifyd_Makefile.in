@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- notifyd/Makefile.in.orig	2012-12-01 19:57:54.000000000 +0000
++++ notifyd/Makefile.in
+@@ -71,10 +71,11 @@ NOTIFYD_LIBS = @NOTIFYD_LIBS@
+ SERVICE=../master/service.o
+ 
+ IMAP_LIBS = @IMAP_LIBS@ @LIB_RT@
++SIEVE_LIBS = @SIEVE_LIBS@
+ IMAP_COM_ERR_LIBS = @IMAP_COM_ERR_LIBS@
+ LIB_WRAP = @LIB_WRAP@
+ LIBS = @ZEPHYR_LIBS@ @LIBS@ $(IMAP_COM_ERR_LIBS)
+-DEPLIBS=../imap/mutex_fake.o ../imap/libimap.a ../lib/libcyrus.a ../lib/libcyrus_min.a @DEPLIBS@
++DEPLIBS=../imap/mutex_fake.o ../imap/libimap.a $(SIEVE_LIBS) ../lib/libcyrus.a ../lib/libcyrus_min.a @DEPLIBS@
+ 
+ PURIFY=/usr/local/bin/purify
+ PUREOPT=-best-effort

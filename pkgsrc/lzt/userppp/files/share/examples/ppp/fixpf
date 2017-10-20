@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+I=${1:-tun0}
+
+eval $(/etc/ppp/parseiface $I)
+if [ -n "$GW" ]
+then
+pfctl -a iface/$I -f - <<%
+pass in on $I reply-to ($I $GW)
+%
+fi
+service pf restart

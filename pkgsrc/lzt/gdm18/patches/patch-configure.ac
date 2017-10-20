@@ -1,0 +1,84 @@
+$NetBSD$
+
+--- configure.ac.orig	2017-07-20 02:24:03.000000000 +0000
++++ configure.ac
+@@ -643,7 +643,7 @@ have_xinput=
+ AC_CHECK_LIB(Xi, XOpenDevice, XINPUT_LIBS=-lXi)
+ if test "x$XINPUT_LIBS" = x; then
+   save_LIBS="$LIBS"
+-  for xinputpath in $x_libraries /usr/X11R6/lib /usr/openwin/lib; do
++  for xinputpath in $x_libraries /usr/X11R7/lib /usr/openwin/lib; do
+     LIBS="-L$xinputpath -lXi"
+     case "$host" in
+        *solaris*) XINPUT_RPATH_FLAGS="-R$xinputpath" 
+@@ -1006,15 +1006,15 @@ case "$host" in
+         ;;
+ esac
+ 
+-# First check with "! -h" for /usr/X11R6 and /usr/X11 since they often
++# First check with "! -h" for /usr/X11R7 and /usr/X11 since they often
+ # symlink to each other, and configure should use the more stable
+ # location (the real directory) if possible.
+ #
+-if test ! -h /usr/X11R6 -a -x /usr/X11R6/bin/X; then
+-   X_PATH="/usr/X11R6/bin"
+-   X_SERVER_PATH="/usr/X11R6/bin"
+-   X_SERVER="/usr/X11R6/bin/X"
+-   GDM_USER_PATH="$GDM_USER_PATH:/usr/X11R6/bin"
++if test ! -h /usr/X11R7 -a -x /usr/X11R7/bin/X; then
++   X_PATH="/usr/X11R7/bin"
++   X_SERVER_PATH="/usr/X11R7/bin"
++   X_SERVER="/usr/X11R7/bin/X"
++   GDM_USER_PATH="$GDM_USER_PATH:/usr/X11R7/bin"
+    X_CONFIG_OPTIONS="-audit 0"
+ elif test ! -h /usr/X11 -a -x /usr/X11/bin/X; then
+    X_PATH="/usr/X11/bin"
+@@ -1022,11 +1022,11 @@ elif test ! -h /usr/X11 -a -x /usr/X11/b
+    X_SERVER="/usr/X11/bin/X"
+    GDM_USER_PATH="$GDM_USER_PATH:/usr/X11/bin"
+    X_CONFIG_OPTIONS="-audit 0"
+-elif test -x /usr/X11R6/bin/X; then
+-   X_PATH="/usr/X11R6/bin"
+-   X_SERVER_PATH="/usr/X11R6/bin"
+-   X_SERVER="/usr/X11R6/bin/X"
+-   GDM_USER_PATH="$GDM_USER_PATH:/usr/X11R6/bin"
++elif test -x /usr/X11R7/bin/X; then
++   X_PATH="/usr/X11R7/bin"
++   X_SERVER_PATH="/usr/X11R7/bin"
++   X_SERVER="/usr/X11R7/bin/X"
++   GDM_USER_PATH="$GDM_USER_PATH:/usr/X11R7/bin"
+    X_CONFIG_OPTIONS="-audit 0"
+ elif test -x /usr/bin/Xorg; then
+    X_PATH="/usr/bin"
+@@ -1047,11 +1047,11 @@ elif test -x /usr/openwin/bin/Xsun; then
+    X_SERVER_PATH="/usr/openwin/bin"
+    X_SERVER="/usr/openwin/bin/Xsun"
+    X_CONFIG_OPTIONS="-audit 0 -nobanner"
+-elif test -x /opt/X11R6/bin/X; then
+-   X_PATH="/opt/X11R6/bin"
+-   X_SERVER_PATH="/opt/X11R6/bin"
+-   X_SERVER="/opt/X11R6/bin/X"
+-   GDM_USER_PATH="$GDM_USER_PATH:/opt/X11R6/bin"
++elif test -x /opt/X11R7/bin/X; then
++   X_PATH="/opt/X11R7/bin"
++   X_SERVER_PATH="/opt/X11R7/bin"
++   X_SERVER="/opt/X11R7/bin/X"
++   GDM_USER_PATH="$GDM_USER_PATH:/opt/X11R7/bin"
+    X_CONFIG_OPTIONS="-audit 0"   
+ elif test -x /usr/bin/X; then
+    X_PATH="/usr/bin"
+@@ -1061,10 +1061,10 @@ elif test -x /usr/bin/X; then
+ else
+    # what to do, what to do, this is wrong, but this just sets the
+    # defaults, perhaps this user is cross compiling or some such
+-   X_PATH="/usr/bin/X11:/usr/X11R6/bin:/opt/X11R6/bin"
+-   X_SERVER_PATH="/usr/X11R6/bin"
+-   X_SERVER="/usr/X11R6/bin/X"
+-   GDM_USER_PATH="$GDM_USER_PATH:/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/opt/X11R6/bin"
++   X_PATH="/usr/bin/X11:/usr/X11R7/bin:/opt/X11R7/bin"
++   X_SERVER_PATH="/usr/X11R7/bin"
++   X_SERVER="/usr/X11R7/bin/X"
++   GDM_USER_PATH="$GDM_USER_PATH:/usr/bin/X11:/usr/X11R7/bin:/usr/local/bin:/opt/X11R7/bin"
+    X_CONFIG_OPTIONS="-audit 0"
+ fi
+ 

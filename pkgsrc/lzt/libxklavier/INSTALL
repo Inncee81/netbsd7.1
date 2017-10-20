@@ -1,0 +1,16 @@
+t=/tmp/$$
+case ${STAGE} in
+POST-INSTALL)
+	if [ -d ${X11BASE}/lib/X11/xkb ]
+	then
+		find ${X11BASE}/lib/X11/xkb -name "*.xml" | \
+		while read x
+		do
+			sed -e "\;<_;s;<_;<;" -e "\;</_;s;</_;</;" < $x >$t
+			cp $t $x
+		done
+		echo XKB FIXED
+	fi
+;;
+esac
+rm -rf $t

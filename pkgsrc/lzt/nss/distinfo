@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.64 2016/11/29 22:51:12 ryoon Exp $
+
+SHA1 (nss-3.27.2.tar.gz) = b63dc5ab4608b9954ffe3edd4152c90e1b93bf6a
+RMD160 (nss-3.27.2.tar.gz) = 36e2fcf2eca8c26d597df39718835d2d3e6963a7
+SHA512 (nss-3.27.2.tar.gz) = 699847665e93fd649cb60ce6bc8f849f452779e7232a09bbeb0613f9e6c57bb81948f1ae59cc86648e41a212cda259109850ccd14546d35910deb75f5d2a13b8
+Size (nss-3.27.2.tar.gz) = 7397599 bytes
+SHA1 (patch-nss_cmd_platlibs.mk) = eaf46c50f3e140a232934c9847c9d94ff02fe95f
+SHA1 (patch-nss_cmd_shlibsign_sign.sh) = 46c32b3c5afdff97542b238acc9c862b45af8bb7
+SHA1 (patch-nss_coreconf_DragonFly.mk) = 5de37acf0b223384588c17548d4ed12c4385f454
+SHA1 (patch-nss_coreconf_OpenBSD.mk) = 6e34c679e87a604b58076e9ed43496989529105e
+SHA1 (patch-nss_coreconf_SunOS5.mk) = 00e853ef2e08ebaa28c8c7d9369b5c65f7a65102
+SHA1 (patch-nss_coreconf_arch.mk) = 34a9bc9696076a3b8085c3e4600811c7dea35e12
+SHA1 (patch-nss_coreconf_command.mk) = 5b8f52719e4feff5061f7c049a0af13a374b7b85
+SHA1 (patch-nss_coreconf_config.mk) = e05555daa0c3d10a73ba47cea8cd664eaedca1d3
+SHA1 (patch-nss_lib_Makefile) = 673f60556a218f59d272ab0218e0b6a7fb6d5c04
+SHA1 (patch-nss_lib_freebl_Makefile) = 73f25572b179f8c1deee28859de81adc70b4fb00
+SHA1 (patch-nss_lib_freebl_blapi.h) = 3059fd1c82137773898eeacffd8425163fc32bbd
+SHA1 (patch-nss_lib_freebl_config.mk) = e4212ae6258cd0cd55dbf92e12f4434118629db7
+SHA1 (patch-nss_lib_freebl_sha-fast-amd64-sun.s) = 456e56c31697e8009709dbfd93ff20229597a6c7
+SHA1 (patch-nss_lib_softoken_config.mk) = ae0c4798d06d22aa52890bfe7bfb488bebf33b0a

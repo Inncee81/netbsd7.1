@@ -1,0 +1,4 @@
+Printer driver for epson inkjet printer escpr
+works for any INK TANK
+
+port to Netbsd by Sergio Lenzi <nervoso@k1.com.br>

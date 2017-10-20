@@ -1,0 +1,49 @@
+#!/bin/sh
+
+# PROVIDE: diskless
+# REQUIRE: mountcritlocal
+# BEFORE:  tty
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name=diskless
+start_cmd=diskless_start
+stop_cmd=diskless_stop
+
+ROOTDEVICE=$(sysctl -n kern.root_device)
+
+diskless_start () {
+	for i in $(ifconfig -l)
+	do
+		if [ "$i" = "$ROOTDEVICE" ]
+		then
+			rm -f /var/log/* /var/run/* /tmp/* /var/cache/hald/* /var/yp/binding/*
+			mkdir -m 1775 -p /var/cache/hald /var/yp/binding
+			chgrp operator /var/cache/hald
+			/sbin/mount -t mfs -o -s=1m swap /tmp
+			/sbin/mount -t mfs -o union -o -s=64k swap /var/yp/binding
+			/sbin/mount -t mfs -o union -o -s=4m swap /var/run
+			/sbin/mount -t mfs -o union -o -s=4m swap /var/log
+			/sbin/mount -t mfs -o union -o -s=16m swap /var/cache/hald
+			echo DISKLESS START
+			break
+		fi
+	done
+}
+
+diskless_stop () {
+	for i in $(ifconfig -l)
+	do
+		if [ "$i" = "$ROOTDEVICE" ]
+		then
+			/sbin/umount /var/cache/hald
+			/sbin/umount /var/log
+			/sbin/umount /var/run
+			/sbin/umount /var/yp/binding
+			/sbin/umount /tmp
+			echo DISKLESS STOP
+		fi
+	done
+}
+run_rc_command "$1"

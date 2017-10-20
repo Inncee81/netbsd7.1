@@ -1,0 +1,20 @@
+/mailer.conf/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/netbsd-proto.mc/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/sendmail.sh/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-db2/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-db4/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-ffr_tls/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-fpic/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-ldap/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-libresolv/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-milter/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-sasl2/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-starttls/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-stdbool/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-tcpwrappers/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-v6/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/site.config.m4-v6-not-solaris/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/sm_os_netbsd.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/smmsp.sh/1.1.1.1/Sun Apr 16 15:28:00 2017//
+D/smf////

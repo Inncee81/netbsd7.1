@@ -1,0 +1,187 @@
+$NetBSD$
+
+--- configure.orig	2007-07-30 20:10:54.000000000 +0000
++++ configure
+@@ -10615,7 +10615,7 @@ bsdi[45]*)
+   sys_lib_search_path_spec="/shlib /usr/lib /usr/X11/lib /usr/contrib/lib /lib /usr/local/lib"
+   sys_lib_dlsearch_path_spec="/shlib /usr/lib /usr/local/lib"
+   # the default ld.so.conf also contains /usr/contrib/lib and
+-  # /usr/X11R6/lib (/usr/X11 is a link to /usr/X11R6), but let us allow
++  # /usr/X11R7/lib (/usr/X11 is a link to /usr/X11R7), but let us allow
+   # libtool to hard-code these into programs
+   ;;
+ 
+@@ -14534,7 +14534,7 @@ bsdi[45]*)
+   sys_lib_search_path_spec="/shlib /usr/lib /usr/X11/lib /usr/contrib/lib /lib /usr/local/lib"
+   sys_lib_dlsearch_path_spec="/shlib /usr/lib /usr/local/lib"
+   # the default ld.so.conf also contains /usr/contrib/lib and
+-  # /usr/X11R6/lib (/usr/X11 is a link to /usr/X11R6), but let us allow
++  # /usr/X11R7/lib (/usr/X11 is a link to /usr/X11R7), but let us allow
+   # libtool to hard-code these into programs
+   ;;
+ 
+@@ -17117,7 +17117,7 @@ bsdi[45]*)
+   sys_lib_search_path_spec="/shlib /usr/lib /usr/X11/lib /usr/contrib/lib /lib /usr/local/lib"
+   sys_lib_dlsearch_path_spec="/shlib /usr/lib /usr/local/lib"
+   # the default ld.so.conf also contains /usr/contrib/lib and
+-  # /usr/X11R6/lib (/usr/X11 is a link to /usr/X11R6), but let us allow
++  # /usr/X11R7/lib (/usr/X11 is a link to /usr/X11R7), but let us allow
+   # libtool to hard-code these into programs
+   ;;
+ 
+@@ -19707,7 +19707,7 @@ bsdi[45]*)
+   sys_lib_search_path_spec="/shlib /usr/lib /usr/X11/lib /usr/contrib/lib /lib /usr/local/lib"
+   sys_lib_dlsearch_path_spec="/shlib /usr/lib /usr/local/lib"
+   # the default ld.so.conf also contains /usr/contrib/lib and
+-  # /usr/X11R6/lib (/usr/X11 is a link to /usr/X11R6), but let us allow
++  # /usr/X11R7/lib (/usr/X11 is a link to /usr/X11R7), but let us allow
+   # libtool to hard-code these into programs
+   ;;
+ 
+@@ -21251,11 +21251,13 @@ fi
+ # Check X11 before X11Rn because it is often a symlink to the current release.
+ ac_x_header_dirs='
+ /usr/X11/include
++/usr/X11R7/include
+ /usr/X11R6/include
+ /usr/X11R5/include
+ /usr/X11R4/include
+ 
+ /usr/include/X11
++/usr/include/X11R7
+ /usr/include/X11R6
+ /usr/include/X11R5
+ /usr/include/X11R4
+@@ -21276,6 +21278,7 @@ ac_x_header_dirs='
+ 
+ /usr/include
+ /usr/local/include
++/usr/pkg/include
+ /usr/unsupported/include
+ /usr/athena/include
+ /usr/local/x11r5/include
+@@ -22421,7 +22424,7 @@ fi
+     fi
+   fi
+ 
+-  # Check for libraries that X11R6 Xt/Xaw programs need.
++  # Check for libraries that X11R7 Xt/Xaw programs need.
+   ac_save_LDFLAGS=$LDFLAGS
+   test -n "$x_libraries" && LDFLAGS="$LDFLAGS -L$x_libraries"
+   # SM needs ICE to (dynamically) link under SunOS 4.x (so we have to
+@@ -27262,7 +27265,9 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ #include <sys/statvfs.h>
++#ifndef __NetBSD__
+ #include <sys/fstyp.h>
++#endif
+ _ACEOF
+ if { (ac_try="$ac_cpp conftest.$ac_ext"
+ case "(($ac_try" in
+@@ -29728,7 +29733,7 @@ fi
+ 
+ if test "x$XINPUT_LIBS" = x; then
+   save_LIBS="$LIBS"
+-  for xinputpath in $x_libraries /usr/X11R6/lib /usr/openwin/lib; do
++  for xinputpath in $x_libraries /usr/X11R7/lib /usr/openwin/lib; do
+     LIBS="-L$xinputpath -lXi"
+     case "$host" in
+        *solaris*) XINPUT_RPATH_FLAGS="-R$xinputpath"
+@@ -31792,6 +31797,15 @@ case "$host" in
+ 	SOUND_PROGRAM=
+         GDMGNOMESESSIONCMD=gnome-session
+ 	;;
++*netbsd*)
++	GDM_USER_PATH="/bin:/usr/bin"
++	HALT_COMMAND="/sbin/shutdown -p now"
++	REBOOT_COMMAND="/sbin/shutdown -r now"
++	SUSPEND_COMMAND="/usr/sbin/zzz"
++	XSESSION_SHELL=/bin/sh
++	SOUND_PROGRAM=/usr/bin/audioplay
++	GDMGNOMESESSIONCMD="dbus-launch --exit-with-session gnome-session"
++	;;
+ *)
+         GDM_USER_PATH="/bin:/usr/bin"
+         HALT_COMMAND="/usr/bin/poweroff;/sbin/poweroff;/sbin/shutdown -h now;/usr/sbin/shutdown -h now"
+@@ -31803,15 +31817,15 @@ case "$host" in
+         ;;
+ esac
+ 
+-# First check with "! -h" for /usr/X11R6 and /usr/X11 since they often
++# First check with "! -h" for /usr/X11R7 and /usr/X11 since they often
+ # symlink to each other, and configure should use the more stable
+ # location (the real directory) if possible.
+ #
+-if test ! -h /usr/X11R6 -a -x /usr/X11R6/bin/X; then
+-   X_PATH="/usr/X11R6/bin"
+-   X_SERVER_PATH="/usr/X11R6/bin"
+-   X_SERVER="/usr/X11R6/bin/X"
+-   GDM_USER_PATH="$GDM_USER_PATH:/usr/X11R6/bin"
++if test ! -h /usr/X11R7 -a -x /usr/X11R7/bin/X; then
++   X_PATH="/usr/X11R7/bin"
++   X_SERVER_PATH="/usr/X11R7/bin"
++   X_SERVER="/usr/X11R7/bin/X"
++   GDM_USER_PATH="$GDM_USER_PATH:/usr/X11R7/bin"
+    X_CONFIG_OPTIONS="-audit 0"
+ elif test ! -h /usr/X11 -a -x /usr/X11/bin/X; then
+    X_PATH="/usr/X11/bin"
+@@ -31819,11 +31833,11 @@ elif test ! -h /usr/X11 -a -x /usr/X11/b
+    X_SERVER="/usr/X11/bin/X"
+    GDM_USER_PATH="$GDM_USER_PATH:/usr/X11/bin"
+    X_CONFIG_OPTIONS="-audit 0"
+-elif test -x /usr/X11R6/bin/X; then
+-   X_PATH="/usr/X11R6/bin"
+-   X_SERVER_PATH="/usr/X11R6/bin"
+-   X_SERVER="/usr/X11R6/bin/X"
+-   GDM_USER_PATH="$GDM_USER_PATH:/usr/X11R6/bin"
++elif test -x /usr/X11R7/bin/X; then
++   X_PATH="/usr/X11R7/bin"
++   X_SERVER_PATH="/usr/X11R7/bin"
++   X_SERVER="/usr/X11R7/bin/X"
++   GDM_USER_PATH="$GDM_USER_PATH:/usr/X11R7/bin"
+    X_CONFIG_OPTIONS="-audit 0"
+ elif test -x /usr/bin/Xorg; then
+    X_PATH="/usr/bin"
+@@ -31844,26 +31858,32 @@ elif test -x /usr/openwin/bin/Xsun; then
+    X_SERVER_PATH="/usr/openwin/bin"
+    X_SERVER="/usr/openwin/bin/Xsun"
+    X_CONFIG_OPTIONS="-audit 0 -nobanner"
+-elif test -x /opt/X11R6/bin/X; then
+-   X_PATH="/opt/X11R6/bin"
+-   X_SERVER_PATH="/opt/X11R6/bin"
+-   X_SERVER="/opt/X11R6/bin/X"
+-   GDM_USER_PATH="$GDM_USER_PATH:/opt/X11R6/bin"
++elif test -x /opt/X11R7/bin/X; then
++   X_PATH="/opt/X11R7/bin"
++   X_SERVER_PATH="/opt/X11R7/bin"
++   X_SERVER="/opt/X11R7/bin/X"
++   GDM_USER_PATH="$GDM_USER_PATH:/opt/X11R7/bin"
+    X_CONFIG_OPTIONS="-audit 0"
+ elif test -x /usr/bin/X; then
+    X_PATH="/usr/bin"
+    X_SERVER_PATH="/usr/bin"
+    X_SERVER="/usr/bin/X"
+    X_CONFIG_OPTIONS="-audit 0"
++elif test -x ${X11BASE}/bin/X; then
++   X_PATH="${X11BASE}/bin"
++   X_SERVER_PATH="${X11BASE}/bin"
++   X_SERVER="${X11BASE}/bin/X"
++   X_CONFIG_OPTIONS="-audit 0"
+ else
+    # what to do, what to do, this is wrong, but this just sets the
+    # defaults, perhaps this user is cross compiling or some such
+-   X_PATH="/usr/bin/X11:/usr/X11R6/bin:/opt/X11R6/bin"
+-   X_SERVER_PATH="/usr/X11R6/bin"
+-   X_SERVER="/usr/X11R6/bin/X"
+-   GDM_USER_PATH="$GDM_USER_PATH:/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/opt/X11R6/bin"
++   X_PATH="/usr/bin/X11:/usr/X11R7/bin:/opt/X11R7/bin"
++   X_SERVER_PATH="/usr/X11R7/bin"
++   X_SERVER="/usr/X11R7/bin/X"
++   GDM_USER_PATH="$GDM_USER_PATH:/usr/bin/X11:/usr/X11R7/bin:/usr/pkg/bin"
+    X_CONFIG_OPTIONS="-audit 0"
+ fi
++X_CONFIG_OPTIONS="$X_SERVER_ARGS $X_CONFIG_OPTIONS"
+ 
+ # Don't add bindir to GDM_USER_PATH if it is already in the PATH.
+ # If it is /bin or /usr/bin, for example.

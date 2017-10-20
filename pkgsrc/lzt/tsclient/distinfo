@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (tsclient-0.150.tar.gz) = 75e061ba365a826c1b88623cedf33736578c8a3c
+RMD160 (tsclient-0.150.tar.gz) = b4263f667bdf6c4d1f4d5b10ccb77b3a1c356252
+SHA512 (tsclient-0.150.tar.gz) = 95daa3b4c2c86a68e96767baed215a2bacf821033b9013f220622991de6ef5368764b9fa62a3665964c73750105acb4e716811bba87ae8cdff7e2dc6751c204b
+Size (tsclient-0.150.tar.gz) = 495975 bytes
+SHA1 (patch-src_support.c) = 1dbccd32d252955a75bbb5d0a3af113246003a9a

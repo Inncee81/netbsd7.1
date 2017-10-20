@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.86 2016/08/21 07:41:25 wiz Exp $
+
+SHA1 (gimp-2.8.18.tar.bz2) = 42434a0782c37803fbd184dbb9b648be887f4f40
+RMD160 (gimp-2.8.18.tar.bz2) = b5ded6e919b0d4c6670fc1ba0642a21d4185edd0
+SHA512 (gimp-2.8.18.tar.bz2) = 64b259aa5aa9d5afbf1da148ec7f162841f62db2f903c480710273362df62f00344e276b705a13619855e54948aabcd1d9a3788993360f2a52a58189b62fec2f
+Size (gimp-2.8.18.tar.bz2) = 20824198 bytes
+SHA1 (patch-app_Makefile.in) = d88ddd43fc5da2cd8b9d2977c4d2b32020b5a8cf
+SHA1 (patch-app_config_Makefile.in) = 1ef3b3bbee876aec30905039f8bdb97955f1a78b
+SHA1 (patch-configure) = e557f7b2f9e3e385ceca540c88d4a6d7e555a75c
+SHA1 (patch-devel-docs_app_Makefile.in) = bea5ea43a735b8b9a1fa65dde22b7f208876e6d8
+SHA1 (patch-etc_Makefile.in) = 147a0a0ee346850c821d6a269cc65ae7260b6345
+SHA1 (patch-plug-ins_common_file-mng.c) = 2987d54e7b30b3950e86168065e6b3e654a5f8f4
+SHA1 (patch-plug-ins_script-fu_script-fu-server.c) = 858120bd262d302f800477fba9a58d26f1e58587
+SHA1 (patch-plug-ins_twain_tw__mac.c) = d2894599eabe06f760266fac1bad5400cb2a404b

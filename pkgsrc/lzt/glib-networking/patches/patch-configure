@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- configure.orig	2016-03-21 21:51:20.000000000 +0000
++++ configure
+@@ -14712,7 +14712,7 @@ else
+   ENABLE_ALWAYS_BUILD_TESTS_FALSE=
+ fi
+ 
+-  if test "$ENABLE_INSTALLED_TESTS" == "1"; then
++  if test "$ENABLE_INSTALLED_TESTS" = "1"; then
+     installed_test_metadir=${datadir}/installed-tests/glib-networking
+ 
+     installed_testdir=${libexecdir}/installed-tests/glib-networking

@@ -1,0 +1,8 @@
+/patch-ao/1.2/Mon Mar 16 01:36:14 2015//
+/patch-opcodes_i386-dis_c/1.1/Sun Mar 15 14:56:46 2015//
+/patch-sim_ppc_emul_netbsd.c/1.1/Sun Mar 15 14:56:46 2015//
+/patch-Makefile.in/1.2/Fri Apr 15 01:00:29 2016//
+/patch-gdb_config_i386_nbsd64.mh/1.1/Mon Jun  5 11:38:51 2017//
+/patch-gdb_x86-bsd-nat.c/1.1/Mon Jun  5 11:38:51 2017//
+/patch-gdb_bsd-kvm.c/1.3/Sat Jun 24 01:00:37 2017//
+D

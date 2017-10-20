@@ -1,0 +1,34 @@
+t=/tmp/$$
+echo ===============================
+echo RUNNING INSTALL STAGE: $STAGE
+echo ===============================
+
+case ${STAGE} in
+PRE-INSTALL)
+mkdir -p /etc/mail
+;;
+POST-INSTALL)
+cp /usr/pkg/share/examples/sendmail/mailer.conf /etc
+(cd /usr/pkg/share/examples/rc.d: cp sendmail saslauthd /etc/rc.d)
+sed \
+	-e "/smmsp=/d" \
+	-e "/saslauthd=/d" \
+	-e "/sendmail=/d" \
+/etc/rc.conf > $t
+cp $t /etc/rc.conf
+rm -f $t
+if [ ! -s /usr/libexec/postfix/sendmail ]
+then
+	echo "sendmail=YES"  >> /etc/rc.conf
+%
+echo "saslauthd=YES" >> /etc/rc.conf
+cd /etc/mail
+make
+/etc/rc.d/saslauthd restart
+/etc/rc.d/sendmail restart
+fi
+;;
+esac
+/etc/rc.d/saslauthd restart
+/etc/rc.d/sendmail restart
+rm -rf $t

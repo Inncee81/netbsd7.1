@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.11 2015/11/03 03:27:28 agc Exp $
+
+SHA1 (glade-2.12.2.tar.bz2) = a43d89b147296244ba4b2efc67e8772d5155afff
+RMD160 (glade-2.12.2.tar.bz2) = 6035749c249492279794d508d3558a8aac17b6f0
+SHA512 (glade-2.12.2.tar.bz2) = c59e2163fe7ad8be7ba1ae97c09026b879cd99c10509e27e1ed6beae1de7d0dd1dd710e75815c348e82cff6b02b604476a8494f2cbabbc1742fd0e4d2e26bcf6
+Size (glade-2.12.2.tar.bz2) = 1785723 bytes
+SHA1 (patch-glade_gbwidgets_gbclist.c) = a826af9d4ddcc435db18f34d254c2f280e33b5ff
+SHA1 (patch-glade_glade__keys__dialog.c) = 8f2d9276dec98bcc47a2999696339577746e3044
+SHA1 (patch-glade_glade__menu__editor.c) = 8b8f01507ac3fa6f74cb57691d585101a3608f7b
+SHA1 (patch-glade_glade__project__view.h) = 39d9aa9baaff55b04f450cb2d5228782ac857ecf

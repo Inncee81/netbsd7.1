@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- ptclient/Makefile.in.orig	2012-12-01 19:57:54.000000000 +0000
++++ ptclient/Makefile.in
+@@ -57,10 +57,11 @@ CPPFLAGS = -I.. -I$(srcdir)/../imap -I$(
+ AFS_LDFLAGS = @AFS_LDFLAGS@ @COM_ERR_LDFLAGS@
+ AFS_LIBS = @AFS_LIBS@
+ IMAP_LIBS = @IMAP_LIBS@ @LIB_RT@
++SIEVE_LIBS = @SIEVE_LIBS@
+ LIBS = $(IMAP_LIBS) @COM_ERR_LIBS@
+ LIB_SASL = @LIB_SASL@
+ LIB_WRAP = @LIB_WRAP@
+-DEPLIBS = ../imap/libimap.a ../lib/libcyrus.a ../lib/libcyrus_min.a @DEPLIBS@
++DEPLIBS = ../imap/libimap.a $(SIEVE_LIBS) ../lib/libcyrus.a ../lib/libcyrus_min.a @DEPLIBS@ 
+ UTIL_LIBS = ../imap/mutex_fake.o ../imap/cli_fatal.o
+ 
+ LDAP_LIBS=@LDAP_LIBS@

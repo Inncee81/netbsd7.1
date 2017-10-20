@@ -1,0 +1,9 @@
+/patch-src_pngread.c/1.1/Sun Aug  7 20:36:20 2011//
+/patch-src_pngwrite.c/1.1/Sun Aug  7 20:36:20 2011//
+/patch-src_tiffread.c/1.2/Mon Jul 30 01:02:17 2012//
+/patch-src_gifread.c/1.2/Sun May 25 01:05:43 2014//
+/patch-src_gifwrite.c/1.2/Sun May 25 01:05:43 2014//
+/patch-OMakefile/1.3/Mon Sep 19 01:00:42 2016//
+/patch-src_jpegread.c/1.2/Mon Sep 19 01:00:42 2016//
+/patch-src_tiffwrite.c/1.2/Mon Sep 19 01:00:42 2016//
+D

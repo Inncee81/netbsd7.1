@@ -1,0 +1,30 @@
+--- /tmp/libreoffice/slideshow/source/engine/opengl/TransitionImpl.cxx	2017-01-26 20:22:46.000000000 -0200
++++ slideshow/source/engine/opengl/TransitionImpl.cxx	2017-07-17 02:05:15.000000000 -0300
+@@ -926,7 +926,7 @@
+ 
+ inline double randFromNeg1to1()
+ {
+-    return comphelper::rng::uniform_real_distribution(-1.0, std::nextafter(1.0, DBL_MAX));
++    return comphelper::rng::uniform_real_distribution(-1.0, nextafter(1.0, DBL_MAX));
+ }
+ 
+ // TODO(Q3): extract to basegfx
+--- /tmp/libreoffice/vcl/workben/vcldemo.cxx	2017-01-26 20:22:46.000000000 -0200
++++ vcl/workben/vcldemo.cxx	2017-07-17 02:05:15.000000000 -0300
+@@ -440,14 +440,14 @@
+                 {
+                     float nFontMagnitude = 0.25f;
+                     // random font size to avoid buffering
+-                    nFontHeight = 1 + nFontMagnitude * (0.9 + comphelper::rng::uniform_real_distribution(0.0, std::nextafter(0.1, DBL_MAX))) * (r.Bottom() - r.Top());
++                    nFontHeight = 1 + nFontMagnitude * (0.9 + comphelper::rng::uniform_real_distribution(0.0, nextafter(0.1, DBL_MAX))) * (r.Bottom() - r.Top());
+                     nFontIndex=0;
+                     nFontColorIndex=0;
+                 }
+                 else
+                 {
+                     // random font size to avoid buffering
+-                    nFontHeight = 1 + i * (0.9 + comphelper::rng::uniform_real_distribution(0.0, std::nextafter(0.1, DBL_MAX))) * (r.Top() - r.Bottom()) / nPrintNumCopies;
++                    nFontHeight = 1 + i * (0.9 + comphelper::rng::uniform_real_distribution(0.0, nextafter(0.1, DBL_MAX))) * (r.Top() - r.Bottom()) / nPrintNumCopies;
+                     nFontIndex = (i % aFontNames.size());
+                     nFontColorIndex=(i % aFontNames.size());
+                 }

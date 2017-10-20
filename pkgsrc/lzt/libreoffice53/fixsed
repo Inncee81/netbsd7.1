@@ -1,0 +1,29 @@
+#!/bin/sh
+
+t=/tmp/$$
+
+while [ $# -gt 0 ]
+do
+	find "$1" -type f \! -name "*.orig" -print0 | \
+	xargs -0 grep -- "sed -i" | \
+	awk -F:  '{print $1}' | \
+	sort -u | \
+	while read x
+	do
+		if grep -q "gsed -i" "$x"
+		then
+			continue
+		fi
+		if [ ! -s "${x}.orig" ]
+		then
+			cp "$x" "${x}.orig"
+		fi
+		sed \
+			-e "s/sed -i /gsed -i /" \
+			-e "s/sed -ie /gsed -i -e /" \
+			"$x" > $t
+		mv $t "$x"
+		echo "$x" OK
+	done
+	shift
+done

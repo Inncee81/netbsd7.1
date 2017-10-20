@@ -1,0 +1,7 @@
+.include		"../../security/cyrus-saslauthd/buildlink3.mk"
+PLIST_SRC_DFLT+=        ${PKGSRCDIR}/${PKGPATH}/PLIST.lzt
+
+pre-install:
+	${MKDIR} ${DESTDIR}${PREFIX}/lib/sasl2
+	cp Sendmail.conf ${DESTDIR}${PREFIX}/lib/sasl2
+	tar cf - etc | tar xpvf - -C ${DESTDIR}

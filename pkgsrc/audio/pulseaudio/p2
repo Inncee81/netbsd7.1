@@ -1,0 +1,240 @@
+--- PLIST	2017-09-08 22:00:30.000000000 -0300
++++ p1	2017-09-21 08:24:36.000000000 -0300
+@@ -1,18 +1,17 @@
+-@comment $NetBSD: PLIST,v 1.25 2017/09/08 02:27:44 ryoon Exp $
++@comment $NetBSD$
+ bin/esdcompat
+ bin/pacat
+ bin/pacmd
+ bin/pactl
+-${PLIST.oss}bin/padsp
++bin/padsp
+ bin/pamon
+ bin/paplay
+ bin/parec
+ bin/parecord
+ bin/pasuspender
+-${PLIST.x11}bin/pax11publish
++bin/pax11publish
+ bin/pulseaudio
+-${PLIST.fftw}bin/qpaeq
+-${PLIST.x11}bin/start-pulseaudio-x11
++bin/start-pulseaudio-x11
+ include/pulse/cdecl.h
+ include/pulse/channelmap.h
+ include/pulse/context.h
+@@ -53,14 +52,12 @@
+ lib/pkgconfig/libpulse-mainloop-glib.pc
+ lib/pkgconfig/libpulse-simple.pc
+ lib/pkgconfig/libpulse.pc
+-${PLIST.alsa}lib/pulse-${PKGVERSION}/modules/libalsa-util.a
+-${PLIST.alsa}lib/pulse-${PKGVERSION}/modules/libalsa-util.so
+-${PLIST.avahi}lib/pulse-${PKGVERSION}/modules/libavahi-wrap.a
+-${PLIST.avahi}lib/pulse-${PKGVERSION}/modules/libavahi-wrap.so
++lib/pulse-${PKGVERSION}/modules/libavahi-wrap.a
++lib/pulse-${PKGVERSION}/modules/libavahi-wrap.so
+ lib/pulse-${PKGVERSION}/modules/libcli.a
+ lib/pulse-${PKGVERSION}/modules/libcli.so
+-${PLIST.oss}lib/pulse-${PKGVERSION}/modules/liboss-util.a
+-${PLIST.oss}lib/pulse-${PKGVERSION}/modules/liboss-util.so
++lib/pulse-${PKGVERSION}/modules/liboss-util.a
++lib/pulse-${PKGVERSION}/modules/liboss-util.so
+ lib/pulse-${PKGVERSION}/modules/libprotocol-cli.a
+ lib/pulse-${PKGVERSION}/modules/libprotocol-cli.so
+ lib/pulse-${PKGVERSION}/modules/libprotocol-esound.a
+@@ -75,20 +72,12 @@
+ lib/pulse-${PKGVERSION}/modules/libraop.so
+ lib/pulse-${PKGVERSION}/modules/librtp.a
+ lib/pulse-${PKGVERSION}/modules/librtp.so
+-${PLIST.alsa}lib/pulse-${PKGVERSION}/modules/module-alsa-card.a
+-${PLIST.alsa}lib/pulse-${PKGVERSION}/modules/module-alsa-card.so
+-${PLIST.alsa}lib/pulse-${PKGVERSION}/modules/module-alsa-sink.a
+-${PLIST.alsa}lib/pulse-${PKGVERSION}/modules/module-alsa-sink.so
+-${PLIST.alsa}lib/pulse-${PKGVERSION}/modules/module-alsa-source.a
+-${PLIST.alsa}lib/pulse-${PKGVERSION}/modules/module-alsa-source.so
+ lib/pulse-${PKGVERSION}/modules/module-allow-passthrough.a
+ lib/pulse-${PKGVERSION}/modules/module-allow-passthrough.so
+ lib/pulse-${PKGVERSION}/modules/module-always-sink.a
+ lib/pulse-${PKGVERSION}/modules/module-always-sink.so
+ lib/pulse-${PKGVERSION}/modules/module-augment-properties.a
+ lib/pulse-${PKGVERSION}/modules/module-augment-properties.so
+-${PLIST.bonjour}lib/pulse-${PKGVERSION}/modules/module-bonjour-publish.a
+-${PLIST.bonjour}lib/pulse-${PKGVERSION}/modules/module-bonjour-publish.so
+ lib/pulse-${PKGVERSION}/modules/module-card-restore.a
+ lib/pulse-${PKGVERSION}/modules/module-card-restore.so
+ lib/pulse-${PKGVERSION}/modules/module-cli-protocol-tcp.a
+@@ -103,10 +92,6 @@
+ lib/pulse-${PKGVERSION}/modules/module-combine.so
+ lib/pulse-${PKGVERSION}/modules/module-console-kit.a
+ lib/pulse-${PKGVERSION}/modules/module-console-kit.so
+-${PLIST.coreaudio}lib/pulse-${PKGVERSION}/modules/module-coreaudio-detect.a
+-${PLIST.coreaudio}lib/pulse-${PKGVERSION}/modules/module-coreaudio-detect.so
+-${PLIST.coreaudio}lib/pulse-${PKGVERSION}/modules/module-coreaudio-device.a
+-${PLIST.coreaudio}lib/pulse-${PKGVERSION}/modules/module-coreaudio-device.so
+ lib/pulse-${PKGVERSION}/modules/module-dbus-protocol.a
+ lib/pulse-${PKGVERSION}/modules/module-dbus-protocol.so
+ lib/pulse-${PKGVERSION}/modules/module-default-device-restore.a
+@@ -119,8 +104,6 @@
+ lib/pulse-${PKGVERSION}/modules/module-device-restore.so
+ lib/pulse-${PKGVERSION}/modules/module-echo-cancel.a
+ lib/pulse-${PKGVERSION}/modules/module-echo-cancel.so
+-${PLIST.fftw}lib/pulse-${PKGVERSION}/modules/module-equalizer-sink.a
+-${PLIST.fftw}lib/pulse-${PKGVERSION}/modules/module-equalizer-sink.so
+ lib/pulse-${PKGVERSION}/modules/module-esound-compat-spawnfd.a
+ lib/pulse-${PKGVERSION}/modules/module-esound-compat-spawnfd.so
+ lib/pulse-${PKGVERSION}/modules/module-esound-compat-spawnpid.a
+@@ -141,14 +124,18 @@
+ lib/pulse-${PKGVERSION}/modules/module-http-protocol-unix.so
+ lib/pulse-${PKGVERSION}/modules/module-intended-roles.a
+ lib/pulse-${PKGVERSION}/modules/module-intended-roles.so
++lib/pulse-${PKGVERSION}/modules/module-jack-sink.a
++lib/pulse-${PKGVERSION}/modules/module-jack-sink.so
++lib/pulse-${PKGVERSION}/modules/module-jack-source.a
++lib/pulse-${PKGVERSION}/modules/module-jack-source.so
++lib/pulse-${PKGVERSION}/modules/module-jackdbus-detect.a
++lib/pulse-${PKGVERSION}/modules/module-jackdbus-detect.so
+ lib/pulse-${PKGVERSION}/modules/module-ladspa-sink.a
+ lib/pulse-${PKGVERSION}/modules/module-ladspa-sink.so
+ lib/pulse-${PKGVERSION}/modules/module-loopback.a
+ lib/pulse-${PKGVERSION}/modules/module-loopback.so
+ lib/pulse-${PKGVERSION}/modules/module-match.a
+ lib/pulse-${PKGVERSION}/modules/module-match.so
+-${PLIST.evdev}lib/pulse-${PKGVERSION}/modules/module-mmkbd-evdev.a
+-${PLIST.evdev}lib/pulse-${PKGVERSION}/modules/module-mmkbd-evdev.so
+ lib/pulse-${PKGVERSION}/modules/module-native-protocol-fd.a
+ lib/pulse-${PKGVERSION}/modules/module-native-protocol-fd.so
+ lib/pulse-${PKGVERSION}/modules/module-native-protocol-tcp.a
+@@ -159,16 +146,16 @@
+ lib/pulse-${PKGVERSION}/modules/module-null-sink.so
+ lib/pulse-${PKGVERSION}/modules/module-null-source.a
+ lib/pulse-${PKGVERSION}/modules/module-null-source.so
+-${PLIST.oss}lib/pulse-${PKGVERSION}/modules/module-oss.a
+-${PLIST.oss}lib/pulse-${PKGVERSION}/modules/module-oss.so
++lib/pulse-${PKGVERSION}/modules/module-oss.a
++lib/pulse-${PKGVERSION}/modules/module-oss.so
+ lib/pulse-${PKGVERSION}/modules/module-pipe-sink.a
+ lib/pulse-${PKGVERSION}/modules/module-pipe-sink.so
+ lib/pulse-${PKGVERSION}/modules/module-pipe-source.a
+ lib/pulse-${PKGVERSION}/modules/module-pipe-source.so
+ lib/pulse-${PKGVERSION}/modules/module-position-event-sounds.a
+ lib/pulse-${PKGVERSION}/modules/module-position-event-sounds.so
+-${PLIST.avahi}lib/pulse-${PKGVERSION}/modules/module-raop-discover.a
+-${PLIST.avahi}lib/pulse-${PKGVERSION}/modules/module-raop-discover.so
++lib/pulse-${PKGVERSION}/modules/module-raop-discover.a
++lib/pulse-${PKGVERSION}/modules/module-raop-discover.so
+ lib/pulse-${PKGVERSION}/modules/module-raop-sink.a
+ lib/pulse-${PKGVERSION}/modules/module-raop-sink.so
+ lib/pulse-${PKGVERSION}/modules/module-remap-sink.a
+@@ -195,8 +182,6 @@
+ lib/pulse-${PKGVERSION}/modules/module-sine-source.so
+ lib/pulse-${PKGVERSION}/modules/module-sine.a
+ lib/pulse-${PKGVERSION}/modules/module-sine.so
+-${PLIST.sun}lib/pulse-${PKGVERSION}/modules/module-solaris.a
+-${PLIST.sun}lib/pulse-${PKGVERSION}/modules/module-solaris.so
+ lib/pulse-${PKGVERSION}/modules/module-stream-restore.a
+ lib/pulse-${PKGVERSION}/modules/module-stream-restore.so
+ lib/pulse-${PKGVERSION}/modules/module-suspend-on-idle.a
+@@ -221,21 +206,21 @@
+ lib/pulse-${PKGVERSION}/modules/module-virtual-surround-sink.so
+ lib/pulse-${PKGVERSION}/modules/module-volume-restore.a
+ lib/pulse-${PKGVERSION}/modules/module-volume-restore.so
+-${PLIST.x11}lib/pulse-${PKGVERSION}/modules/module-x11-bell.a
+-${PLIST.x11}lib/pulse-${PKGVERSION}/modules/module-x11-bell.so
+-${PLIST.x11}lib/pulse-${PKGVERSION}/modules/module-x11-cork-request.a
+-${PLIST.x11}lib/pulse-${PKGVERSION}/modules/module-x11-cork-request.so
+-${PLIST.x11}lib/pulse-${PKGVERSION}/modules/module-x11-publish.a
+-${PLIST.x11}lib/pulse-${PKGVERSION}/modules/module-x11-publish.so
+-${PLIST.x11}lib/pulse-${PKGVERSION}/modules/module-x11-xsmp.a
+-${PLIST.x11}lib/pulse-${PKGVERSION}/modules/module-x11-xsmp.so
+-${PLIST.avahi}lib/pulse-${PKGVERSION}/modules/module-zeroconf-discover.a
+-${PLIST.avahi}lib/pulse-${PKGVERSION}/modules/module-zeroconf-discover.so
+-${PLIST.avahi}lib/pulse-${PKGVERSION}/modules/module-zeroconf-publish.a
+-${PLIST.avahi}lib/pulse-${PKGVERSION}/modules/module-zeroconf-publish.so
++lib/pulse-${PKGVERSION}/modules/module-x11-bell.a
++lib/pulse-${PKGVERSION}/modules/module-x11-bell.so
++lib/pulse-${PKGVERSION}/modules/module-x11-cork-request.a
++lib/pulse-${PKGVERSION}/modules/module-x11-cork-request.so
++lib/pulse-${PKGVERSION}/modules/module-x11-publish.a
++lib/pulse-${PKGVERSION}/modules/module-x11-publish.so
++lib/pulse-${PKGVERSION}/modules/module-x11-xsmp.a
++lib/pulse-${PKGVERSION}/modules/module-x11-xsmp.so
++lib/pulse-${PKGVERSION}/modules/module-zeroconf-discover.a
++lib/pulse-${PKGVERSION}/modules/module-zeroconf-discover.so
++lib/pulse-${PKGVERSION}/modules/module-zeroconf-publish.a
++lib/pulse-${PKGVERSION}/modules/module-zeroconf-publish.so
+ lib/pulseaudio/libpulsecommon-${PKGVERSION}.la
+ lib/pulseaudio/libpulsecore-${PKGVERSION}.la
+-${PLIST.oss}lib/pulseaudio/libpulsedsp.la
++lib/pulseaudio/libpulsedsp.la
+ man/man1/esdcompat.1
+ man/man1/pacat.1
+ man/man1/pacmd.1
+@@ -266,7 +251,7 @@
+ share/examples/pulseaudio/daemon.conf
+ share/examples/pulseaudio/default.pa
+ share/examples/pulseaudio/pulseaudio-system.conf
+-${PLIST.x11}share/examples/pulseaudio/pulseaudio.desktop
++share/examples/pulseaudio/pulseaudio.desktop
+ share/examples/pulseaudio/system.pa
+ share/locale/as/LC_MESSAGES/pulseaudio.mo
+ share/locale/be/LC_MESSAGES/pulseaudio.mo
+@@ -312,53 +297,6 @@
+ share/locale/uk/LC_MESSAGES/pulseaudio.mo
+ share/locale/zh_CN/LC_MESSAGES/pulseaudio.mo
+ share/locale/zh_TW/LC_MESSAGES/pulseaudio.mo
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-aux.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-dock-mic.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-fm.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-front-mic.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-headphone-mic.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-headset-mic.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-internal-mic-always.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-internal-mic.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-linein.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-mic-line.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-mic.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-mic.conf.common
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-rear-mic.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-tvtuner.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input-video.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-input.conf.common
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output-headphones-2.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output-headphones.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output-lineout.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output-mono.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output-speaker-always.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output-speaker.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-0.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-1.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-2.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-3.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-4.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-5.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-6.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/hdmi-output-7.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/paths/iec958-stereo-output.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/default.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/force-speaker-and-int-mic.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/force-speaker.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/kinect-audio.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/maudio-fasttrack-pro.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-audio4dj.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-audio8dj.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-korecontroller.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktor-audio10.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktor-audio2.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktor-audio6.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/native-instruments-traktorkontrol-s4.conf
+-${PLIST.alsa}share/pulseaudio/alsa-mixer/profile-sets/sb-omni-surround-5.1.conf
+ share/vala/vapi/libpulse-mainloop-glib.deps
+ share/vala/vapi/libpulse-mainloop-glib.vapi
+ share/vala/vapi/libpulse-simple.deps
+@@ -366,3 +304,5 @@
+ share/vala/vapi/libpulse.deps
+ share/vala/vapi/libpulse.vapi
+ share/zsh/site-functions/_pulseaudio
++@pkgdir share/examples/rc.d
++@pkgdir share/examples/pulse

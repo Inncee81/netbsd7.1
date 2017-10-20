@@ -1,0 +1,31 @@
+#!/bin/sh
+
+export PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/pkg/sbin:/usr/pkg/bin
+
+u=3
+label=ppptun
+gw=192.168.202.1
+
+cd /etc/ppp
+
+if [ ! -s /var/run/tun${u}.pid ]
+then
+	ppp -unit $u -ddial $label
+	sleep 5
+fi
+
+if ping -c 3 $gw > /dev/null 2>&1
+then
+   exit 0
+fi
+[ -s /var/run/tun${u}.pid ] && kill `cat /var/run/tun${u}.pid` 
+sleep 1
+[ -s /var/run/tun${u}.pid ] && kill -9 `cat /var/run/tun${u}.pid` 
+sleep 1
+ppp -unit $u -ddial $label
+if [ -s /var/run/ping${u}.pid ]
+then
+        kill $(cat var/run/ping${u}.pid)
+fi
+
+daemon -f -p /var/run/ping${u}.pid ping $gw

@@ -1,0 +1,13 @@
+/replace-localedir.mk/1.2/Fri Aug  4 07:03:01 2006//
+/bsd.configure-vars.mk/1.4/Fri Jul 13 01:06:26 2007//
+/cmake-rewrite.awk/1.2/Fri Dec 21 01:08:27 2007//
+/bsd.configure.mk/1.11/Sat Jan  5 01:08:52 2008//
+/install-sh-override.mk/1.2/Fri Feb  8 01:08:26 2008//
+/configure.mk/1.25/Sat Jun  2 01:02:21 2012//
+/replace-interpreter.mk/1.13/Thu Apr 18 01:02:23 2013//
+/config-override.mk/1.7/Mon Oct 14 01:18:08 2013//
+/pkg-config-override.mk/1.4/Tue Jul 22 01:03:39 2014//
+/gnu-configure.mk/1.17/Sun Aug 24 01:11:40 2014//
+/cmake.mk/1.14/Sat Oct 22 01:00:47 2016//
+/libtool-override.mk/1.13/Tue Mar  7 01:01:00 2017//
+D

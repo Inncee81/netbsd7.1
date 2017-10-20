@@ -1,0 +1,22 @@
+/patch-Makefile.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-config.h.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-configure/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-daemon_Makefile.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libgnomevfs_Makefile.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libgnomevfs_gnome-vfs-cdrom.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libgnomevfs_gnome-vfs-job.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libgnomevfs_gnome-vfs-pty.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libgnomevfs_gnome-vfs-unix-mounts.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libgnomevfs_gnome-vfs-utils.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libgnomevfs_xdgmime.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libgnomevfs_xdgmimealias.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libgnomevfs_xdgmimecache.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libgnomevfs_xdgmimeparent.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-modules_Makefile.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-modules_bzip2-method.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-modules_file-method-acl.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-modules_file-method.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-modules_fstype.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-modules_inotify-kernel.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-modules_sftp-method.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+D

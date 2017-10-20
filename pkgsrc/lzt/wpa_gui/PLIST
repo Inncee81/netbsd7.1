@@ -1,0 +1,5 @@
+@comment $NetBSD$
+man/man8/wpa_gui.8
+sbin/wpa_gui
+share/applications/wpa_gui.desktop
+share/icons/hicolor/64x64/apps/wpa_gui.png

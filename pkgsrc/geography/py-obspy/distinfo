@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2017/03/04 11:05:35 wen Exp $
+
+SHA1 (obspy-1.0.3.zip) = 3a3c4dcf0d0ae4ac5f075ed933c159f43b8e9b6d
+RMD160 (obspy-1.0.3.zip) = 56da2759068e3cdd7d4a78d21d28883947606296
+SHA512 (obspy-1.0.3.zip) = 0c22179e14ec564f711ceece93ee201ca316c5b7f2179c31da83a125000c939d2532511114498a3e9a43fa297a7a22309d919a517aecaa7dde183de44096575f
+Size (obspy-1.0.3.zip) = 22798404 bytes

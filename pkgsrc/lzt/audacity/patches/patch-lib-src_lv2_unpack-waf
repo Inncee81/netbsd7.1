@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- lib-src/lv2/unpack-waf.orig	2017-07-19 01:17:26.000000000 +0000
++++ lib-src/lv2/unpack-waf
+@@ -5,7 +5,7 @@ for dir in $(find . -type f -name waf); 
+    pushd "${dir%/*}"
+    ./waf --help > /dev/null
+    mv .waf-*/* .
+-   sed -i '/^#==>$/,$d' waf
++   gsed -i '/^#==>$/,$d' waf
+    rmdir .waf-*
+    find waflib -name "*.pyc" -delete
+    popd

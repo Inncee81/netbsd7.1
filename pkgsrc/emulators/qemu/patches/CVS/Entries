@@ -1,0 +1,19 @@
+/patch-hw_display_omap__dss.c/1.2/Thu Jan 16 01:03:29 2014//
+/patch-hw_net_etraxfs__eth.c/1.3/Thu Jan 16 01:03:29 2014//
+/patch-hw_net_xilinx__axienet.c/1.2/Thu Jan 16 01:03:29 2014//
+/patch-et/1.14/Thu Aug 13 01:18:45 2015//
+/patch-hw_ppc_mac__newworld.c/1.3/Mon May 16 01:00:34 2016//
+/patch-hw_ppc_mac__oldworld.c/1.3/Mon May 16 01:00:34 2016//
+/patch-slirp_tcp__subr.c/1.7/Mon May 16 01:00:34 2016//
+/patch-ef/1.8/Mon Sep  5 01:00:27 2016//
+/patch-tests_Makefile.include/1.1/Sun Sep  4 09:21:04 2016//
+/patch-contrib_ivshmem-client_ivshmem-client.c/1.1/Fri Aug 25 12:39:56 2017//
+/patch-contrib_ivshmem-server_ivshmem-server.c/1.1/Fri Aug 25 12:39:56 2017//
+/patch-hw_net_e1000.c/1.1/Fri Aug 25 12:39:56 2017//
+/patch-hw_net_e1000__regs.h/1.1/Fri Aug 25 12:39:56 2017//
+/patch-hw_net_e1000e__core.c/1.1/Fri Aug 25 12:39:56 2017//
+/patch-hw_net_e1000x__common.h/1.1/Fri Aug 25 12:39:56 2017//
+/patch-hw_usb_dev-mtp.c/1.1/Fri Aug 25 12:39:56 2017//
+/patch-memory.c/1.11/Sat Aug 26 01:00:31 2017//
+/patch-configure/1.20/Thu Aug 31 01:00:45 2017//
+D

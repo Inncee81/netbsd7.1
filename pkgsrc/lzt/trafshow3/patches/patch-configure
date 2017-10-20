@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- configure.orig	1998-08-28 07:31:56.000000000 +0000
++++ configure
+@@ -874,7 +874,7 @@ echo "configure:873: checking gcc versio
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_cv_lbl_gcc_vers=`$CC -v 2>&1 | \
+-			    sed -n -e '$s/.* //' -e '$s/\..*//p'`
++			    sed -n -e '$s/^.*version //' -e '$s/\..*//p'`
+ fi
+ 
+ 		    echo "$ac_t""$ac_cv_lbl_gcc_vers" 1>&6
+@@ -1070,7 +1070,7 @@ else
+ fi
+ echo "$ac_t""$CPP" 1>&6
+ 
+-for ac_hdr in sys/ioctl.h sys/mbuf.h net/slip.h
++for ac_hdr in sys/ioctl.h net/slip.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+ echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6

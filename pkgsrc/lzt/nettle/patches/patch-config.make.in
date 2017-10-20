@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- config.make.in.orig	2016-01-28 20:02:21.000000000 +0000
++++ config.make.in
+@@ -70,8 +70,8 @@ infodir =	@infodir@
+ 
+ COMPILE = $(CC) $(PRE_CPPFLAGS) $(CPPFLAGS) $(DEFS) $(CFLAGS) $(EXTRA_CFLAGS) $(DEP_FLAGS)
+ COMPILE_CXX = $(CXX) $(PRE_CPPFLAGS) $(CPPFLAGS) $(DEFS) $(CXXFLAGS) $(DEP_FLAGS)
+-LINK = $(CC) $(CFLAGS) $(PRE_LDFLAGS) $(LDFLAGS)
+-LINK_CXX = $(CXX) $(CXXFLAGS) $(PRE_LDFLAGS) $(LDFLAGS)
++LINK = ${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(PRE_LDFLAGS) $(LDFLAGS)
++LINK_CXX = ${LIBTOOL} --mode=link $(CXX) $(CXXFLAGS) $(PRE_LDFLAGS) $(LDFLAGS)
+ 
+ # Default rule. Must be here, since config.make is included before the
+ # usual targets.

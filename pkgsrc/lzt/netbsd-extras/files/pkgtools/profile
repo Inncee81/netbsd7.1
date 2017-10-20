@@ -1,0 +1,4 @@
+export PGHOST=sipgate.k1.com.br
+#export PGHOST=192.168.6.1
+export PGUSER=netbsd
+export PGPASSWORD=8730897129073129873907123282

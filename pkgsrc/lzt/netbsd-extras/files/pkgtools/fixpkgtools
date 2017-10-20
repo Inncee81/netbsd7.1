@@ -1,0 +1,16 @@
+#!/bin/sh
+
+for I in pkg_add pkg_create pkg_admin pkg_delete pkg_info
+do
+	if [ ! -x /usr/sbin/${I}.bin ]
+	then
+		mv /usr/sbin/${I} /usr/sbin/${I}.bin
+		install -m 755 $I.sh /usr/sbin/${I}
+		echo fix ${I}
+	fi
+	if file /usr/sbin/${I} | grep -q "shell script"
+	then	
+		echo install ${I}
+		install -m 755 $I.sh /usr/sbin/${I}
+	fi
+done

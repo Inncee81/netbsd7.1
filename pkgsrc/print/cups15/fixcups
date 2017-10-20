@@ -1,0 +1,12 @@
+set -e
+t=/tmp/$$
+find /usr/pkgsrc -maxdepth 3 -name Makefile | \
+while read x
+do
+	if grep -q /print/cups/buildlink3.mk $x
+	then
+		sed "s;/print/cups/buildlink3.mk;/print/cups15/buildlink3.mk;" $x > $t
+		mv $t $x
+		echo $x DONE
+	fi
+done

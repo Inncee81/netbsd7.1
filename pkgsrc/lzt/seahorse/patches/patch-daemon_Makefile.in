@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- daemon/Makefile.in.orig	2010-09-27 21:36:56.000000000 +0000
++++ daemon/Makefile.in
+@@ -348,7 +348,7 @@ INCLUDES = -I$(top_builddir) \
+ 	-DLOCALEDIR=\""$(localedir)"\" \
+ 	-DPIXMAPSDIR=\""$(pixmapsdir)"\" \
+ 	-DLIBCRYPTUI_API_SUBJECT_TO_CHANGE \
+-	-DAUTOSTARTDIR=\""$(sysconfdir)/xdg/autostart"\"
++	-DAUTOSTARTDIR=\""$(PREFIX)/share/gnome/autostart"\"
+ 
+ BUILT_SOURCES = \
+ 	seahorse-service-bindings.h \

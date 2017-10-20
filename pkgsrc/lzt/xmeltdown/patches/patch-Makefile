@@ -1,0 +1,54 @@
+$NetBSD$
+
+--- Makefile.orig	2016-11-29 20:47:53.000000000 +0000
++++ Makefile
+@@ -6,24 +6,18 @@ DO_MKDBG:=0
+ # do you want dependency on the Makefile itself ?
+ DO_ALLDEP:=1
+ # flags for compilation
+-CFLAGS:=-Wall -Werror -O3
++#CFLAGS:=-I/usr/pkg/include -Wall -Werror  -O2
+ # libraries to link with
+-LDFLAGS:=-lX11 -lm
+-# where to install ?
+-DEST:=/usr/local/bin
++#LDFLAGS:=-lX11 -lm
+ # where to put binaries ?
+ BIN_FOLDER:=bin
+ # version of gcc
+-GCCVER:=$(shell gcc --version | head -1 | cut -f 4 -d " ")
+-# short version of GCC
+-GCCVER_SHORT:=$(shell echo $(GCCVER)| cut -b 1-3)
+-
+ #########################
+ # Processing parameters #
+ #########################
+ SRC:=$(shell find . -name "*.c")
+ OBJ:=$(addprefix obj/,$(notdir $(addsuffix .o,$(basename $(SRC)))))
+-ALL:=tools.stamp $(BIN_FOLDER)/stickman $(BIN_FOLDER)/stickread $(BIN_FOLDER)/dance $(BIN_FOLDER)/xmeltdown $(BIN_FOLDER)/grid
++ALL:=$(BIN_FOLDER)/stickman $(BIN_FOLDER)/stickread $(BIN_FOLDER)/dance $(BIN_FOLDER)/xmeltdown $(BIN_FOLDER)/grid
+ 
+ # dependency on the makefile itself
+ ifeq ($(DO_ALLDEP),1)
+@@ -48,11 +42,6 @@ endif # DO_MKDBG
+ all: $(ALL) $(ALL_DEP)
+ 	@true
+ 
+-tools.stamp: templardefs/deps.py
+-	$(info doing [$@])
+-	@templar install_deps
+-	@make_helper touch-mkdir $@
+-
+ .PHONY: clean
+ clean: $(ALL_DEP)
+ 	$(info doing [$@])
+@@ -96,7 +85,8 @@ $(BIN_FOLDER)/xmeltdown: $(OBJ_XMELTDOWN
+ .PHONY: install
+ install: $(ALL_DEP)
+ 	$(info doing [$@])
+-	$(Q)install $(ALL) $(DEST)
++	mkdir -p $(DESTDIR)/usr/pkg/bin
++	install $(ALL) $(DESTDIR)/usr/pkg/bin
+ 
+ .PHONY: depend
+ depend: $(ALL_DEP)

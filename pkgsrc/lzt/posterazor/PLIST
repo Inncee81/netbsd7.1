@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/PosteRazor
+share/applications/posterazor.desktop
+share/icons/hicolor/128x128/apps/posterazor.png

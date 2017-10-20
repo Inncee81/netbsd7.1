@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.31 2017/08/08 18:15:17 schnoebe Exp $
+
+SHA1 (hplip-3.17.7.tar.gz) = 4857667a02ed437d87d5042077d1595b77504a53
+RMD160 (hplip-3.17.7.tar.gz) = 5d09ed7faf787e28b4a9d6023b3037c926b81f0f
+SHA512 (hplip-3.17.7.tar.gz) = f88c16d5b6e1986df5b7c1081802ed4832849de8d8b01961231965b115731eb9bd5c18fa52d5bf2eb412927b9de0057bf8025a1579b053c4d8441f0ad4e7ce3f
+Size (hplip-3.17.7.tar.gz) = 23644395 bytes
+SHA1 (patch-ab) = 82b8ab80f778a6a31c1031688d9a16dbd4c55462
+SHA1 (patch-ae) = c4bae69fce7d9061d4c7dc53f1f8c5404577c605
+SHA1 (patch-configure.in) = a155b9590a7ab93ca6922a3f55b09d8d531cb9e6
+SHA1 (patch-diagnose_queues.py) = 0ef5c12a3f3de217064d5b0c40611ba3f1e72c9e
+SHA1 (patch-installer_dcheck.py) = e381086ccdfbdcd84d3ffe29995d5d3643709be6
+SHA1 (patch-io_hpmud_musb.h) = ad634f5a1f426877e1c88916b6468fcdb7598555
+SHA1 (patch-prnt_hpijs_context2.cpp) = f81148c1c334a9074453b27ac055833cd1669bd0
+SHA1 (patch-prnt_hpijs_foomatic-rip-hplip) = a94c7bbdc90dd68d001ce0325b7aabcd470233eb
+SHA1 (patch-prnt_hpijs_hjzjscolor.cpp) = 5ca9c828ba4aff17a54a803d79c2dc169975d50c
+SHA1 (patch-protocol_discovery_mdns.c) = e2ca43f6ab13fe2124a38bcc0eff292a57b34b06
+SHA1 (patch-scan.py) = 4d942ee0580d5f1818e43164c07edd018529395d

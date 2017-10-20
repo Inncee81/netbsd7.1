@@ -1,0 +1,57 @@
+$NetBSD: patch-configure,v 1.2 2017/07/05 10:34:12 adam Exp $
+
+builtin krb5-config in platforms such as solaris do not support
+the gssapi option, and need an explicit -lgss
+
+On Darwin, do not append custom CFLAGS.
+
+--- configure.orig	2017-06-14 06:10:57.000000000 +0000
++++ configure
+@@ -4241,6 +4241,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
+         ;;
+     esac
+   done
++  xc_bad_var_cflags=no
+   if test $xc_bad_var_cflags = yes; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
+ $as_echo "$as_me: using CFLAGS: $CFLAGS" >&6;}
+@@ -17702,7 +17703,7 @@ squeeze() {
+ 
+ 
+       #
+-  if test "$compiler_id" != "unknown"; then
++  if false; then
+     #
+     if test "$compiler_id" = "GNU_C" ||
+       test "$compiler_id" = "CLANG"; then
+@@ -19639,7 +19640,7 @@ $as_echo "no" >&6; }
+   tst_cflags="no"
+   case $host_os in
+     darwin*)
+-      tst_cflags="yes"
++      tst_cflags="no"
+       ;;
+   esac
+ 
+@@ -22272,7 +22273,11 @@ $as_echo "yes" >&6; }
+      if test -n "$host_alias" -a -f "$GSSAPI_ROOT/bin/$host_alias-krb5-config"; then
+         GSSAPI_INCS=`$GSSAPI_ROOT/bin/$host_alias-krb5-config --cflags gssapi`
+      elif test -f "$KRB5CONFIG"; then
+-        GSSAPI_INCS=`$KRB5CONFIG --cflags gssapi`
++        if `$KRB5CONFIG --cflags gssapi` 2>&1 | grep "Unknown option" >/dev/null; then
++           GSSAPI_INCS=`$KRB5CONFIG --cflags`
++        else
++           GSSAPI_INCS=`$KRB5CONFIG --cflags gssapi`
++        fi
+      elif test "$GSSAPI_ROOT" != "yes"; then
+         GSSAPI_INCS="-I$GSSAPI_ROOT/include"
+      fi
+@@ -22445,7 +22450,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+         LIBS="-lgss $LIBS"
+         ;;
+      *)
+-        LIBS="-lgssapi $LIBS"
++        LIBS="-lgssapi -lkrb5 $LIBS"
+         ;;
+      esac
+   fi

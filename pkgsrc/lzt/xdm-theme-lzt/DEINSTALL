@@ -1,0 +1,13 @@
+echo running ${STAGE}
+case ${STAGE} in
+POST-DEINSTALL)
+(
+rm -f /etc/X11/xinit/xmodmaps
+cd /etc/X11/xdm
+if [ -s xdm-config.bak ]
+then
+	mv xdm-config.bak xdm-config
+fi
+)
+;;
+esac

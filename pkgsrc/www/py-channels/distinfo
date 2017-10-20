@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2017/09/15 12:49:07 adam Exp $
+
+SHA1 (channels-1.1.7.tar.gz) = cba22e21ea83c3859daf47fb4d5872f50a70364c
+RMD160 (channels-1.1.7.tar.gz) = 6ba25a08a33ad0b23720d342da311840ea3fc25b
+SHA512 (channels-1.1.7.tar.gz) = 20e8f108a5723abb6f7dcfc3137ebd4a03be70f24d1480c318745ab6b2c3f83b90167aaf5d61ccc31267ef9b233e2f5f9a596b253ca21397b8daeef40718ad49
+Size (channels-1.1.7.tar.gz) = 44011 bytes

@@ -1,0 +1,22 @@
+@comment $NetBSD$
+etc/xdm/lzt/Xaccess
+etc/xdm/lzt/Xreset
+etc/xdm/lzt/Xresources
+etc/xdm/lzt/Xsetup
+etc/xdm/lzt/Xsetup_0
+etc/xdm/lzt/Xstartup
+etc/xdm/lzt/buttons
+etc/xdm/lzt/images/netbsd_color.png
+etc/xdm/lzt/images/netbsd_color_50.png
+etc/xdm/lzt/messagemyip
+etc/xdm/xdm-config
+etc/xdm/xmodmaps/Xmodmap.NCD+
+etc/xdm/xmodmaps/Xmodmap.Sun4+
+etc/xdm/xmodmaps/Xmodmap.Sun5c+
+etc/xdm/xmodmaps/Xmodmap.abnt
+etc/xdm/xmodmaps/Xmodmap.abnt2
+etc/xdm/xmodmaps/Xmodmap.abnt3
+etc/xdm/xmodmaps/Xmodmap.acer
+etc/xdm/xmodmaps/Xmodmap.es
+etc/xdm/xmodmaps/Xmodmap.pt
+etc/xdm/xmodmaps/Xmodmap.us+

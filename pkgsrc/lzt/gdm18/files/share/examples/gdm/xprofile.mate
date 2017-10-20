@@ -1,0 +1,31 @@
+set -e
+config_model=/usr/pkg/etc/gdm/dconf.default
+if [ `id -u` = 0 ]
+then
+	exit 0
+fi
+t=/tmp/$$
+if [ ! -f .mate_inited  -a -f $config_model ]
+then
+	cd $HOME
+	dconf load / < ${config_model}
+	date > .mate_inited
+	rm -rf .dmrc
+	(
+	echo "[Desktop]"
+	echo "Session=mate"
+	if [ -n "$LANG" ]
+	then
+		echo "Language=$LANG"
+	else
+		echo "Language=pt_BR.UTF-8"
+	fi
+	) > .dmrc
+	for i in $(jot 10 1)
+	do
+		echo ${i}0
+		sleep 1
+	done | zenity --text=INSTALL --no-cancel --auto-close --progress
+	exit 0
+fi
+xhost +

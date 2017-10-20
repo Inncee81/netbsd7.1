@@ -1,0 +1,44 @@
+$NetBSD: patch-configure.ac,v 1.5 2016/12/06 15:21:00 ryoon Exp $
+
+* Adapt ant path for pkgsrc.
+
+--- configure.ac.orig	2016-12-13 16:57:41.000000000 +0000
++++ configure.ac
+@@ -6069,14 +6069,14 @@ if test "$GCC" = "yes" -o "$COM_IS_CLANG
+         ], [AC_MSG_RESULT([no])])
+     AC_LANG_POP([C++])
+ 
+-    AC_MSG_CHECKING([whether $CXX defines __cxa_exceptions in cxxabi.h])
++    AC_MSG_CHECKING([whether $CXX defines __cxa_exception in cxxabi.h])
+     AC_LANG_PUSH([C++])
+     AC_COMPILE_IFELSE([AC_LANG_SOURCE([
+             #include <cstddef>
+             #include <cxxabi.h>
+-            std::size_t f() { return sizeof(__cxxabiv1::__cxa_exceptions); }
++            std::size_t f() { return sizeof(__cxxabiv1::__cxa_exception); }
+         ])], [
+-            AC_DEFINE([HAVE_CXXABI_H_CXA_EXCEPTIONS],[1])
++            AC_DEFINE([HAVE_CXXABI_H_CXA_EXCEPTION],[1])
+             AC_MSG_RESULT([yes])
+         ], [AC_MSG_RESULT([no])])
+     AC_LANG_POP([C++])
+@@ -10433,7 +10433,7 @@ if test "x$enable_gltf" != "xno" -a $_os
+     AC_DEFINE(HAVE_FEATURE_GLTF,1)
+     if test "$with_system_libgltf" = "yes"; then
+         SYSTEM_LIBGLTF=TRUE
+-        PKG_CHECK_MODULES( LIBGLTF, [libgltf-0.0 >= 0.0.1] )
++        PKG_CHECK_MODULES( LIBGLTF, [libgltf-0.1 >= 0.0.1] )
+         FilterLibs "${LIBGLTF_LIBS}"
+         LIBGLTF_LIBS="${filteredlibs}"
+     else
+@@ -11980,8 +11980,8 @@ EOF
+     dnl Checking for ant.jar
+     if test "$ANT_HOME" != "NO_ANT_HOME"; then
+         AC_MSG_CHECKING([Ant lib directory])
+-        if test -f $ANT_HOME/lib/ant.jar; then
+-            ANT_LIB="$ANT_HOME/lib"
++        if test -f $ANT_HOME/lib/java/ant/ant.jar; then
++            ANT_LIB="$ANT_HOME/lib/java/ant"
+         else
+             if test -f $ANT_HOME/ant.jar; then
+                 ANT_LIB="$ANT_HOME"

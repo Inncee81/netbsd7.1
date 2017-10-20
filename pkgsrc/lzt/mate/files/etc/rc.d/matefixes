@@ -1,0 +1,8 @@
+#!/bin/sh
+echo Mate fixes .....
+rm -rf /media/*
+mkdir -m 1777 -p /media
+echo fix /etc/hosts
+sed -e "/^127\.0\.0\.1/s/127.0.0.1.*/127.0.0.1	localhost $(hostname)/" /etc/hosts > /etc/hosts.bak
+mv /etc/hosts.bak /etc/hosts
+echo DONE

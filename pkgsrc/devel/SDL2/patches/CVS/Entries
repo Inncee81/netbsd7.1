@@ -1,0 +1,8 @@
+/patch-src_joystick_bsd_SDL__sysjoystick.c/1.5/Sun Oct 30 10:37:17 2016//
+/patch-src_audio_sun_SDL__sunaudio.c/1.1/Sun Dec 11 19:42:46 2016//
+/patch-configure/1.6/Fri Jan 27 01:00:34 2017//
+/patch-src_audio_bsd_SDL__bsdaudio.c/1.5/Fri Jan 27 01:00:34 2017//
+/patch-src_video_SDL__egl.c/1.4/Fri Jan 27 01:00:34 2017//
+/patch-src_video_x11_SDL__x11opengl.c/1.2/Fri Jan 27 01:00:34 2017//
+/patch-src_video_SDL__blit__N.c/1.1/Tue Sep  5 09:02:18 2017//
+D

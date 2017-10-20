@@ -1,0 +1,16 @@
+case ${STAGE} in
+POST-INSTALL)
+cat <<% > /etc/wpa_supplicant.conf
+ctrl_interface=/var/run/wpa_supplicant
+update_config=1
+
+network={
+	ssid=""
+	key_mgmt=NONE
+}
+%
+/sbin/chown root:operator /etc/wpa_supplicant.conf
+/bin/chmod g+w /etc/wpa_supplicant.conf
+
+;;
+esac

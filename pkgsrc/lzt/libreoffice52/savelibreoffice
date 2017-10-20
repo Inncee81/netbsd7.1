@@ -1,0 +1,12 @@
+set -e
+DEST=/usr/tmp/$(makevar PKGNAME)
+mkdir -p ${DEST}
+cd $(makevar WRKSRC)
+find * \
+	-name "*.hxx" -o \
+	-name "*.cxx" -o \
+	-name "*.mk" -o \
+	-name "*.Makefile*" -o \
+	-name "*.h" -o \
+	-name "*.c" | \
+cpio -pdvm ${DEST}

@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- tools/Makefile.in.orig	2016-01-28 20:02:21.000000000 +0000
++++ tools/Makefile.in
+@@ -75,7 +75,7 @@ check:
+ install: $(TARGETS)
+ 	$(MKDIR_P) $(DESTDIR)$(bindir)
+ 	for f in $(TARGETS) ; do \
+-	  $(INSTALL_PROGRAM) $$f $(DESTDIR)$(bindir) ; \
++	  ${LIBTOOL} --mode=install $(INSTALL_PROGRAM) $$f $(DESTDIR)$(bindir) ; \
+ 	done
+ 
+ uninstall:

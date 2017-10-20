@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2017/03/07 16:28:17 maya Exp $
+
+SHA1 (pycryptodome-3.4.5.tar.gz) = a5d66d1b923b57d4aa3f4bdb2d296b39f23213d2
+RMD160 (pycryptodome-3.4.5.tar.gz) = ebdb0edb86f048889f467ddabb9efe95b74254e6
+SHA512 (pycryptodome-3.4.5.tar.gz) = b33bb8e404bbd9b294f185a44468c7b09504fda94cf37f2445e6afbea4837510146470c1dcf7b28133d1b50d6f59685957fd5cd770d7afefcecca6bb18ad36bd
+Size (pycryptodome-3.4.5.tar.gz) = 6494255 bytes

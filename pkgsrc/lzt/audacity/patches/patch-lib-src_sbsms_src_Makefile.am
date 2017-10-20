@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- lib-src/sbsms/src/Makefile.am.orig	2016-01-13 14:31:21.000000000 +0000
++++ lib-src/sbsms/src/Makefile.am
+@@ -3,7 +3,7 @@ AM_CXXFLAGS = -I$(srcdir)/../include @SB
+ libsbsmsincludedir = $(includedir)
+ libsbsmsinclude_HEADERS = ../include/sbsms.h
+ 
+-lib_LTLIBRARIES = libsbsms.la
++noinst_LTLIBRARIES = libsbsms.la
+ libsbsms_la_SOURCES = \
+ 	sms.cpp \
+ 	track.cpp \

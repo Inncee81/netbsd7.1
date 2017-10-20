@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.32 2015/11/03 03:27:11 agc Exp $
+
+SHA1 (GConf-2.32.4.tar.bz2) = 8c53a2b3220cfc058a08638a89fe35e44cfef581
+RMD160 (GConf-2.32.4.tar.bz2) = 8f7aa9fb72deb935546b503b4f8547099be459e3
+SHA512 (GConf-2.32.4.tar.bz2) = f7c60d0e0981a288649d5ab2306d0e1526f993ce7ca9bcccfe3670c1d84c20da477ee48d7cdebcabb366e45a59dda183acb65eccbd2615f5fded74514a0b35b1
+Size (GConf-2.32.4.tar.bz2) = 1531539 bytes
+SHA1 (patch-Makefile.in) = 23d394de6707186c6ad05a3f81e80b0d4f76057d
+SHA1 (patch-defaults_Makefile.am) = 0dad63a083fb85c40b852fbc841675d08ac923e4
+SHA1 (patch-defaults_Makefile.in) = d679437752a1bbc81e8615fda6478eb51c55b4b4
+SHA1 (patch-gconf_Makefile.in) = 0404a92f41fd9845e9959aa20bf595f52d6777d4
+SHA1 (patch-gconf_gconf-client.c) = 53f70b47b48b886c45867809ac6a3bf4fd01a338
+SHA1 (patch-gsettings_Makefile.in) = a2b15b6ec2489f21bb908051ab57ed2399a15ddf

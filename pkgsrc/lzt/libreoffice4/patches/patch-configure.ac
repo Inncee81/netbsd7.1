@@ -1,0 +1,207 @@
+--- configure.ac.orig	2015-04-20 16:36:29.000000000 -0300
++++ configure.ac	2017-08-17 02:40:31.568141000 -0300
+@@ -651,6 +651,8 @@
+ 
+ openbsd*)
+     test_gtk=yes
++    build_gstreamer=yes
++    build_gstreamer_0_10=yes
+     test_tde=yes
+     test_kde=yes
+     test_freetype=yes
+@@ -4169,7 +4171,7 @@
+         fi
+         ;;
+     *)
+-        AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
++        AC_MSG_ERROR([Unsupported 01 host_cpu $host_cpu for host_os $host_os])
+         ;;
+     esac
+     SCPDEFS="$SCPDEFS -D_MSC_VER"
+@@ -4220,7 +4222,7 @@
+         fi
+         ;;
+     *)
+-        AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
++        AC_MSG_ERROR([Unsupported 02 host_cpu $host_cpu for host_os $host_os])
+         ;;
+     esac
+     ;;
+@@ -4245,7 +4247,7 @@
+         PLATFORMID=dragonfly_x86_64
+         ;;
+     *)
+-        AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
++        AC_MSG_ERROR([Unsupported 03 host_cpu $host_cpu for host_os $host_os])
+         ;;
+     esac
+     ;;
+@@ -4271,7 +4273,7 @@
+         PLATFORMID=freebsd_x86_64
+         ;;
+     *)
+-        AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
++        AC_MSG_ERROR([Unsupported 04 host_cpu $host_cpu for host_os $host_os])
+         ;;
+     esac
+     ;;
+@@ -4299,7 +4301,7 @@
+         OUTPATH=unxkfgx6
+         ;;
+     *)
+-        AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
++        AC_MSG_ERROR([Unsupported 05 host_cpu $host_cpu for host_os $host_os])
+         ;;
+     esac
+     ;;
+@@ -4432,7 +4434,7 @@
+         OUTPATH=unxlngx6
+         ;;
+     *)
+-        AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
++        AC_MSG_ERROR([Unsupported 06 host_cpu $host_cpu for host_os $host_os])
+         ;;
+     esac
+     ;;
+@@ -4465,7 +4467,7 @@
+         OUTPATH=unxandi
+         ;;
+     *)
+-        AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
++        AC_MSG_ERROR([Unsupported 07 host_cpu $host_cpu for host_os $host_os])
+         ;;
+     esac
+     ;;
+@@ -4494,7 +4496,7 @@
+         fi
+         ;;
+     *)
+-        AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
++        AC_MSG_ERROR([Unsupported 08 host_cpu $host_cpu for host_os $host_os])
+         ;;
+     esac
+     ;;
+@@ -4524,13 +4526,18 @@
+         RTL_ARCH=SPARC
+         PLATFORMID=netbsd_sparc
+         ;;
++    *arm*)
++        CPUNAME=ARM
++        RTL_ARCH=ARM_EABI
++        PLATFORMID=all
++        ;;
+     x86_64)
+         CPUNAME=X86_64
+         RTL_ARCH=X86_64
+         PLATFORMID=netbsd_x86_64
+         ;;
+     *)
+-        AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
++        AC_MSG_ERROR([Unsupported 09 host_cpu $host_cpu for host_os $host_os])
+         ;;
+     esac
+     ;;
+@@ -4555,7 +4562,7 @@
+         PLATFORMID=openbsd_x86_64
+         ;;
+     *)
+-        AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
++        AC_MSG_ERROR([Unsupported 10 host_cpu $host_cpu for host_os $host_os])
+         ;;
+     esac
+     SOLARINC="$SOLARINC -I/usr/local/include"
+@@ -4589,7 +4596,7 @@
+         OUTPATH=unxsogu
+         ;;
+     *)
+-        AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
++        AC_MSG_ERROR([Unsupported 11 host_cpu $host_cpu for host_os $host_os])
+         ;;
+     esac
+     SOLARINC="$SOLARINC -I/usr/local/include"
+@@ -6557,7 +6564,7 @@
+ 
+     # Assume visibility is not broken with libc++. The below test is very much designed for libstdc++
+     # only.
+-    if test "$HAVE_GCC_VISIBILITY_FEATURE" = "TRUE" -a "$CPP_LIBRARY" = GLIBCXX; then
++    if test "$HAVE_GCC_VISIBILITY_FEATURE" = "TRUE" -a "$CPP_LIBRARY" = GLIBCXX -a "$COM_GCC_IS_CLANG" != "TRUE"; then
+         dnl gcc#19664, gcc#22482, rhbz#162935
+         AC_MSG_CHECKING([if STL headers are visibility safe (GCC bug 22482)])
+         AC_EGREP_HEADER(visibility push, string, stlvisok=yes, stlvisok=no)
+@@ -7868,7 +7875,7 @@
+ dnl ===================================================================
+ dnl Check for system libwps
+ dnl ===================================================================
+-libo_CHECK_SYSTEM_MODULE([libwps],[WPS],[libwps-0.3])
++libo_CHECK_SYSTEM_MODULE([libwps],[WPS],[libwps-0.4])
+ 
+ dnl ===================================================================
+ dnl Check for system libwpg
+@@ -8044,7 +8051,7 @@
+     else
+         # Unset variables set by the above AM_PATH_PYTHON so that
+         # we actually do check anew.
+-        unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
++        #unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
+         AM_PATH_PYTHON([3.3],, [:])
+         if test "$PYTHON" = :; then
+             AC_MSG_RESULT([internal])
+@@ -8101,9 +8108,9 @@
+     elif test "$cross_compiling" != yes; then
+         # Unset variables set by the above AM_PATH_PYTHON so that
+         # we actually do check anew.
+-        unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
++        #unset PYTHON am_cv_pathless_PYTHON ac_cv_path_PYTHON am_cv_python_version am_cv_python_platform am_cv_python_pythondir am_cv_python_pyexecdir
+         # This causes an error if no python command is found
+-        AM_PATH_PYTHON([3.3])
++        AM_PATH_PYTHON([2.6])
+         python_include=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('INCLUDEPY'));"`
+         python_version=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('VERSION'));"`
+         python_libs=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('LIBS'));"`
+@@ -8771,7 +8778,7 @@
+ dnl ===================================================================
+ dnl Check for system mdds
+ dnl ===================================================================
+-libo_CHECK_SYSTEM_MODULE([mdds], [MDDS], [mdds >= 0.10.3], ["-I${WORKDIR}/UnpackedTarball/mdds/include"])
++libo_CHECK_SYSTEM_MODULE([mdds], [MDDS], [mdds-1.2 >= 0.10.3], ["-I${WORKDIR}/UnpackedTarball/mdds/include"])
+ 
+ dnl ===================================================================
+ dnl Check for system glm
+@@ -9148,7 +9155,7 @@
+     ENABLE_ORCUS="TRUE"
+     AC_DEFINE(ENABLE_ORCUS)
+ 
+-    libo_CHECK_SYSTEM_MODULE([orcus],[ORCUS],[liborcus-0.8 >= 0.7.0])
++    libo_CHECK_SYSTEM_MODULE([orcus],[ORCUS],[liborcus-0.12 >= 0.7.0])
+     if test "$with_system_orcus" != "yes"; then
+         if test "$SYSTEM_BOOST" = "TRUE"; then
+             # ===========================================================
+@@ -9906,8 +9913,8 @@
+     AC_MSG_ERROR([\"patch\" not found in \$PATH, install it])
+ fi
+ 
+-dnl On Solaris, FreeBSD or MacOS X, check if --with-gnu-patch was used
+-if test "$_os" = "SunOS" -o "$_os" = "FreeBSD" -o "$_os" = "Darwin"; then
++dnl On Solaris or MacOS X, check if --with-gnu-patch was used
++if test "$_os" = "SunOS" -o "$_os" = "Darwin"; then
+     if test -z "$with_gnu_patch"; then
+         GNUPATCH=$PATCH
+     else
+@@ -12172,7 +12179,7 @@
+     dnl Checking for ant.jar
+     if test "$ANT_HOME" != "NO_ANT_HOME"; then
+         AC_MSG_CHECKING([Ant lib directory])
+-        if test -f $ANT_HOME/lib/ant.jar; then
++        if test -f $ANT_HOME/lib/java/ant/ant.jar; then
+             ANT_LIB="$ANT_HOME/lib"
+         else
+             if test -f $ANT_HOME/ant.jar; then
+@@ -12633,7 +12640,7 @@
+ DOCDIR=[$(eval echo $(eval echo $docdir))]
+ AC_SUBST(DOCDIR)
+ 
+-INSTALLDIR="$LIBDIR/$INSTALLDIRNAME"
++INSTALLDIR="$PREFIXDIR"
+ AC_SUBST(INSTALLDIR)
+ 
+ TESTINSTALLDIR="${BUILDDIR}/test-install"

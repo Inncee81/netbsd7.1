@@ -1,0 +1,34 @@
+/Makefile.am/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_acpi.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_audio.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_audio.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_cpu.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_mass.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_mass.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_misc.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_misc.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_optical.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_optical.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_pci.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_pci.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_storage.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_storage.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_usb.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_usb.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_video.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/devinfo_video.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/drvctl.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/drvctl.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/envsys.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/envsys.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/hal-file-monitor.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/hotplug.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/hotplug.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/osspec.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/osspec_netbsd.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/vfsstat.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/vfsstat.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+D/addons////
+D/probing////

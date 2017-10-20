@@ -1,0 +1,15 @@
+/patch-nss_cmd_platlibs.mk/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_cmd_shlibsign_sign.sh/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_coreconf_DragonFly.mk/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_coreconf_OpenBSD.mk/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_coreconf_SunOS5.mk/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_coreconf_arch.mk/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_coreconf_command.mk/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_coreconf_config.mk/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_lib_Makefile/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_lib_freebl_Makefile/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_lib_freebl_blapi.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_lib_freebl_config.mk/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_lib_freebl_sha-fast-amd64-sun.s/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-nss_lib_softoken_config.mk/1.1.1.1/Sun Apr 16 15:28:00 2017//
+D

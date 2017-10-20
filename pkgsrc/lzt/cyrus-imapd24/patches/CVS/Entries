@@ -1,0 +1,26 @@
+/patch-README.autocreate/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-imap_Makefile.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-imap_autosieve.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-imap_compile__sieve.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-imap_imap__err.et/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-imap_imapd.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-imap_lmtpd.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-imap_mailbox.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-imap_mboxlist.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-imap_mboxlist.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-imap_pop3d.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-imap_sync__client.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-lib_auth.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-lib_auth.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-lib_auth__krb.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-lib_auth__krb5.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-lib_auth__pts.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-lib_auth__unix.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-lib_imapoptions/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-notifyd_Makefile.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-notifyd_notifyd.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-perl_Makefile.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-perl_sieve_Makefile.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-ptclient_Makefile.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-tools_config2header/1.1.1.1/Sun Apr 16 15:28:00 2017//
+D

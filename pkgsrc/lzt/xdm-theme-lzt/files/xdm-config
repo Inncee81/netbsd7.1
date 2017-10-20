@@ -1,0 +1,20 @@
+DisplayManager.errorLogFile:	/tmp
+DisplayManager.pidFile:		/var/run/xdm.pid
+DisplayManager.keyFile:		/etc/X11/xdm/xdm-keys
+DisplayManager.servers:		/etc/X11/xdm/Xservers
+DisplayManager.accessFile:	/etc/X11/xdm/lzt/Xaccess
+DisplayManager.willing:		su nobody -c /etc/X11/xdm/Xwilling
+DisplayManager.authDir:		/tmp
+
+DisplayManager*authorize:	true
+
+DisplayManager._0.setup:	/etc/X11/xdm/lzt/Xsetup_0
+DisplayManager._0.startup:	/etc/X11/xdm/lzt/Xstartup
+DisplayManager._0.reset:	/etc/X11/xdm/lzt/Xreset
+
+DisplayManager.*.setup:		/etc/X11/xdm/lzt/Xsetup
+
+DisplayManager*chooser:		/usr/lib/X11/xdm/chooser
+DisplayManager*resources:	/etc/X11/xdm/lzt/Xresources
+DisplayManager*session:		/etc/X11/xdm/Xsession
+DisplayManager*authComplain:	true

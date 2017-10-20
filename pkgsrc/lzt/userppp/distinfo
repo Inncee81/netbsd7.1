@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.12 2015/11/04 00:35:43 agc Exp $
+
+SHA1 (ppp-001107.src.tar.gz) = 3ba073a99f747579d8ffbe7f80b72a2af924eca2
+RMD160 (ppp-001107.src.tar.gz) = 58ed989cef856d0f3004d7c4bffe2f97f784d797
+SHA512 (ppp-001107.src.tar.gz) = 04ea6137db9324c05e4af684bad8938c2ae24c277ba47e7c2795df1ad5785c8e2d5630dfcbba8e69790dcf008ce7c70a45fc53400a718ac813053bb0749e84f9
+Size (ppp-001107.src.tar.gz) = 380594 bytes
+SHA1 (patch-Makefile) = b7bf370b9bde1e661e4ee66fa778372068a28176
+SHA1 (patch-Makefile.inc) = 5c79edace3754f0a91db023833c92d2c67234944
+SHA1 (patch-libhack_Makefile) = a7a44679e0153be2ea18c969a63facb8b3680632
+SHA1 (patch-libhack_alias__db.c) = 387f4c30898448ab5acb595b420841eec76e5077
+SHA1 (patch-libhack_alias__nbt.c) = 15a97b9075846ed780498f3b2c0ff739d69dc70f
+SHA1 (patch-ppp_Makefile) = c656607d456ec9eff22df9a0f00fad8590a11b0c
+SHA1 (patch-ppp_atm.c) = d63df7072a1f43e83910621d9bdf15dde29f526e
+SHA1 (patch-ppp_cbcp.c) = c79db684aca47922cb2d5d99d522b485955d0e4b
+SHA1 (patch-ppp_defs.c) = fdaf09f65dba5ea80455d3509d7bc10b8e521dd9
+SHA1 (patch-ppp_defs.h) = 55d47c5600c82fad86236b0cd3a1dd5b093e72c7
+SHA1 (patch-ppp_id.c) = da942f46a3b7484e0d562269322b1fc6ada2ec0f
+SHA1 (patch-ppp_ip.c) = 34527a591d64a48d50cb436d2b4a803530b62b43
+SHA1 (patch-ppp_ipcp.c) = 1ac2651b330fe38436546af1b2e430c9e50c54b5
+SHA1 (patch-ppp_ppp.8) = e750a5bee53ab7fa3942d5ad3315082375f8debe
+SHA1 (patch-ppp_prompt.h) = 839f68277d0d61e06245a07a23bb699c2b0d6d51
+SHA1 (patch-ppp_route.c) = cc8f59de09ab15475907353313543cc79c321136
+SHA1 (patch-pppctl_Makefile) = 68b2b1ce3c12eea115a6f37f1ff120602a366fd6
+SHA1 (patch-pppctl_pppctl.c) = be41fa73e406098b8504b5c5ef4b15aa6e054e2b

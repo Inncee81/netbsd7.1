@@ -1,0 +1,15 @@
+$NetBSD$
+
+SHA1 (pulseaudio-10.0.tar.xz) = ab7cc41a2dc2b9da0794e3a51a4eb7e82e7da511
+RMD160 (pulseaudio-10.0.tar.xz) = e237245db82ddb9069b7b80435ef1d4867d7609e
+SHA512 (pulseaudio-10.0.tar.xz) = 11d98b4b2000a41bdea92df253409452bc9b77d8bb309b6d14c439e3b902e3f90c69da00daff409e3859a54ad01c63a75be5723616bdcb492801d622a6406481
+Size (pulseaudio-10.0.tar.xz) = 1608040 bytes
+SHA1 (patch-configure.ac) = 17e90e89f5f2420b977d37d0982e47d3cfb37ec2
+SHA1 (patch-src_Makefile.am) = 0df22360bff6d04ad825c9c7f19bcaede941e37a
+SHA1 (patch-src_modules_module-detect.c) = 541b71749e96a2ddbf6caef51fe29315ba97526b
+SHA1 (patch-src_modules_oss_module-oss.c) = 22af7c138daeaf1e88ce6de40b7939bab3ab3fc1
+SHA1 (patch-src_pulsecore_mix__neon.c) = 1dc8ecc50bac023c608387a8d178fa29f1bb612f
+SHA1 (patch-src_pulsecore_svolume__mmx.c) = 514b8abbedda8918223e8ce14a5d3e022e3c4e83
+SHA1 (patch-src_pulsecore_svolume__sse.c) = cd7ff45d1b24140855f3672e8eeee22f7015ecad
+SHA1 (patch-src_tests_rtpoll-test.c) = 9a45e280957ab16561da0394710b795a7b6d7073
+SHA1 (patch-src_utils_padsp.c) = bac5eb615c56e54400d8530835949312c84eb6f7

@@ -1,0 +1,31 @@
+$NetBSD: distinfo,v 1.21 2015/11/03 23:27:03 agc Exp $
+
+SHA1 (cyrus-imapd-2.4.17.tar.gz) = cc869dea08ad663fc32d9ab628992a1711cfbb1b
+RMD160 (cyrus-imapd-2.4.17.tar.gz) = c28e971515130eea23067b7015047a120edba86f
+SHA512 (cyrus-imapd-2.4.17.tar.gz) = 86ffe1664ca3c3df164ed8fca21cc08ddae12380e1485deccec7da4ec263d8b953a806e05f0b10f6fb7717a0d40fc05669792b77cc66d7c5067061c8506e59ee
+Size (cyrus-imapd-2.4.17.tar.gz) = 2486355 bytes
+SHA1 (patch-README.autocreate) = c545012f2df603686832afb68f50ed5638b8930c
+SHA1 (patch-imap_Makefile.in) = ff55b0a97df8db41758e019a548f53877e3c12f4
+SHA1 (patch-imap_autosieve.c) = 917ba642ab8d84d048428680198bcfc94954f8da
+SHA1 (patch-imap_compile__sieve.c) = ad99623ac9ba2dcbc3032077b0e8638402b9dd15
+SHA1 (patch-imap_imap__err.et) = 33435965b983d4de22d546b63bc0e3a8a68365bb
+SHA1 (patch-imap_imapd.c) = 1a1ff750c953c5b6aafc8bbfbf23c279c6eb2746
+SHA1 (patch-imap_lmtpd.c) = 7b0ef8e72d5e9b663e2adfb6c0a3a4f222874b84
+SHA1 (patch-imap_mailbox.c) = 4733bff24c38fc9452e6bd982533c76234ae9fd4
+SHA1 (patch-imap_mboxlist.c) = 4667d3103840e0425fe82ac60ead97a19bfaf07d
+SHA1 (patch-imap_mboxlist.h) = 5fe190c8bc6de7cda0b046338021a2b842b4e1cf
+SHA1 (patch-imap_pop3d.c) = 580cd232049b2f7923a8307233f98efcbbd44e33
+SHA1 (patch-imap_sync__client.c) = b417b9a8f927f53a101801dd8a445bc2ec28e513
+SHA1 (patch-lib_auth.c) = f60a18ad33a2f93a8a52bc95d5331dda4d34f380
+SHA1 (patch-lib_auth.h) = 0d81aff3c4f7845e8d84fa36cb2f2927b68b7b42
+SHA1 (patch-lib_auth__krb.c) = 74acaf08540ec6412f6984398798c82fc18c6260
+SHA1 (patch-lib_auth__krb5.c) = cf193f3e8f61372c30b7642d334a5ab0d67e2cd4
+SHA1 (patch-lib_auth__pts.c) = a82a9cd6ffc8db833853246c88716da14d4584bd
+SHA1 (patch-lib_auth__unix.c) = d772ecff6efe7235fe48c4e95720e0a8ace72d62
+SHA1 (patch-lib_imapoptions) = 17c00970ee67ff655bd6a7cf136874c9665199c3
+SHA1 (patch-notifyd_Makefile.in) = 7f15f0c6ca385a2db32e288dd9c9805d5d3e688e
+SHA1 (patch-notifyd_notifyd.c) = 219791726f3ed89d5be094dd7e56b43c704162ad
+SHA1 (patch-perl_Makefile.in) = e5952ac81b840113a3d6f3eda45e0dae2639c896
+SHA1 (patch-perl_sieve_Makefile.in) = d359523e7a43f59f30999c2e6b7957678578bacf
+SHA1 (patch-ptclient_Makefile.in) = 7577fd51f901f2e00f22bf1526b41397d8319eba
+SHA1 (patch-tools_config2header) = 65867eecd014140dad639cd8d1d71a578d7d2354

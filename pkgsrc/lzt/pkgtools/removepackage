@@ -1,0 +1,10 @@
+#!/usr/bin/env python2.7
+import os,sys,string
+import pkgutils
+
+if len(sys.argv) < 2:
+	sys.stderr.write("Use %s pkgpath\n" % (sys.argv[0]))
+	sys.exit(1)
+x=pkgutils.progs()
+x.removepackage(sys.argv[1])
+x.close()

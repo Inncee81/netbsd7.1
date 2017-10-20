@@ -1,0 +1,10 @@
+$NetBSD$
+
+--- media/libtremor/moz.build.orig	2016-10-31 20:15:24.000000000 +0000
++++ media/libtremor/moz.build
+@@ -9,3 +9,5 @@ with Files('*'):
+ 
+ DIRS += ['include/tremor', 'lib']
+ 
++if CONFIG['MOZ_SYSTEM_OGG']:
++    CFLAGS += CONFIG['MOZ_OGG_CFLAGS']

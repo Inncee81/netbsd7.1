@@ -1,0 +1,10 @@
+t=/tmp/$$
+case ${STAGE} in
+POST-INSTALL)
+	crontab -l | sed -e "/dwatch/d" > $t
+	(cat $t
+	echo -n "*	*	*	*	*	"
+	echo "/usr/pkg/bin/dwatch") | crontab -
+;;
+esac
+rm -f $t

@@ -1,0 +1,15 @@
+--- Makefile.orig	2016-07-11 19:05:09 UTC
++++ Makefile
+@@ -0,0 +1,12 @@
++CFLAGS!=	pkg-config --cflags glib-2.0
++LDFLAGS!=	pkg-config --libs glib-2.0
++
++BINDIR=		${DESTDIR}${LOCALBASE}/bin
++CONFDIR=	${DESTDIR}${LOCALBASE}/share/thumbnailers
++
++all: dxf_thumbnailer
++
++install:
++	mkdir -p ${BINDIR} ${CONFDIR}
++	install -m 755 -s dxf_thumbnailer ${BINDIR}
++	install -m 644 dxf.thumbnailer ${CONFDIR}

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.6 2017/04/06 14:15:48 mef Exp $
+
+SHA1 (Crypt-OpenSSL-Bignum-0.08.tar.gz) = 47a6d8a6b7d031d8445f3534d38dab49b1e1c351
+RMD160 (Crypt-OpenSSL-Bignum-0.08.tar.gz) = a8dd919576f8be688c39757748eaab9d3794c1e6
+SHA512 (Crypt-OpenSSL-Bignum-0.08.tar.gz) = da36b377287037c46e905f25d491641a06113ea1157f00731c43fdc27762af6cbde0e55361d929712adf57fc3564197aadb54629498318c1eb9c1f3fd0c50e7d
+Size (Crypt-OpenSSL-Bignum-0.08.tar.gz) = 16023 bytes

@@ -1,0 +1,9 @@
+/patch-guile_src_core.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-lib_Makefile.in/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-src_libopts_autoopts_options.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-src_libopts_compat_compat.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-src_libopts_libopts.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-src_libopts_makeshell.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-src_libopts_proto.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-tests_mini-server-name.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+D

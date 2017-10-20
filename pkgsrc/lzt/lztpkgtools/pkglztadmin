@@ -1,0 +1,254 @@
+#!/usr/bin/env python2.7
+
+import os,sys,psycopg2
+
+PKGSRCDIR="/usr/pkgsrc"
+
+PKGDATA={}
+
+OS_VERSION="7.1_RC2"
+MACHINE_ARCH="i386"
+
+class pkgadmin:
+	def __init__(self):
+		self.conn=psycopg2.connect("")
+		self.cursor=self.conn.cursor()
+		self.cursor.execute("set search_path to lenzi2,public")
+		self.conn.commit()
+		self.notfoundpackages=[]
+
+	def load_db(self):
+		ifile=os.popen("pkg_info","r")
+		self.cursor.execute("delete from package")
+		v=[]
+		for p in ifile.readlines():
+			v.append(p.split()[0])
+		ifile.close()
+		k=0
+		for pkgname in v:
+			self.loadpackagedata(pkgname)
+			k+=1
+		print "Database loaded, total packages:",k 
+		print "Not found:",len(self.notfoundpackages) 
+		for i in self.notfoundpackages:
+			print "\t%s" % (i)
+
+	def close(self):
+		self.cursor.close()
+		self.conn.commit()
+		self.conn.close()
+
+	def loadpackagedata(self,arg):
+		pkgname=self.path2pname(arg)
+		print "load:",pkgname
+		if not os.path.isdir("/var/db/pkg/%s" % (pkgname)):
+			return None
+		if not os.path.isfile("/var/db/pkg/%s/+CONTENTS" % (pkgname)):
+			return None
+		id=self.newpackage(pkgname)
+		ifile=open("/var/db/pkg/%s/+CONTENTS" %(pkgname),"r")
+		#print "%.5d %s" % (int(id),pkgname)
+		for data in ifile.readlines():
+			if not "@blddep " in data:
+				continue
+			if "digest-" in data:
+				continue
+			data=data.split()[1].strip()
+			pkgdepid=self.newpackage(data)
+			sql="insert into deptable(pkgid,pkgdep,os_version) values(%s,%s,%s)"
+			self.cursor.execute(sql,[id,pkgdepid,OS_VERSION])
+			#print "\t %s" % (data)
+		ifile.close()
+		[requires,provides]=self.requires_provides(pkgname)
+		for data in requires:
+			sql="insert into pkgrequires (pkgid,data,os_version) values(%s,%s,%s)"
+			self.cursor.execute(sql,[id,data,OS_VERSION])
+		for data in provides:
+			sql="insert into pkgprovides (pkgid,data,os_version) values(%s,%s,%s)"
+			self.cursor.execute(sql,[id,data,OS_VERSION])
+		return id
+
+	def pkgfound(self,pname):
+		self.cursor.execute("select id from package where pkgname = %s",[pname])
+		id=self.cursor.fetchone()
+		if not id:
+			return None
+		return id[0];
+
+	def upgrade(self):
+		ifile=os.popen("pkg_info","r")
+		for p in ifile.readlines():
+			p=p.strip().split()[0]
+			if self.pkgfound(p):
+				continue
+			print "must update:",p.strip()
+		ifile.close()
+
+	def newpackage(self,pkgname):
+		pkgname=self.path2pname(pkgname)
+		pkgpath=self.pkgname2path(pkgname)
+		self.cursor.execute("select id from package where pkgname=%s",[pkgname])
+		id=self.cursor.fetchone()
+		if id:
+			self.cursor.execute("update package set pkgpath=%s where id=%s",[pkgpath,id])
+			return id[0]
+		self.cursor.execute("select nextval('package_id_seq')")
+		(id)=self.cursor.fetchone()[0]
+		sql="insert into package(id,pkgname,os_version,pkgpath,machine_arch) values(%s,%s,%s,%s,%s)"
+		self.cursor.execute(sql,[id,pkgname,OS_VERSION,pkgpath,MACHINE_ARCH])
+		return id
+
+	def pkgname2pkgid(self,arg):
+		if not arg:
+			return None
+		if  "/" in arg:
+			return self.pkgname2pkgid(self.path2pname(arg))
+		self.cursor.execute("select id from package where pkgname=%s",[arg])
+		id=self.cursor.fetchone()
+		if not id:
+			return None
+		return id[0]
+
+	def pkgname2path(self,arg):
+		if not arg:
+			return None
+		if  "/" in arg:
+			return arg
+		ifile=os.popen("pkg_info -Q PKGPATH %s 2> /dev/null" % (arg),"r")
+		path=ifile.readline().strip()
+		rc=ifile.close()
+		if rc:
+			self.notfoundpackages.append(arg)
+			return None
+		return path
+
+	def path2pname(self,arg):
+		if not arg:
+			return None
+		if not "/" in arg:
+			return arg
+
+		arg=arg.strip()
+		if not os.path.isdir("%s/%s" % (PKGSRCDIR,arg)):
+			return None
+		ifile=os.popen("cd %s/%s;make show-var VARNAME=PKGNAME" % (PKGSRCDIR,arg),"r")
+		pname=ifile.readline()
+		ifile.close
+		return pname.strip()
+
+	def listdep(self,pname,origin="",ident=0,build=0):
+		pname=self.path2pname(pname)
+		if not pname:
+			return
+		if not ident:
+			self.tvect=[]
+		if pname in self.tvect:
+			return
+		if not origin:
+			origin=self.pkgname2path(pname)
+		pnameid=self.pkgname2pkgid(pname)
+		if not pnameid:
+			return
+		self.tvect.append(pname)
+		sql="select pkgname,pkgpath from package where id in " \
+			"(select pkgdep from deptable where pkgid=%s)"
+		self.cursor.execute(sql,[pnameid])
+		for (name,path) in self.cursor.fetchall():
+			self.listdep(name,path,ident + 1,build)
+		if build:
+			print "%s" % (origin)
+			return
+		area="%s %s" % (" " * ident, pname)
+		print "%.5d %-60s %s" % (ident,area,origin)
+
+	def listreq(self,pname,origin="",ident=0):
+		pname=self.path2pname(pname)
+		if not pname:
+			return
+		if not ident:
+			self.tvect=[]
+		if pname in self.tvect:
+			return
+		if not origin:
+			origin=self.pkgname2path(pname)
+		pnameid=self.pkgname2pkgid(pname)
+		if not pnameid:
+			return
+		self.tvect.append(pname)
+		sql="select pkgname,pkgpath from package where id in " \
+			"(select pkgid from deptable where pkgdep=%s)"
+		self.cursor.execute(sql,[pnameid])
+		for (name,path) in self.cursor.fetchall():
+			self.listreq(name,path,ident + 1)
+		area="%s %s" % (" " * ident, pname)
+		print "%.5d %-60s %s" % (ident,area,origin)
+
+	def getpkgname(self,pkgpath):
+		if not os.path.isdir("%s/%s" %(PKGSRCDIR,pkgpath)):
+			return None
+		ifile=os.popen("cd %s/%s;make show-var VARNAME=PKGNAME" %(PKGSRCDIR,pkgpath),"r")
+		newpname=ifile.readline().strip()
+		ifile.close()
+		return newpname
+
+	def requires_provides(self,arg):
+		requires=[]
+		provides=[]
+		pkgname=self.path2pname(arg)
+		try:
+			ifile=open("/var/db/pkg/%s/+BUILD_INFO" %(pkgname))
+			for p in ifile.readlines():
+				v=p.strip().split("=")
+				if v[0] == "PROVIDES":
+					provides.append(v[1])
+				elif v[0] == "REQUIRES":
+					requires.append(v[1])
+			ifile.close()
+		except:
+			pass
+		return [requires,provides]
+	def sync(self):
+		ifile=os.popen("pkg_info","r")
+		for data in ifile.readlines():
+			data=data.split()[0]
+			if not self.pkgname2pkgid(data):
+				print "%s add %s" % (sys.argv[0],data)
+
+	def check_updates(self):
+		self.cursor.execute("select pkgname,pkgpath from package")
+		for p in self.cursor.fetchall():
+			if not os.path.isdir("%s/%s" %(PKGSRCDIR,p[1])):
+				continue
+			ifile=os.popen("cd %s/%s;make show-var VARNAME=PKGNAME" %(PKGSRCDIR,p[1]),"r")
+			newpname=ifile.readline().strip()
+			ifile.close()
+			print "%-40s ... " % (p[0]),
+			if p[0] != newpname:
+				print "must update to %s on %s" % (newpname,p[1])
+			else:
+				print "OK"
+
+if __name__ == "__main__":
+	x=pkgadmin()
+
+	if len(sys.argv) > 2:
+		if sys.argv[1] == "load":
+			x.load(sys.argv[2]);
+		elif sys.argv[1] == "req":
+			x.listreq(sys.argv[2])
+		elif sys.argv[1] == "dep":
+			x.listdep(sys.argv[2])
+		elif sys.argv[1] == "add":
+			x.loadpackagedata(sys.argv[2])
+		elif sys.argv[1] == "bld":
+			x.makebuild(sys.argv[2])
+	elif len(sys.argv) == 2:
+		if sys.argv[1] == "init":
+			x.load_db()
+		elif sys.argv[1] == "sync":
+			x.sync()
+		elif sys.argv[1] == "upgrade":
+			x.upgrade()
+		elif sys.argv[1] == "check":
+			x.check_updates();
+	x.close()

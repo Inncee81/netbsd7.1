@@ -1,0 +1,11 @@
+case ${STAGE} in
+POST-INSTALL)
+mkdir -p /usr/pkg/etc/gnupg
+cd /usr/pkg/etc/gnupg
+for TRUST in /etc/openssl/certs/*.pem
+do
+	openssl x509 -in ${TRUST} -noout -fingerprint | \
+		sed 's|^.*=\(.*\)|\1 S|'
+done > trustlist.txt
+;;
+esac

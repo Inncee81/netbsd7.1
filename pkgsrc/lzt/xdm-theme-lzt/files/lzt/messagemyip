@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set $(ifconfig -l)
+while [ $# -gt 0 ]
+do
+	case $1 in
+	lo0)
+	shift
+	;;
+	*)
+	set $(ifconfig $1 | grep "inet ")
+	ip=$2
+	xmessage -geometry -0+0 "ADDR:$ip"
+	break;
+	;;
+	esac
+done

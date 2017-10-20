@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/trafshow
+etc/trafshow.sample
+man/man1/trafshow.1

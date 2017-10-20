@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- lib-src/lib-widget-extra/Makefile.am.orig	2016-01-13 14:31:17.000000000 +0000
++++ lib-src/lib-widget-extra/Makefile.am
+@@ -5,7 +5,7 @@ EXTRA_DIST = libwidgetextra.pc.in
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = libwidgetextra.pc
+ 
+-lib_LTLIBRARIES = libwidgetextra.la
++noinst_LTLIBRARIES = libwidgetextra.la
+ 
+ libwidgetextra_la_CPPFLAGS = $(WX_CXXFLAGS) -Wno-deprecated-declarations
+ libwidgetextra_la_LIBADD = $(WX_LIBS)

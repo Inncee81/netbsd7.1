@@ -1,0 +1,27 @@
+/patch-Makefile.in/1.1/Tue Mar 15 15:16:39 2016//
+/patch-aa/1.5/Wed Mar 16 01:00:56 2016//
+/patch-ae/1.4/Wed Mar 16 01:00:56 2016//
+/patch-aj/1.4/Wed Mar 16 01:00:56 2016//
+/patch-al/1.7/Wed Mar 16 01:00:56 2016//
+/patch-cf/1.3/Wed Mar 16 01:00:56 2016//
+/patch-cg/1.3/Wed Mar 16 01:00:56 2016//
+/patch-cj/1.2/Wed Mar 16 01:00:56 2016//
+/patch-config_lib.in/1.1/Tue Mar 15 15:16:39 2016//
+/patch-config_libnover.in/1.1/Tue Mar 15 15:16:39 2016//
+/patch-config_shlib.conf/1.1/Tue Mar 15 15:16:39 2016//
+/patch-configure.in/1.2/Wed Mar 16 01:00:56 2016//
+/patch-include_osconf.hin/1.1/Tue Mar 15 15:16:39 2016//
+/patch-lib_apputils_Makefile.in/1.1/Tue Mar 15 15:16:39 2016//
+/patch-lib_krb5_asn.1_asn1buf.h/1.2/Wed Mar 16 01:00:56 2016//
+/patch-plugins_kdb_db2_Makefile.in/1.1/Tue Mar 15 15:16:39 2016//
+/patch-plugins_kdb_db2_libdb2_Makefile.in/1.1/Tue Mar 15 15:16:39 2016//
+/patch-plugins_preauth_otp_Makefile.in/1.1/Tue Mar 15 15:16:39 2016//
+/patch-plugins_preauth_pkinit_Makefile.in/1.1/Tue Mar 15 15:16:39 2016//
+/patch-util_k5ev_verto-k5ev.c/1.3/Wed Mar 16 01:00:56 2016//
+/patch-util_ss_Makefile.in/1.3/Wed Mar 16 01:00:56 2016//
+/patch-lib_apputils_net-server.c/1.3/Mon Apr 18 01:00:48 2016//
+/patch-config_pre.in/1.2/Wed Jun 22 01:00:43 2016//
+/patch-kadmin_cli_ss_wrapper.c/1.1/Fri Oct 28 20:56:14 2016//
+/patch-lib_krb5_ccache_Makefile.in/1.2/Tue Nov  1 01:01:16 2016//
+/patch-CVE-2017-11368/1.1/Mon Aug 21 22:19:26 2017//
+D

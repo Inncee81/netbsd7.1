@@ -1,0 +1,13 @@
+/patch-bash__completion/1.1/Mon May 27 08:36:00 2013//
+/patch-etckeeper/1.1/Mon May 27 08:36:00 2013//
+/patch-init.d_40vcs-init/1.1/Mon May 27 08:36:00 2013//
+/patch-update-ignore.d_01update-ignore/1.1/Mon May 27 08:36:00 2013//
+/patch-pre-install.d_50uncommitted-changes/1.2/Fri May 19 01:01:04 2017//
+/patch-debian_cron.daily/1.3/Sun May 21 01:01:03 2017//
+/patch-etckeeper.8/1.3/Sun May 21 01:01:03 2017//
+/patch-etckeeper.conf/1.3/Sun May 21 01:01:03 2017//
+/patch-list-installed.d_50list-installed/1.2/Sun May 21 01:01:03 2017//
+/patch-post-install.d_50vcs-commit/1.3/Sun May 21 01:01:03 2017//
+/patch-pre-install.d_10packagelist/1.2/Sun May 21 01:01:03 2017//
+/patch-commit.d_50vcs-commit/1.3/Fri Jun 30 01:00:52 2017//
+D

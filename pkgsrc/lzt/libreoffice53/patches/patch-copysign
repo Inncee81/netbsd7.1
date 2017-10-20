@@ -1,0 +1,23 @@
+--- /tmp/libreoffice/vcl/source/filter/sgvspln.cxx	2017-01-26 20:22:46.000000000 -0200
++++ vcl/source/filter/sgvspln.cxx	2017-07-17 00:24:53.000000000 -0300
+@@ -588,16 +588,16 @@
+         case 4: {
+             if (std::abs(Marg01)>=MAXROOT) {
+                 alphX=0.0;
+-                alphY=std::copysign(1.0,y[1]-y[0]);
++                alphY=copysign(1.0,y[1]-y[0]);
+             } else {
+-                alphX=std::copysign(sqrt(1.0/(1.0+Marg01*Marg01)),x[1]-x[0]);
++                alphX=copysign(sqrt(1.0/(1.0+Marg01*Marg01)),x[1]-x[0]);
+                 alphY=alphX*Marg01;
+             }
+             if (std::abs(MargN1)>=MAXROOT) {
+                 betX=0.0;
+-                betY=std::copysign(1.0,y[n]-y[n-1]);
++                betY=copysign(1.0,y[n]-y[n-1]);
+             } else {
+-                betX=std::copysign(sqrt(1.0/(1.0+MargN1*MargN1)),x[n]-x[n-1]);
++                betX=copysign(sqrt(1.0/(1.0+MargN1*MargN1)),x[n]-x[n-1]);
+                 betY=betX*MargN1;
+             }
+         }

@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/dxf_thumbnailer
+share/thumbnailers/dxf.thumbnailer
+share/thumbnailers/ffmpegthumbnailer.thumbnailer

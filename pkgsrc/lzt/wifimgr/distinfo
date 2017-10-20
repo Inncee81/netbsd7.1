@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (wifimgr-1.11.tar.bz2) = edb8ae735f6990603e466b0a817e1245f3f62d23
+RMD160 (wifimgr-1.11.tar.bz2) = abf62ad93ea27a32dcd4e95899d08af8ab8f502f
+SHA512 (wifimgr-1.11.tar.bz2) = 90ab8512637293138a3c5f60426dc039fea2750c6ccbfe1936469e49cd77d68b34755b03f4622ab7860d8ca6292d990fca725f52abd8b638063ba2925b7a566b
+Size (wifimgr-1.11.tar.bz2) = 116900 bytes
+SHA1 (patch-src_wifimgr.c) = 8850932c4bf506b6b4f912c26b46c9c580fa8c30
+SHA1 (patch-src_wifimgrsu.c) = 372dd08c6004f1c35572c322cdedf78fb93f91d8

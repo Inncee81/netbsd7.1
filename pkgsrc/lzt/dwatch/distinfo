@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (dwatch-0.1.1.tar.gz) = d1588364fcbad85b7ba81fa027199e983de55435
+RMD160 (dwatch-0.1.1.tar.gz) = 54e28a0c1862372fc455fd5ff71aca82495dacac
+SHA512 (dwatch-0.1.1.tar.gz) = e6cb3e10a1527d33b30a59166dad162851685dcee939595fe8c51f38c3206f468d0501fb10c0bf4bbc5cf131898a90c3d72b4f7619d2db281a2d9f3580db674a
+Size (dwatch-0.1.1.tar.gz) = 10157 bytes
+SHA1 (patch-dwatch.1) = 9e078ac36e7cace40b9dae56ba18f5786be9fb69

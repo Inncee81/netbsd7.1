@@ -1,0 +1,19 @@
+/patch-Makefile/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-Makefile.inc/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libhack_Makefile/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libhack_alias__db.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-libhack_alias__nbt.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-ppp_Makefile/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-ppp_atm.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-ppp_cbcp.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-ppp_defs.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-ppp_defs.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-ppp_id.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-ppp_ip.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-ppp_ipcp.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-ppp_ppp.8/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-ppp_prompt.h/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-ppp_route.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-pppctl_Makefile/1.1.1.1/Sun Apr 16 15:28:00 2017//
+/patch-pppctl_pppctl.c/1.1.1.1/Sun Apr 16 15:28:00 2017//
+D

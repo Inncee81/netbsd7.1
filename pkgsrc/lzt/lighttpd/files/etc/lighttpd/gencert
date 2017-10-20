@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if [ ! -s /etc/openssl/openssl.cnf ]
+then
+	cp /usr/share/examples/openssl/* /etc/openssl
+fi
+
+CERT=/tmp/cert.pem
+openssl req -new -x509 \
+	-subj '/C=XX/ST=Fake_State/L=Toon_Town/CN=http:\/\/fake_server.fake/O=ACME' \
+	-newkey rsa:4096 \
+	-days 4000 -nodes \
+	-keyout ${CERT} -out ${CERT}
+
+cat ${CERT}
+rm ${CERT}

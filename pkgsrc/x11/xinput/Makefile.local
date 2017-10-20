@@ -1,0 +1,4 @@
+USE_TOOLS+=	gmake autoconf autoreconf
+pre-configure:
+	rm -f $(WRKSRC}/configure
+	cd ${WRKSRC};${MAKE_ENV} autoreconf -f

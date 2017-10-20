@@ -1,0 +1,13 @@
+echo running ${STAGE}
+case ${STAGE} in
+POST-DEINSTALL)
+	for i in lpq lprm lpc lpd pr lpr
+	do
+		if [ -s /usr/bin/$i ]
+		then
+			echo "###### ENABLE unix $i"
+			chmod 655 /usr/bin/$i
+		fi
+	done
+;;
+esac

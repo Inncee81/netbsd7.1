@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if which xmessage >> /dev/null 2>&1; then
+	xmessage -buttons "REINICIAR","DESLIGAR" "$@" "";
+
+	case "$?" in
+	101)
+		shutdown -r now
+	;;
+	102)
+		shutdown -p now
+	;;
+	esac
+fi
+

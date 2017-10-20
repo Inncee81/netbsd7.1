@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2 2017/03/20 16:21:42 tsutsui Exp $
+
+SHA1 (slack-api-1.4.0.gem) = a10ff8b95a4563d3d67263a4121ed28bb2a22792
+RMD160 (slack-api-1.4.0.gem) = f910e475f65de3cfbff9169542d94355e9441a10
+SHA512 (slack-api-1.4.0.gem) = 4056b9a975e2caef63e3710a4e2d993194ddfc7f750edad21faafeb2dafb56b8c5aad7eb2935bbdbd87f00e53e832c6617ea2f8d86c8201672567e48ebfb6924
+Size (slack-api-1.4.0.gem) = 27648 bytes

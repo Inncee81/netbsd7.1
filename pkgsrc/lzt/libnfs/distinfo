@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (libnfs-2.0.0.tar.gz) = 7d2cd288d87cff4b715fabc62dbeeabe00e9ce44
+RMD160 (libnfs-2.0.0.tar.gz) = ccea3e592686bc4a0eaabeda72790d0ea6e118e6
+SHA512 (libnfs-2.0.0.tar.gz) = 701dd5317b0395523be89123d473f4da5c3ff53c2e30004a922f649f0dbbd97546ee39ab34fce06278a8148c13200ca383726a0822d09846fad6e308f29e42c7
+Size (libnfs-2.0.0.tar.gz) = 200932 bytes
+SHA1 (patch-lib_libnfs-sync.c) = 1fdf91f5d88c7412b1c967e3dcb2ef4c0c5df0a0
+SHA1 (patch-lib_socket.c) = 78f84c281565f37f34e69e72188780a3900fa4ef

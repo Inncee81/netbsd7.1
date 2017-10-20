@@ -1,0 +1,9 @@
+/patch-config.threads.in/1.1.1.1/Wed Jul  2 02:42:58 2014//
+/patch-contrib_dlz_config.dlz.in/1.1.1.1/Wed Jul  2 02:42:58 2014//
+/patch-lib_lwres_getnameinfo.c/1.1.1.1/Wed Jul  2 02:42:58 2014//
+/patch-lib_lwres_getaddrinfo.c/1.2/Wed Oct 15 01:05:16 2014//
+/patch-bin_dig_dighost.c/1.3/Mon Dec 14 02:14:52 2015//
+/patch-configure/1.4/Mon Dec 14 02:14:52 2015//
+/patch-lib_dns_rbt.c/1.5/Wed Jul 20 01:00:43 2016//
+/patch-bin_tests_system_Makefile.in/1.4/Sun Apr 23 01:00:52 2017//
+D

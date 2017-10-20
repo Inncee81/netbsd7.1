@@ -1,0 +1,8 @@
+PLIST_SRC=		PLIST.lzt
+CONFIGURE_ARGS+=	--disable-silent-rules
+CONFIGURE_ARGS+=	--disable-console-kit
+CONFIGURE_ARGS+=	--disable-policy-kit
+
+#post-install:
+#	cd ${WRKSRC}/fdi;gmake
+#	cd ${WRKSRC}/fdi;gmake install

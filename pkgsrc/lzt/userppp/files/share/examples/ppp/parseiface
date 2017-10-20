@@ -1,0 +1,24 @@
+#!/bin/sh
+
+if [ $# -eq 0 ]
+then
+	exit 1
+fi
+
+IFACE=${1:-}
+
+set $(ifconfig ${IFACE})
+while [ $# -gt 0 ]
+do
+	case $1 in
+	inet)
+		MYIP=$2
+	;;
+	'->')
+		GW=$2
+	esac
+	shift
+done
+echo MYIP=$MYIP
+echo GW=$GW
+exit 0

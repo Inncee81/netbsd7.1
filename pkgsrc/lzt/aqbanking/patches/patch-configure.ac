@@ -1,0 +1,49 @@
+$NetBSD$
+
+--- configure.ac.orig	2017-01-07 10:55:17.000000000 +0000
++++ configure.ac
+@@ -964,7 +964,7 @@ AC_SUBST(visibility_cflags)
+ #
+ # Subst
+ #
+-AS_SCRUB_INCLUDE(aqbanking_includes)
++#AS_SCRUB_INCLUDE(aqbanking_includes)
+ AC_SUBST(aqbanking_sys_is_windows)
+ AC_SUBST(aqbanking_includes)
+ AC_SUBST(aqbanking_internal_libs)
+@@ -1107,7 +1107,7 @@ case "$aqbanking_backends" in *aqhbci*)
+   ;;
+ esac
+ 
+-AS_SCRUB_INCLUDE(aqhbci_includes)
++#AS_SCRUB_INCLUDE(aqhbci_includes)
+ AC_SUBST(aqhbci_includes)
+ AC_SUBST(aqhbci_internal_libs)
+ AC_SUBST(aqhbci_libs)
+@@ -1150,7 +1150,7 @@ case "$aqbanking_backends" in *aqofxconn
+   ;;
+ esac
+ 
+-AS_SCRUB_INCLUDE(aqofxconnect_includes)
++#AS_SCRUB_INCLUDE(aqofxconnect_includes)
+ AC_SUBST(aqofxconnect_includes)
+ AC_SUBST(aqofxconnect_internal_libs)
+ AC_SUBST(aqofxconnect_libs)
+@@ -1182,7 +1182,7 @@ case "$aqbanking_backends" in *aqebics*)
+   ;;
+ esac
+ 
+-AS_SCRUB_INCLUDE(aqebics_includes)
++#AS_SCRUB_INCLUDE(aqebics_includes)
+ AC_SUBST(aqebics_includes)
+ AC_SUBST(aqebics_internal_libs)
+ AC_SUBST(aqebics_libs)
+@@ -1309,7 +1309,7 @@ AC_SUBST(TUTORIALS)
+ # Cleanup includes, define all_XXX
+ #
+ 
+-AS_SCRUB_INCLUDE(all_includes)
++#AS_SCRUB_INCLUDE(all_includes)
+ AC_SUBST(all_includes)
+ AC_SUBST(all_libraries)
+ 

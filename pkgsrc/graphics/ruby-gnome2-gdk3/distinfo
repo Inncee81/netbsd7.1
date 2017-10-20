@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.7 2017/08/18 14:58:50 tsutsui Exp $
+
+SHA1 (gdk3-3.1.8.gem) = f42a6d657454bb97f81c0cf6bd00259d825f25ec
+RMD160 (gdk3-3.1.8.gem) = b9c032f157ac237889fdd7b090fc5d4cb0fcd0cc
+SHA512 (gdk3-3.1.8.gem) = ede0c85a4095946525601ff781d2c8b66cdf17292eca3a5c3398cefa4273d6ac4a02f6aff2c6ea0f0e8399232ebd47b3eb90868c7e6fe3a523574502b5c779d8
+Size (gdk3-3.1.8.gem) = 26112 bytes

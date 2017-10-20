@@ -1,0 +1,376 @@
+$NetBSD$
+
+--- ppp/ppp.8.orig	2000-10-31 02:25:54.000000000 +0000
++++ ppp/ppp.8
+@@ -102,7 +102,7 @@ is usually appropriate.
+ See the
+ .Dq pmdemand
+ system in
+-.Pa /usr/share/examples/ppp/ppp.conf.sample
++.Pa /usr/pkg/share/examples/ppp/ppp.conf.sample
+ for an example.
+ .It Fl background
+ Here,
+@@ -157,13 +157,13 @@ interactive prompt.
+ .El
+ .Pp
+ One or more configuration entries or systems
+-.Pq as specified in Pa /etc/ppp/ppp.conf
++.Pq as specified in Pa /usr/pkg/etc/ppp/ppp.conf
+ may also be specified on the command line.
+ .Nm
+ will read the
+ .Dq default
+ system from
+-.Pa /etc/ppp/ppp.conf
++.Pa /usr/pkg/etc/ppp/ppp.conf
+ at startup, followed by each of the systems specified on the command line.
+ .Sh Major Features
+ .Bl -diag
+@@ -376,7 +376,7 @@ will not run if the invoking user id is 
+ This may be overridden by using the
+ .Dq allow users
+ command in
+-.Pa /etc/ppp/ppp.conf .
++.Pa /usr/pkg/etc/ppp/ppp.conf .
+ When running as a normal user,
+ .Nm
+ switches to user id 0 in order to alter the system routing table, set up
+@@ -431,7 +431,7 @@ manual page for details.
+ Each of these users must also be given access using the
+ .Dq allow users
+ command in
+-.Pa /etc/ppp/ppp.conf .
++.Pa /usr/pkg/etc/ppp/ppp.conf .
+ .It
+ Create a log file.
+ .Nm
+@@ -733,9 +733,9 @@ section for details on all available com
+ .Sh AUTOMATIC DIALING
+ To use automatic dialing, you must prepare some Dial and Login chat scripts.
+ See the example definitions in
+-.Pa /usr/share/examples/ppp/ppp.conf.sample
++.Pa /usr/pkg/share/examples/ppp/ppp.conf.sample
+ (the format of
+-.Pa /etc/ppp/ppp.conf
++.Pa /usr/pkg/etc/ppp/ppp.conf
+ is pretty simple).
+ Each line contains one comment, inclusion, label or command:
+ .Bl -bullet
+@@ -761,7 +761,7 @@ A command line must contain a space or t
+ .El
+ .Pp
+ The
+-.Pa /etc/ppp/ppp.conf
++.Pa /usr/pkg/etc/ppp/ppp.conf
+ file should consist of at least a
+ .Dq default
+ section.
+@@ -786,7 +786,7 @@ is started with no arguments, the
+ .Dq default
+ section is still executed.
+ The load command can be used to manually load a section from the
+-.Pa /etc/ppp/ppp.conf
++.Pa /usr/pkg/etc/ppp/ppp.conf
+ file:
+ .Bd -literal -offset indent
+ ppp ON awfulhak> load MyISP
+@@ -839,7 +839,7 @@ has successfully negotiated a network la
+ a usable state.
+ .Pp
+ If the
+-.Pa /etc/ppp/ppp.linkup
++.Pa /usr/pkg/etc/ppp/ppp.linkup
+ file is available, its contents are executed
+ when the
+ .Em PPP
+@@ -847,7 +847,7 @@ connection is established.
+ See the provided
+ .Dq pmdemand
+ example in
+-.Pa /usr/share/examples/ppp/ppp.conf.sample
++.Pa /usr/pkg/share/examples/ppp/ppp.conf.sample
+ which runs a script in the background after the connection is established
+ (refer to the
+ .Dq shell
+@@ -855,10 +855,10 @@ and
+ .Dq bg
+ commands below for a description of possible substitution strings).
+ Similarly, when a connection is closed, the contents of the
+-.Pa /etc/ppp/ppp.linkdown
++.Pa /usr/pkg/etc/ppp/ppp.linkdown
+ file are executed.
+ Both of these files have the same format as
+-.Pa /etc/ppp/ppp.conf .
++.Pa /usr/pkg/etc/ppp/ppp.conf .
+ .Pp
+ In previous versions of
+ .Nm ppp ,
+@@ -911,13 +911,13 @@ or
+ .Fl ddial
+ options.
+ You must also specify the destination label in
+-.Pa /etc/ppp/ppp.conf
++.Pa /usr/pkg/etc/ppp/ppp.conf
+ to use.
+ It must contain the
+ .Dq set ifaddr
+ command to define the remote peers IP address.
+ (refer to
+-.Pa /usr/share/examples/ppp/ppp.conf.sample )
++.Pa /usr/pkg/share/examples/ppp/ppp.conf.sample )
+ .Bd -literal -offset indent
+ # ppp -auto pmdemand
+ .Ed
+@@ -932,7 +932,7 @@ runs as a daemon but you can still confi
+ configuration by using the
+ .Dq set server
+ command in
+-.Pa /etc/ppp/ppp.conf ,
++.Pa /usr/pkg/etc/ppp/ppp.conf ,
+ .Pq for example, Dq set server +3000 mypasswd
+ and connecting to the diagnostic port as follows:
+ .Bd -literal -offset indent
+@@ -1183,7 +1183,7 @@ client-side
+ Here, the
+ .Ar incoming
+ section must be set up in
+-.Pa /etc/ppp/ppp.conf .
++.Pa /usr/pkg/etc/ppp/ppp.conf .
+ .Pp
+ Make sure that the
+ .Ar incoming
+@@ -1241,7 +1241,7 @@ or
+ .Dq enable pap
+ .Pq or both
+ to
+-.Pa /etc/ppp/ppp.conf
++.Pa /usr/pkg/etc/ppp/ppp.conf
+ under the
+ .Sq incoming
+ label (or whatever label
+@@ -1249,7 +1249,7 @@ label (or whatever label
+ uses).
+ .It
+ Create an entry in
+-.Pa /etc/ppp/ppp.secret
++.Pa /usr/pkg/etc/ppp/ppp.secret
+ for each incoming user:
+ .Bd -literal
+ Pfred<TAB>xxxx
+@@ -1284,7 +1284,7 @@ to the relevant section of
+ .Pa ppp.conf .
+ .Pp
+ You must then configure the
+-.Pa /etc/ppp/ppp.secret
++.Pa /usr/pkg/etc/ppp/ppp.secret
+ file.
+ This file contains one line per possible client, each line
+ containing up to five fields:
+@@ -1391,7 +1391,7 @@ after you've updated
+ Here, we use a label named
+ .Dq ppp-in .
+ The entry in
+-.Pa /etc/ppp/ppp.conf
++.Pa /usr/pkg/etc/ppp/ppp.conf
+ on ui-gate (the receiver) should contain the following:
+ .Bd -literal -offset indent
+ ppp-in:
+@@ -1407,7 +1407,7 @@ To enable PAP, add the following line:
+ .Ed
+ .Pp
+ You'll also need to create the following entry in
+-.Pa /etc/ppp/ppp.secret :
++.Pa /usr/pkg/etc/ppp/ppp.secret :
+ .Bd -literal -offset indent
+ MyAuthName MyAuthPasswd
+ .Ed
+@@ -1421,7 +1421,7 @@ the password is looked up in the
+ database.
+ .Pp
+ The entry in
+-.Pa /etc/ppp/ppp.conf
++.Pa /usr/pkg/etc/ppp/ppp.conf
+ on awfulhak (the initiator) should contain the following:
+ .Bd -literal -offset indent
+ ui-gate:
+@@ -1687,7 +1687,7 @@ to flush all rules.
+ .El
+ .Pp
+ See
+-.Pa /usr/share/examples/ppp/ppp.conf.sample .
++.Pa /usr/pkg/share/examples/ppp/ppp.conf.sample .
+ .Sh SETTING THE IDLE TIMER
+ To check/set the idle timer, use the
+ .Dq show bundle
+@@ -2082,7 +2082,7 @@ add default HISADDR
+ .Ed
+ .Pp
+ to
+-.Pa /etc/ppp/ppp.conf .
++.Pa /usr/pkg/etc/ppp/ppp.conf .
+ .Pp
+ This tells
+ .Nm
+@@ -2097,7 +2097,7 @@ change, the route will be updated accord
+ Previous versions of
+ .Nm
+ required a similar entry in the
+-.Pa /etc/ppp/ppp.linkup
++.Pa /usr/pkg/etc/ppp/ppp.linkup
+ file.
+ Since the advent of
+ .Sq sticky routes ,
+@@ -2105,7 +2105,7 @@ this is no longer required.
+ .It
+ If your provider requests that you use PAP/CHAP authentication methods, add
+ the next lines to your
+-.Pa /etc/ppp/ppp.conf
++.Pa /usr/pkg/etc/ppp/ppp.conf
+ file:
+ .Bd -literal -offset indent
+ set authname MyName
+@@ -2131,7 +2131,7 @@ do this if you are running a local DNS u
+ or have
+ .Dq resolv restore
+ in
+-.Pa /etc/ppp/ppp.linkdown ,
++.Pa /usr/pkg/etc/ppp/ppp.linkdown ,
+ as
+ .Nm
+ will simply circumvent its use by entering some nameserver lines in
+@@ -2139,9 +2139,9 @@ will simply circumvent its use by enteri
+ .El
+ .Pp
+ Please refer to
+-.Pa /usr/share/examples/ppp/ppp.conf.sample
++.Pa /usr/pkg/share/examples/ppp/ppp.conf.sample
+ and
+-.Pa /usr/share/examples/ppp/ppp.linkup.sample
++.Pa /usr/pkg/share/examples/ppp/ppp.linkup.sample
+ for some real examples.
+ The pmdemand label should be appropriate for most ISPs.
+ .Sh LOGGING FACILITY
+@@ -2514,9 +2514,9 @@ Subsequent challenges may occur.
+ If you want to have your peer authenticate itself, you must
+ .Dq enable chap .
+ in
+-.Pa /etc/ppp/ppp.conf ,
++.Pa /usr/pkg/etc/ppp/ppp.conf ,
+ and have an entry in
+-.Pa /etc/ppp/ppp.secret
++.Pa /usr/pkg/etc/ppp/ppp.secret
+ for the peer.
+ .Pp
+ When using CHAP as the client, you need only specify
+@@ -2524,7 +2524,7 @@ When using CHAP as the client, you need 
+ and
+ .Dq AuthKey
+ in
+-.Pa /etc/ppp/ppp.conf .
++.Pa /usr/pkg/etc/ppp/ppp.conf .
+ CHAP is accepted by default.
+ Some
+ .Em PPP
+@@ -2727,9 +2727,9 @@ It is only performed when the connection
+ If you want to have your peer authenticate itself, you must
+ .Dq enable pap .
+ in
+-.Pa /etc/ppp/ppp.conf ,
++.Pa /usr/pkg/etc/ppp/ppp.conf ,
+ and have an entry in
+-.Pa /etc/ppp/ppp.secret
++.Pa /usr/pkg/etc/ppp/ppp.secret
+ for the peer (although see the
+ .Dq passwdauth
+ and
+@@ -2741,7 +2741,7 @@ When using PAP as the client, you need o
+ and
+ .Dq AuthKey
+ in
+-.Pa /etc/ppp/ppp.conf .
++.Pa /usr/pkg/etc/ppp/ppp.conf .
+ PAP is accepted by default.
+ .It pred1
+ Default: Enabled and Accepted.
+@@ -2869,16 +2869,16 @@ Enabling this option will tell the PAP a
+ code to use the password database (see
+ .Xr passwd 5 )
+ to authenticate the caller if they cannot be found in the
+-.Pa /etc/ppp/ppp.secret
++.Pa /usr/pkg/etc/ppp/ppp.secret
+ file.
+-.Pa /etc/ppp/ppp.secret
++.Pa /usr/pkg/etc/ppp/ppp.secret
+ is always checked first.
+ If you wish to use passwords from
+ .Xr passwd 5 ,
+ but also to specify an IP number or label for a given client, use
+ .Dq \&*
+ as the client password in
+-.Pa /etc/ppp/ppp.secret .
++.Pa /usr/pkg/etc/ppp/ppp.secret .
+ .It proxy
+ Default: Disabled.
+ Enabling this option will tell
+@@ -3188,8 +3188,7 @@ be logged to the file
+ .Ar remotePort Ns
+ .Oo
+ .No - Ns Ar remotePort
+-.Oc Oc
+-.Xc
++.Oc Oc Xc
+ This command causes incoming
+ .Ar proto
+ connections to
+@@ -3718,7 +3717,7 @@ with the version originally read at star
+ .Dq resolv reload
+ command.
+ This is sometimes a useful command to put in the
+-.Pa /etc/ppp/ppp.linkdown
++.Pa /usr/pkg/etc/ppp/ppp.linkdown
+ file.
+ .It Em rewrite
+ Rewrite the
+@@ -3728,7 +3727,7 @@ This command will work even if the
+ .Dq resolv readonly
+ command has been used.
+ It may be useful as a command in the
+-.Pa /etc/ppp/ppp.linkup
++.Pa /usr/pkg/etc/ppp/ppp.linkup
+ file if you wish to defer updating
+ .Pa /etc/resolv.conf
+ until after other commands have finished.
+@@ -3952,7 +3951,7 @@ If
+ .Nm
+ is the callee, the number should be specified as the fifth field of
+ the peers entry in
+-.Pa /etc/ppp/ppp.secret .
++.Pa /usr/pkg/etc/ppp/ppp.secret .
+ .It cbcp
+ Microsoft's callback control protocol is used.
+ See
+@@ -5340,18 +5339,18 @@ refers to four files:
+ and
+ .Pa ppp.secret .
+ These files are placed in the
+-.Pa /etc/ppp
++.Pa /usr/pkg/etc/ppp
+ directory.
+ .Bl -tag -width XX
+-.It Pa /etc/ppp/ppp.conf
++.It Pa /usr/pkg/etc/ppp/ppp.conf
+ System default configuration file.
+-.It Pa /etc/ppp/ppp.secret
++.It Pa /usr/pkg/etc/ppp/ppp.secret
+ An authorisation file for each system.
+-.It Pa /etc/ppp/ppp.linkup
++.It Pa /usr/pkg/etc/ppp/ppp.linkup
+ A file to check when
+ .Nm
+ establishes a network level connection.
+-.It Pa /etc/ppp/ppp.linkdown
++.It Pa /usr/pkg/etc/ppp/ppp.linkdown
+ A file to check when
+ .Nm
+ closes a network level connection.

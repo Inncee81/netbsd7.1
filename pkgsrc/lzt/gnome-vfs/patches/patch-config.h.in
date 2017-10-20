@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- config.h.in.orig	2010-09-28 09:35:21.000000000 +0000
++++ config.h.in
+@@ -232,6 +232,8 @@
+ /* Define to 1 if you have the `lseek64' function. */
+ #undef HAVE_LSEEK64
+ 
++#undef HAVE_LOGIN_TTY
++
+ /* Define to 1 if you have the `mbrtowc' function. */
+ #undef HAVE_MBRTOWC
+ 

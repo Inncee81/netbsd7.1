@@ -1,0 +1,4 @@
+[Thumbnailer Entry]
+TryExec=dxf_thumbnailer
+Exec=dxf_thumbnailer -i %i -o %o -s %s
+MimeType=application/dxf;application/x-autocad;application/x-dxf;drawing/x-dxf;image/vnd.dxf;image/dxf;image/x-autocad;image/x-dxf;zz-application/zz-winassoc-dxf;

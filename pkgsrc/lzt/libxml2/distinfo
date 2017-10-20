@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.112.4.1 2016/12/04 15:40:22 bsiegert Exp $
+
+SHA1 (libxml2-2.9.4.tar.gz) = 958ae70baf186263a4bd801a81dd5d682aedd1db
+RMD160 (libxml2-2.9.4.tar.gz) = bb59656e0683d64a38a2f1a45ca9d918837e1e56
+SHA512 (libxml2-2.9.4.tar.gz) = f5174ab1a3a0ec0037a47f47aa47def36674e02bfb42b57f609563f84c6247c585dbbb133c056953a5adb968d328f18cbc102eb0d00d48eb7c95478389e5daf9
+Size (libxml2-2.9.4.tar.gz) = 5374830 bytes
+SHA1 (patch-Makefile.in) = 4368d3547809605713e35d4a71dd740ff2cd045f
+SHA1 (patch-catalog.c) = 0fd77d2ffaff406ca0a242548110e3e1520aff3b
+SHA1 (patch-configure) = 36741409bd4b1254c43b0eda306837ebfc878239
+SHA1 (patch-doc_examples_Makefile.in) = eb10e10dcd9462fd31b1d4327b80909a9f1576b5
+SHA1 (patch-encoding.c) = 41f2448f5af49a097dd011dc7c53e22f8ef11e5e
+SHA1 (patch-parserInternals.c) = d77becb857a5aeb5202dd7be89be0bdd80f0330a
+SHA1 (patch-runtest.c) = d95a6071bf99315fb557bced223c111bfea6b4ff
+SHA1 (patch-testlimits.c) = 75b6f94c52bb6faa23b374e122a3104dd88847c6
+SHA1 (patch-timsort.h) = 09da4afe1155cd326e9565a7a07a9ea03d528d53
+SHA1 (patch-xmlIO.c) = 012710818ecd731179dcd76acef6cb4e826c5f34
+SHA1 (patch-xmlcatalog.c) = 202e412b1c70afd0c2579bda6f7a683d5d5c09b0

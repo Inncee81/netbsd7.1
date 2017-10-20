@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- lib-src/FileDialog/Makefile.am.orig	2016-01-13 14:31:17.000000000 +0000
++++ lib-src/FileDialog/Makefile.am
+@@ -1,6 +1,6 @@
+ ACLOCAL_AMFLAGS = -I m4
+ 
+-lib_LTLIBRARIES = libFileDialog.la
++noinst_LTLIBRARIES = libFileDialog.la
+ 
+ libFileDialog_la_CPPFLAGS = $(WX_CXXFLAGS) -Wno-deprecated-declarations
+ libFileDialog_la_LIBADD = $(WX_LIBS)

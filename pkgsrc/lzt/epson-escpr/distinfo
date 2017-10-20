@@ -1,0 +1,15 @@
+$NetBSD$
+
+SHA1 (epson-inkjet-printer-escpr-1.6.9-1lsb3.2.tar.gz) = 734fa74490f5503c4495c1ac587823596282dfc2
+RMD160 (epson-inkjet-printer-escpr-1.6.9-1lsb3.2.tar.gz) = 9b7270d301b48d85afe845821bee6e0e62ef358e
+SHA512 (epson-inkjet-printer-escpr-1.6.9-1lsb3.2.tar.gz) = 7f9fc7bbb0882e144fe177ae5ecb473c969d12e6e3a9619177e4c8772f7c685c0850ed1f99015faafbec3bc9b468eee1c527cdfc49ae3344e26eb2f3ac364d65
+Size (epson-inkjet-printer-escpr-1.6.9-1lsb3.2.tar.gz) = 3625376 bytes
+SHA1 (patch-configure.ac) = 07aca5829fddba9b02599021c8052a9fd12fb956
+SHA1 (patch-lib-Makefile.am) = fd2dd8936488b30b5fc1b807ea3080a838a64dad
+SHA1 (patch-lib_epson-escpr-api-private.h) = 6d4d7bb4191568d8468dfc282a0b3569ebdcfd53
+SHA1 (patch-lib_epson-escpr-api.c) = 6f43f193fa428e19a885ef13d416a452de4064b1
+SHA1 (patch-lib_epson-usb.c) = 52d5dbe6632d3cff427f186531631d2325a32b72
+SHA1 (patch-src-Makefile.am) = 81e01433e116559a707da707c763b43924b784d6
+SHA1 (patch-src-filter.c) = 49ef4083e203198456c4dbb6c5deaf244101cf7a
+SHA1 (patch-src-mem.c) = 4e64b3afb0e94f53d48912a6c03e3e8c654f3164
+SHA1 (patch-src_wrapper.c) = 0f66087c326c0554c5c60020bc21d7c4be743e1d

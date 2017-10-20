@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/sqlcipher
+include/sqlcipher/sqlite3.h
+include/sqlcipher/sqlite3ext.h
+lib/libsqlcipher.la
+lib/pkgconfig/sqlcipher.pc

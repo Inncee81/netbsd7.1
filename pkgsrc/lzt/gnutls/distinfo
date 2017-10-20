@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.121 2016/09/19 15:32:47 wiz Exp $
+
+SHA1 (gnutls-3.5.4.tar.xz) = d2b9d5f7ad158c5b2a636660fc445765ffd92c75
+RMD160 (gnutls-3.5.4.tar.xz) = d4bb8babd43455bcec24f1298710b576ae996f44
+SHA512 (gnutls-3.5.4.tar.xz) = 175aab43b6349a62530938333910feb26ea5d923e151a9942fd5a6989f87193b18862e69bbbdb6308f889585d428d689d8fd3a6e8149f9fd1ac2882802ea6a9f
+Size (gnutls-3.5.4.tar.xz) = 6930620 bytes
+SHA1 (patch-guile_src_core.c) = 5c9671a4af69d6156a26d444f98c245b1b97043d
+SHA1 (patch-lib_Makefile.in) = 033ff62ea19fbe6f8039ef61f2a688da15f8dd5a
+SHA1 (patch-src_libopts_autoopts_options.h) = 100e9a4329b9be14a81861650a29f2b321d3d597
+SHA1 (patch-src_libopts_compat_compat.h) = 31bdac4e0130ad2b7a7a284a8a0191a05975f365
+SHA1 (patch-src_libopts_libopts.c) = 0d428d1a819aeb703778e35308aa79dcda9acb3b
+SHA1 (patch-src_libopts_makeshell.c) = 350d83707284f78a30b94895d18ad34ad93ba79e
+SHA1 (patch-src_libopts_proto.h) = 852daab6443162265f9912cb9a8b3a54beb46503
+SHA1 (patch-tests_mini-server-name.c) = 79637a90089217507b19469c98042ce7b8fb9b81

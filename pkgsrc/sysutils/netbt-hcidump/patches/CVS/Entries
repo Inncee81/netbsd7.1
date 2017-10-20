@@ -1,0 +1,19 @@
+/patch-Makefile/1.1/Tue Dec 30 08:39:13 2014//
+/patch-lib_bluetooth.c/1.1/Tue Dec 30 08:39:13 2014//
+/patch-lib_bluetooth.h/1.1/Tue Dec 30 08:39:13 2014//
+/patch-lib_hci.c/1.1/Tue Dec 30 08:39:13 2014//
+/patch-lib_hci.h/1.1/Tue Dec 30 08:39:13 2014//
+/patch-lib_hci__lib.h/1.1/Tue Dec 30 08:39:13 2014//
+/patch-lib_l2cap.h/1.1/Tue Dec 30 08:39:13 2014//
+/patch-src_shared_util.h/1.1/Tue Dec 30 08:39:13 2014//
+/patch-tools_Makefile/1.1/Tue Dec 30 08:39:13 2014//
+/patch-tools_hcidump.1/1.1/Tue Dec 30 08:39:13 2014//
+/patch-tools_hcidump.c/1.1/Tue Dec 30 08:39:13 2014//
+/patch-tools_parser_bnep.c/1.1/Tue Dec 30 08:39:13 2014//
+/patch-tools_parser_lmp.c/1.1/Tue Dec 30 08:39:13 2014//
+/patch-tools_parser_rfcomm.h/1.1/Tue Dec 30 08:39:13 2014//
+/patch-tools_parser_tcpip.c/1.1/Tue Dec 30 08:39:13 2014//
+/patch-tools_parser_parser.h/1.2/Fri Mar 20 01:34:37 2015//
+/patch-lib_Makefile/1.7/Thu Aug 24 01:00:57 2017//
+/patch-tools_parser_Makefile/1.2/Thu Aug 24 01:00:57 2017//
+D

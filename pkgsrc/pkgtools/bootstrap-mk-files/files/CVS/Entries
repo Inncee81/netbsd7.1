@@ -1,0 +1,22 @@
+D/mods////
+/bsd.depall.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//
+/bsd.doc.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//
+/bsd.hostprog.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//
+/bsd.inc.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//
+/bsd.info.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//
+/bsd.kernobj.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//
+/bsd.kinc.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//
+/bsd.kmod.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//
+/bsd.links.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//
+/bsd.man.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//
+/bsd.nls.mk/1.1.1.1/Fri Jul 14 23:13:00 2006//
+/bsd.obj.mk/1.1.1.1/Fri Jul 14 23:13:01 2006//
+/bsd.subdir.mk/1.1.1.1/Fri Jul 14 23:13:01 2006//
+/bsd.dep.mk/1.2/Wed Apr 16 01:04:13 2008//
+/bsd.files.mk/1.2/Sat Jan 16 01:02:09 2010//
+/bootstrap.sh/1.4/Tue Mar 19 02:26:20 2013//
+/bsd.prog.mk/1.2/Wed Jan  1 01:03:44 2014//
+/bsd.lib.mk/1.7/Sun Jul  5 01:05:09 2015//
+/bsd.README/1.3/Wed Sep  9 01:09:02 2015//
+/sys.mk/1.2/Fri Sep  9 01:00:48 2016//
+/bsd.sys.mk/1.4/Thu Aug  3 01:00:55 2017//

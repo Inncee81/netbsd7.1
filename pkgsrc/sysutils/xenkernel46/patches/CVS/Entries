@@ -1,0 +1,17 @@
+/patch-Config.mk/1.1.1.1/Mon Jul  4 07:25:13 2016//
+/patch-xen_Makefile/1.1.1.1/Mon Jul  4 07:25:13 2016//
+/patch-xen_arch_x86_Rules.mk/1.1.1.1/Mon Jul  4 07:25:14 2016//
+/patch-xen_common_page__alloc.c/1.1.1.1/Mon Jul  4 07:25:13 2016//
+/patch-xen_drivers_passthrough_vtd_x86_ats.c/1.1.1.1/Mon Jul  4 07:25:14 2016//
+/patch-xen_include_asm-x86_current.h/1.1.1.1/Mon Jul  4 07:25:13 2016//
+/patch-xen_include_xen_lib.h/1.1.1.1/Mon Jul  4 07:25:13 2016//
+/patch-tools_xentrace_xenalyze.c/1.1/Tue Feb 14 21:38:34 2017//
+/patch-xen_arch_x86_mm.c/1.1/Tue Feb 14 21:38:34 2017//
+/patch-xen_arch_x86_xen.lds.S/1.1/Tue Feb 14 21:38:34 2017//
+/patch-xen_include_asm-x86_spinlock.h/1.1/Tue Feb 14 21:38:34 2017//
+/patch-XSA-212/1.1/Sat Apr  8 12:17:58 2017//
+/patch-xen_arch_arm_xen.lds.S/1.1/Sun May  7 21:21:01 2017//
+/patch-xen_arch_x86_alternative.c/1.1/Sun May  7 21:21:01 2017//
+/patch-xen_common_efi_boot.c/1.1/Sun May  7 21:21:01 2017//
+/patch-xen_include_xen_init.h/1.1/Sun May  7 21:21:01 2017//
+D

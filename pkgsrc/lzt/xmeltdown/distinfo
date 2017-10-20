@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (xmeltdown/master.zip) = 1d6e149138d584c5e51367b9b5eb05ad3c512475
+RMD160 (xmeltdown/master.zip) = 0e417bb367aca741e0cd226385a33ecac26e5935
+SHA512 (xmeltdown/master.zip) = 4873e344e537bac2823c831a60814a962c6040f18529e36fff8817b5b1b81aae47ef6cdfa0e799ff7fc047c4c781ccbd0b982917923a27b0f154dc17b4a86c30
+Size (xmeltdown/master.zip) = 32970 bytes
+SHA1 (patch-Makefile) = 42da94fc17c59f45679d63794ca0a26334e31cb3
+SHA1 (patch-src_stickread.c) = f3a83974b623b14a47573b0b58169923e571d66f

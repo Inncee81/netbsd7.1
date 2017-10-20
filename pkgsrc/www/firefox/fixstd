@@ -1,0 +1,30 @@
+set -e
+VER=firefox-55.0.3
+if [ ! -d /tmp/$VER ]
+then
+	echo save SOURCES on /tmp/$VER
+	(cd $(makevar WRKDIR)
+		find $VER \
+		-name "*.h" \
+		-o -name "*.c" \
+		-o -name "*.cc" \
+		-o -name "*.cpp" \
+		-type f | cpio -pdvm /tmp)
+fi
+if [ $# -ne 2 ]
+then
+	echo use $o from to
+	exit 1
+fi
+t=/tmp/$$
+cd $(makevar WRKSRC)
+find * -name "*.h" -o -name "*.c" -o -name "*.cpp" | \
+xargs grep "$1" | \
+awk -F: '{print $1}' | \
+sort -u | \
+while read f
+do
+	sed "s/$1/$2/g" "$f" > $t
+	mv $t "$f"
+	echo $f DONE
+done

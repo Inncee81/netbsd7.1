@@ -1,0 +1,60 @@
+#	$NetBSD: profile,v 1.1 1997/06/21 06:07:39 mikel Exp $
+#
+# System-wide .profile file for sh(1).
+if [ -n "$SHELL" ]
+then
+	if [ "$(basename $SHELL)" = "bash" ]
+	then
+	#	export PATH=/usr/pkg/bin:/usr/pkg/gcc6/bin:$PATH
+		export PS1='[\u@\h \w]\$ '
+	fi
+fi
+export PATH=$HOME/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R7/bin:/usr/pkg/bin
+export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"
+export CVSROOT=:pserver:cvs@cvserver:/usr/cvs
+export CVS_RSH="ssh"
+export CVSROOT CVS_RSH
+export CVS_RSH=ssh
+export INCLUDEDIRS=/usr/pkg/include
+export WRKOBJDIR=/usr/work
+export PKGREPOSITORY=/var/ftp/$(uname -s)/$(uname -s)-$(uname -p)-$(uname -r)/packages
+export AUDIODRIVER=pulseaudio
+#export PKGSRC_COMPILER=clang
+#export HAVE_LLVM=yes
+#export CC="clang"
+#export CPP="clang-cpp"
+#export CXX="clang++"
+#export CXXPP="clang++ -E"
+#export LC_ALL=pt_BR.UTF-8
+export EXINIT="set ai showmode number"
+
+if [ -n "${SSH_CLIENT}" ]
+then
+        set ${SSH_CLIENT}
+	export PULSE_SERVER=$1
+#	export DISPLAY=$1:0
+fi
+if [ -z "$PULSE_SERVER" ]
+then
+	if [ -n "$DISPLAY" ]
+	then
+		set $(echo $DISPLAY | sed "s/:/ /")
+		export PULSE_SERVER=$1
+	else
+		export PULSE_SERVER=/var/run/pulse/native
+	fi
+fi
+if [ "$PULSE_SERVER" = "0" ]
+then
+	export PULSE_SERVER=/var/run/pulse/native
+fi
+if [ -z "$LANG" ]
+then
+	export LANG=pt_BR.UTF-8
+	export LC_ALL=$LANG
+fi
+if tty > /dev/null 2>&1
+then
+	eval $(tset -sQr -e  -m 'unknown:?unknown')
+#	mesg y 2>/dev/null
+fi

@@ -1,0 +1,77 @@
+D/plist-clash////
+/tree.go/1.3/Mon Feb  1 01:00:54 2016//
+/pkglint.0/1.37/Mon Jun  6 01:00:42 2016//
+/pkglint.1/1.51/Mon Jun  6 01:00:42 2016//
+/mkshwalker_test.go/1.1/Thu Jul  7 12:09:27 2016//
+/mkshwalker.go/1.2/Sun Jul 10 01:00:52 2016//
+/parser_test.go/1.6/Sun Jul 10 01:00:52 2016//
+/tree_test.go/1.3/Sun Jul 10 01:00:52 2016//
+/mkshtypes_test.go/1.1/Sun Jul 10 21:24:47 2016//
+/mktypes.go/1.2/Mon Jul 11 01:00:51 2016//
+/mktypes_test.go/1.3/Mon Jul 11 01:00:51 2016//
+/shell.y/1.2/Mon Jul 11 01:00:51 2016//
+/shtypes_test.go/1.2/Mon Jul 11 01:00:51 2016//
+/vartype_test.go/1.4/Mon Jul 11 01:00:51 2016//
+/mkshparser_test.go/1.5/Sun Jan  1 15:15:47 2017//
+/vartype.go/1.12/Sun Jan  1 16:41:37 2017//
+D/getopt////
+D/pkgver////
+/logging.go/1.8/Wed Jan 18 01:01:00 2017//
+/mkshtypes.go/1.5/Wed Jan 18 01:01:00 2017//
+/util_test.go/1.8/Wed Jan 18 01:01:00 2017//
+D/histogram////
+D/licenses////
+D/regex////
+D/textproc////
+D/trace////
+/buildlink3.go/1.10/Mon Jan 30 01:01:05 2017//
+/buildlink3_test.go/1.8/Mon Jan 30 01:01:05 2017//
+/category.go/1.8/Mon Jan 30 01:01:05 2017//
+/category_test.go/1.6/Mon Jan 30 01:01:05 2017//
+/check_test.go/1.13/Mon Jan 30 01:01:05 2017//
+/distinfo.go/1.13/Mon Jan 30 01:01:05 2017//
+/distinfo_test.go/1.10/Mon Jan 30 01:01:05 2017//
+/files.go/1.11/Mon Jan 30 01:01:05 2017//
+/files_test.go/1.10/Mon Jan 30 01:01:05 2017//
+/globaldata.go/1.20/Mon Jan 30 01:01:05 2017//
+/globaldata_test.go/1.11/Mon Jan 30 01:01:05 2017//
+/globalvars.go/1.7/Mon Jan 30 01:01:05 2017//
+/licenses.go/1.10/Mon Jan 30 01:01:05 2017//
+/licenses_test.go/1.8/Mon Jan 30 01:01:05 2017//
+/line.go/1.15/Mon Jan 30 01:01:05 2017//
+/line_test.go/1.10/Mon Jan 30 01:01:05 2017//
+/linechecker.go/1.2/Mon Jan 30 01:01:05 2017//
+/linechecker_test.go/1.2/Mon Jan 30 01:01:05 2017//
+/mkline.go/1.22/Mon Jan 30 01:01:05 2017//
+/mkline_test.go/1.23/Mon Jan 30 01:01:05 2017//
+/mklinechecker.go/1.2/Mon Jan 30 01:01:05 2017//
+/mklinechecker_test.go/1.2/Mon Jan 30 01:01:05 2017//
+/mklines.go/1.13/Mon Jan 30 01:01:05 2017//
+/mklines_test.go/1.13/Mon Jan 30 01:01:05 2017//
+/mkparser.go/1.8/Mon Jan 30 01:01:05 2017//
+/mkparser_test.go/1.5/Mon Jan 30 01:01:05 2017//
+/mkshparser.go/1.5/Mon Jan 30 01:01:05 2017//
+/package.go/1.18/Mon Jan 30 01:01:05 2017//
+/package_test.go/1.14/Mon Jan 30 01:01:05 2017//
+/parser.go/1.8/Mon Jan 30 01:01:05 2017//
+/patches.go/1.14/Mon Jan 30 01:01:05 2017//
+/patches_test.go/1.10/Mon Jan 30 01:01:05 2017//
+/pkglint.go/1.19/Mon Jan 30 01:01:05 2017//
+/pkglint_test.go/1.11/Mon Jan 30 01:01:05 2017//
+/plist.go/1.13/Mon Jan 30 01:01:05 2017//
+/plist_test.go/1.13/Mon Jan 30 01:01:05 2017//
+/shell.go/1.16/Mon Jan 30 01:01:05 2017//
+/shell_test.go/1.16/Mon Jan 30 01:01:05 2017//
+/shtokenizer.go/1.6/Mon Jan 30 01:01:05 2017//
+/shtokenizer_test.go/1.5/Mon Jan 30 01:01:05 2017//
+/substcontext.go/1.9/Mon Jan 30 01:01:05 2017//
+/substcontext_test.go/1.8/Mon Jan 30 01:01:05 2017//
+/toplevel.go/1.7/Mon Jan 30 01:01:05 2017//
+/toplevel_test.go/1.7/Mon Jan 30 01:01:05 2017//
+/util.go/1.14/Mon Jan 30 01:01:05 2017//
+/vartypecheck.go/1.25/Mon Jan 30 01:01:05 2017//
+/vartypecheck_test.go/1.18/Mon Jan 30 01:01:05 2017//
+D/line////
+/shtypes.go/1.5/Fri Mar 17 01:01:06 2017//
+/shellyacc.go/1.1/Fri Mar 17 22:43:34 2017//
+/vardefs.go/1.28/Thu Sep  7 01:00:58 2017//

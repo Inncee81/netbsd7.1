@@ -1,0 +1,35 @@
+t=/tmp/$$
+echo
+echo "===================================================="
+echo "PACKAGE [${PKGNAME}] PROCESS ${STAGE}"
+case ${STAGE} in
+POST-INSTALL)
+	if [ ! -f /etc/ppp ]
+	then
+		ln -sf /usr/pkg/etc/ppp /etc
+	fi
+	if /usr/bin/crontab -l | grep -q /etc/ppp/ppptun
+	then
+		echo PPPTUN ALREADY CONFIGURED
+	else
+		echo PPPTUN CRONTAB INSTALL
+        	/usr/bin/crontab -l | grep -v ppptun > $t
+        	(
+        	cat $t
+        	printf "@reboot\t\t\t\t\t/etc/ppp/ppptun\n"
+        	printf "*\t*\t*\t*\t*\t/etc/ppp/ppptun\n"
+        	) | /usr/bin/crontab -
+	fi
+	echo DONE
+	cp /etc/rc.conf /etc/rc.conf.old
+	(
+	sed -e "/^routed/d"
+	printf "routed=YES\n"
+	printf "routed_flags=-s\n"
+	) > /etc/rc.conf < /etc/rc.conf.old
+	/etc/rc.d/routed restart
+        rm -f ${t}
+;;
+esac
+echo "===================================================="
+echo

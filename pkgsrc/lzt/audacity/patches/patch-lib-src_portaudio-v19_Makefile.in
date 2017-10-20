@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- lib-src/portaudio-v19/Makefile.in.orig	2016-01-13 14:31:21.000000000 +0000
++++ lib-src/portaudio-v19/Makefile.in
+@@ -43,9 +43,7 @@ INCLUDES = @INCLUDES@
+ PALIB = libportaudio.la
+ PAINC = include/portaudio.h
+ 
+-PA_LDFLAGS = $(LDFLAGS) $(SHARED_FLAGS) -rpath $(libdir) -no-undefined \
+-	     -export-symbols-regex "(Pa|PaMacCore|PaJack|PaAlsa|PaAsio|PaOSS)_.*" \
+-	     -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
++PA_LDFLAGS = $(LDFLAGS) -static
+ 
+ COMMON_OBJS = \
+ 	src/common/pa_allocation.o \

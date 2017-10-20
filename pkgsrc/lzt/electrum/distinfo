@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (Electrum-2.9.0.tar.gz) = c1ad2f7f8bf2c13a008631ecd229f9e6274d4847
+RMD160 (Electrum-2.9.0.tar.gz) = 5d9d788ebbc049c56e1575aedfc033efa3327055
+SHA512 (Electrum-2.9.0.tar.gz) = e0014371060873e693d1b1674a400c390d52b256c1bd35cadec756a4b417da43c25fa62b5fb06dc8ce01b7014a86f2acd1481ae494ffe44e77a635bd7874d6f5
+Size (Electrum-2.9.0.tar.gz) = 2359136 bytes
+SHA1 (patch-setup.py) = 39dce60a1cda3e17d1d44a1c4dd16327dba9e345

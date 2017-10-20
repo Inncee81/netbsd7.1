@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- trafshow.1.orig	1998-08-28 07:37:38.000000000 +0000
++++ trafshow.1
+@@ -42,6 +42,16 @@ up interface (excluding loopback).
+ .B \-k
+ Disable input keyboard checking. It is intended to avoid loss of packets.
+ .TP
++.B \-m
++[src-ip M] [dst-ip M] [src-port M] [dst-port M] [proto M]
++.br
++Mask the specified field with mask M (which should be specified
++as an hex number e.g. 0xffff0000) before further processing
++of the packet. This allows to aggregate traffic in the display
++to ease analysis.
++.br
++.The masks for all field not specified will be set to 0.
++.TP
+ .B \-n
+ Don't convert host addresses and port numbers to names.
+ .TP

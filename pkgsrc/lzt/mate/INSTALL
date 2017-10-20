@@ -1,0 +1,82 @@
+t=/tmp/$$
+
+doservice() {
+SERVICE=$(which service)
+if [ -n "${SERVICE}" ]
+then
+	eval ${SERVICE} $1 $2
+else
+	/etc/rc.d/$1 $2
+fi
+}
+
+echo RUNNING ${STAGE}
+case ${STAGE} in
+POST-INSTALL)
+if ! grep -q "^rfb " /etc/inetd.conf
+then
+	echo "rfb stream tcp nowait:4 nobody /usr/pkg/bin/Xvnc Xvnc -inetd -query localhost -once -geometry 1164x652 -depth 16 -deferupdate 120" >> /etc/inetd.conf
+fi
+cat <<% > /etc/dhclient-exit-hooks
+t=/tmp/\$\$
+if [ -s /etc/resolv.conf ]
+then
+	sed -e "/^search/d" /etc/resolv.conf > \$t
+	(echo "search		\$(domainname) k1.com.br";cat \$t) > /etc/resolv.conf
+fi
+rm -f \$t
+%
+if ! grep -q "/usr/pkg/etc/rc.d" /etc/rc.local
+then
+echo FIX RC.LOCAL
+cat <<% >> /etc/rc.local
+if [ -d /usr/pkg/etc/rc.d ]
+then
+	find /usr/pkg/etc/rc.d -type f | \
+	while read p
+	do
+		if [ -x \$p ]
+		then
+			eval \$p start
+		fi
+	done
+fi
+%
+fi
+doservice inetd restart
+doservice local restart
+sed -e "s/dhclient/dhcpcd/" < /etc/rc.d/wpa_supplicant > $t
+cp $t /etc/rc.d/wpa_supplicant
+
+if [ ! -s /etc/wpa_supplicant.conf ]
+then
+mkdir -p /var/run/wpa_supplicant
+cat <<% > /etc/wpa_supplicant.conf
+#created by MATE/INSTALL
+ctrl_interface=/var/run/wpa_supplicant
+ctrl_interface_group=wheel
+update_config=1
+
+network={
+	ssid=""
+	key_mgmt=NONE
+}
+%
+fi
+chmod 755 /usr/pkg/etc
+cat <<% > /etc/fstab
+# NetBSD /etc/fstab
+# See /usr/share/examples/fstab/ for more examples.
+/dev/ld0a	/		ffs	rw,log		1 1
+/dev/ld0b	none		swap	sw		0 0
+kernfs		/kern		kernfs	rw
+ptyfs		/dev/pts	ptyfs	rw
+fdesc		/dev		fdesc	ro,-o=union	0 0
+procfs		/proc		procfs	rw
+tmpfs		/var/shm	tmpfs	rw,-m1777,-sram%25
+tmpfs		/tmp		tmpfs	rw,-m1777,-s64m
+tmpfs		/var/tmp	tmpfs	rw,-m1777,-s64m,-o=union 0 0
+%
+;;
+esac
+rm -f $t

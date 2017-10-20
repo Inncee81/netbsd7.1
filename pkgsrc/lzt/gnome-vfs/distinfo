@@ -1,0 +1,27 @@
+$NetBSD: distinfo,v 1.37 2015/11/04 01:32:16 agc Exp $
+
+SHA1 (gnome-vfs-2.24.4.tar.bz2) = 0dc634e7dd979fd218f378902c0ca1af80738961
+RMD160 (gnome-vfs-2.24.4.tar.bz2) = 6a5952bea02dfc96782b6f1129fe765f5313a75b
+SHA512 (gnome-vfs-2.24.4.tar.bz2) = db4e49f5356647667c4d40c7ce5c299c934cb41069b2086fb89c4e87b2202b5009616d65c1dafeb93e37033a5a68965342c2b18d87b8a3265c4347dec5128581
+Size (gnome-vfs-2.24.4.tar.bz2) = 1890370 bytes
+SHA1 (patch-Makefile.in) = 71e5af38acf6503c27d84b0fe7cbb506566bf911
+SHA1 (patch-config.h.in) = d98c2af59c6ea93b5492781c46feae59cd3ce7b9
+SHA1 (patch-configure) = 3d5dbbceabbd0f53806541e7db3c3aa03cbf0130
+SHA1 (patch-daemon_Makefile.in) = 18b68bb8e302f64afcb615f642f2559be2c97dab
+SHA1 (patch-libgnomevfs_Makefile.in) = 0d28ae25cd9eb9c9ed18330e29b1bd0ed8835c95
+SHA1 (patch-libgnomevfs_gnome-vfs-cdrom.c) = b932d7107c67c26a08a4ba5f2d22be28369bcff3
+SHA1 (patch-libgnomevfs_gnome-vfs-job.h) = 79242964a66a80d7e667037b45d5042043f857eb
+SHA1 (patch-libgnomevfs_gnome-vfs-pty.c) = 8979e4d3281c382ed70acff1706e134a7b654053
+SHA1 (patch-libgnomevfs_gnome-vfs-unix-mounts.c) = 21c1caf9ca1eab5b687a425a13fe1705a7ac6de3
+SHA1 (patch-libgnomevfs_gnome-vfs-utils.c) = da364e145801339181893265a9f7b328c82017d9
+SHA1 (patch-libgnomevfs_xdgmime.c) = 13a70ef716d2bed5ff0a0bbf109d0e5f8386efbf
+SHA1 (patch-libgnomevfs_xdgmimealias.h) = dfd0c2545143e409efbfbc2e5d3be815ae29ba0c
+SHA1 (patch-libgnomevfs_xdgmimecache.h) = 7f658fbb647fc30828a81d9e35136f9829e995a0
+SHA1 (patch-libgnomevfs_xdgmimeparent.h) = b4e30835e150143ce1187f4fd91782b0ddc7c333
+SHA1 (patch-modules_Makefile.in) = 1d6ba9e0ed3102d201dda4de2820bbe17051a852
+SHA1 (patch-modules_bzip2-method.c) = 3b10c5a2a9059d97d19717c19b07b26ce0912b48
+SHA1 (patch-modules_file-method-acl.c) = 0bc195bdec5e39d71be2110f206a951e9d258fb8
+SHA1 (patch-modules_file-method.c) = fa899fb836df54237d7f43fab9d6f72b889ee28c
+SHA1 (patch-modules_fstype.c) = 79ab784debf38d91cb8eb1fea286065bdc91c185
+SHA1 (patch-modules_inotify-kernel.c) = 3933f3413e4db2d66cc9b88295d0c3135617fb03
+SHA1 (patch-modules_sftp-method.c) = c939ac8e4ac63cd2b6e61bfa6695dc30d4312471

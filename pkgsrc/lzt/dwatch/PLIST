@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/dwatch
+man/man1/dwatch.1
+share/examples/dwatch/dwatch.conf
+@pkgdir etc

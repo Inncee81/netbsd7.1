@@ -1,0 +1,29 @@
+diff -up mk/bsd.pkg.mk.orig mk/bsd.pkg.mk
+--- mk/bsd.pkg.mk.orig	2016-08-26 13:51:56.000000000 -0300
++++ mk/bsd.pkg.mk	2017-04-01 16:37:54.000000000 -0300
+@@ -76,6 +76,8 @@ PKG_FAIL_REASON+=	"Circular dependency d
+ 
+ .include "bsd.hacks.mk"
+ 
++.include "rc_script.mk"
++
+ ############################################################################
+ # Transform package Makefile variables and set defaults
+ ############################################################################
+diff -up mk/rc_script.mk.orig mk/rc_script.mk
+--- mk/rc_script.mk.orig	2017-04-01 16:37:54.000000000 -0300
++++ mk/rc_script.mk	2017-04-01 16:37:54.000000000 -0300
+@@ -0,0 +1,13 @@
++.if exists(${.CURDIR}/Makefile.local)
++.include "${.CURDIR}/Makefile.local"
++.endif
++
++.if ! emtpty(RCD_SCRIPTS)
++INSTALLATION_DIRS+=share/examples/rc.d
++RCDIR=	${PREFIX}/share/examples/rc.d
++
++.for R in ${RCD_SCRIPTS}
++CONF_FILES_PERMS+=${RCDIR}/${R} /etc/rc.d/${R} \
++	${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
++.endfor
++.endif

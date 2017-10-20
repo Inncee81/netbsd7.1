@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.18 2017/06/21 13:45:35 taca Exp $
+
+SHA1 (puppet-4.10.4.gem) = 11b514a644772ffab1015c10200e22cb2000de2a
+RMD160 (puppet-4.10.4.gem) = 709efb17758687243c1b870fe9d96b3f19cfe456
+SHA512 (puppet-4.10.4.gem) = 03006c485cb50faa6f31a2ac23ff712b217c812dec3a3b89479db0faabf165764b740b2a0029d2baada8da24b5bb722a936d1f0a4c7a331b12df67f91bc542b2
+Size (puppet-4.10.4.gem) = 2974720 bytes
+SHA1 (patch-aa) = 8b25b975647023902f5d84cc2980f777f23e789c
+SHA1 (patch-ab) = 2e80fc9ca8a9326d69c72149e6fd97738cfd2e1e
+SHA1 (patch-ac) = 38fd0797438e9d6dcbc88e99354dae4ef0b9cba0
+SHA1 (patch-ae) = 73d8cb4c58345b09771f08da8bc3b1e46563aa95
+SHA1 (patch-lib_puppet_util_command__line.rb) = a15aa55703a6f437b2ee0f7137ee1820318f13e0

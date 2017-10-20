@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.5 2017/08/14 19:21:33 wiz Exp $
+
+SHA1 (autovivification-0.17.tar.gz) = 45eafbe24605a35f5a22938a5da243e399ad3417
+RMD160 (autovivification-0.17.tar.gz) = bb787aca110de02b561698e0570344335dc99133
+SHA512 (autovivification-0.17.tar.gz) = 44377110a2f3e9829f2dddd5df0da9cca2718bcddff550d7a948196bc7e21d6b07e9c364e0951614baeedfe1914c54bf09b7c0b614a9420a9e53d55683134f5e
+Size (autovivification-0.17.tar.gz) = 55277 bytes

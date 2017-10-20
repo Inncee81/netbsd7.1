@@ -1,0 +1,2 @@
+#post-patch:
+#	/root/bin/fix-stack-protector

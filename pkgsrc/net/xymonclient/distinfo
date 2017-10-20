@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.15 2016/12/09 21:08:34 spz Exp $
+
+SHA1 (xymon-4.3.27.tar.gz) = 76055c6b1b60f1d2f86859d1de8fec70ce59e538
+RMD160 (xymon-4.3.27.tar.gz) = 585b9e5f49444eee255db62d1510fc67f2539f96
+SHA512 (xymon-4.3.27.tar.gz) = bb48fce02e20f040675d3cf8e32596855b57c8ad1ed12c684550458cc286a6d214814ba596a670539d137e238a9e02ff9f8ffe2522571b95445db5b81b12d0f1
+Size (xymon-4.3.27.tar.gz) = 3000255 bytes
+SHA1 (patch-aa) = c44f791ef6005c809127175cb563bd8f0ac74642
+SHA1 (patch-ab) = db0c5808cfad75aaf37217509399597191236180
+SHA1 (patch-ac) = e36db5081c7461eeec32a9be6e480c8d9643ea41
+SHA1 (patch-ad) = 7519eaeecab9f5d4b6956e0fd426548ec7990a0b
+SHA1 (patch-ae) = 218ef05eb3d51d779230c357d731b2f904d4559f
+SHA1 (patch-af) = 5e71a56cf827f9b30147dd577c295f10c150cd27
+SHA1 (patch-build_Makefile.FreeBSD) = e58b50f35068cba6fed89cc21bcc4eb7d30efd23
+SHA1 (patch-client_xymonclient-netbsd.sh) = 739a201806144ef0e34c1f668ad3a4d9e2b9f9fb
+SHA1 (patch-configure) = 305a74a2383dcd37ea93456272d4254483023aa5

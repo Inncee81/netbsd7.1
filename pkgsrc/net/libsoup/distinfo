@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.13 2017/08/14 20:09:02 wiz Exp $
+
+SHA1 (libsoup-2.58.2.tar.xz) = ac203befb84b4db9c576090f3ae2a390a971f0e7
+RMD160 (libsoup-2.58.2.tar.xz) = ecc17632960fc7760e449daaba27a5cfeebbd820
+SHA512 (libsoup-2.58.2.tar.xz) = 85af6fac87343bdd22312518402144d33916225f60d6fa158efdd84f7ee7ed1f9895989b3558f711c9aedc93cff35a4114ad79d6d2aa19c54cb326f162a4c7de
+Size (libsoup-2.58.2.tar.xz) = 1815256 bytes

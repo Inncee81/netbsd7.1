@@ -1,0 +1,17 @@
+/patch-aa/1.3/Wed Oct 26 01:02:28 2011//
+/patch-ab/1.4/Wed Oct 26 01:02:28 2011//
+/patch-lib_RT_CustomFieldValues_External.pm/1.1/Tue Oct 25 19:38:10 2011//
+/patch-lib_RT_Interface_Email.pm/1.1/Tue Oct 25 19:38:10 2011//
+/patch-sbin_rt-attributes-viewer/1.1/Tue Oct 25 19:38:10 2011//
+/patch-sbin_rt-attributes-viewer.in/1.1/Tue Oct 25 19:38:10 2011//
+/patch-share_html_Helpers_CalPopup.html/1.1/Tue Oct 25 19:38:10 2011//
+/patch-t_approval_admincc.t/1.1/Tue Oct 25 19:38:10 2011//
+/patch-t_approval_basic.t/1.1/Tue Oct 25 19:38:10 2011//
+/patch-lib_RT_Interface_Email_Auth_GnuPG.pm/1.2/Thu Nov  1 01:01:16 2012//
+/patch-share_html_Search_Elements_ResultsRSSView/1.1/Sun Mar  1 22:45:26 2015//
+/patch-lib_RT.pm/1.3/Mon Mar 13 01:00:41 2017//
+/patch-lib_RT_Date.pm/1.1/Sun Mar 12 19:55:49 2017//
+/patch-lib_RT_Interface_Web.pm/1.1/Sun Mar 12 19:55:49 2017//
+/patch-bin_rt.in/1.1/Wed Apr 19 06:34:10 2017//
+/patch-share_html_REST_1.0_Forms_ticket_default/1.1/Wed Apr 19 06:34:10 2017//
+D

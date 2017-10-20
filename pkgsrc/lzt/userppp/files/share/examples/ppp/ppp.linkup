@@ -1,0 +1,5 @@
+ppptun:
+        !bg sh -c "sleep 1;/etc/ppp/fixpf INTERFACE"
+        !bg sh -c "sleep 2;/usr/local/sbin/rdate -os HISADDR"
+        add! 192.168.202.0/24 HISADDR
+        add! 192.168.6.0/24 HISADDR

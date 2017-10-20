@@ -1,0 +1,118 @@
+diff -up bin/distro-install-desktop-integration.orig bin/distro-install-desktop-integration
+--- bin/distro-install-desktop-integration.orig	2017-07-18 13:08:11.000000000 -0300
++++ bin/distro-install-desktop-integration	2017-07-18 13:08:47.000000000 -0300
+@@ -99,7 +99,7 @@ cp -a workdir/CustomTarget/sysui/share/l
+ cp -a "${SRCDIR?}"/sysui/desktop/share/create_tree.sh "$sysui_temp"
+ cd $sysui_temp
+ # we want non-versioned stuff in the distro packages
+-sed -i \
++gsed -i \
+     -e "s/\($INSTALLDIRNAME\)$PRODUCTVERSION_NODOT/\1/" \
+     -e "s/\($INSTALLDIRNAME\)$PRODUCTVERSION/\1/" \
+     -e "s/\($PRODUCTNAME\) $PRODUCTVERSION/\1/" \
+@@ -130,7 +130,7 @@ fi
+ # we want non-versioned desktop files
+ cd $DESTDIR/$INSTALLDIR/share/xdg
+ # we want non-versioned stuff in the distro packages
+-sed -i \
++gsed -i \
+     -e "s/\($INSTALLDIRNAME\)$PRODUCTVERSION_NODOT/\1/" \
+     -e "s/\($INSTALLDIRNAME\)$PRODUCTVERSION/\1/" \
+     -e "s/\($PRODUCTNAME\) $PRODUCTVERSION/\1/" \
+diff -up bin/find-undocumented-classes.orig bin/find-undocumented-classes
+--- bin/find-undocumented-classes.orig	2017-07-18 13:08:11.000000000 -0300
++++ bin/find-undocumented-classes	2017-07-18 13:08:47.000000000 -0300
+@@ -14,12 +14,12 @@ fi
+ 
+ doxygen=$(mktemp -d)
+ eval doxygen -g $doxygen/doxygen.cfg $filter
+-sed -i "/HTML_OUTPUT/s|html|$doxygen/html|" $doxygen/doxygen.cfg
+-sed -i '/GENERATE_LATEX/s/= YES/= NO/' $doxygen/doxygen.cfg
+-sed -i '/RECURSIVE/s/= NO/= YES/' $doxygen/doxygen.cfg
++gsed -i "/HTML_OUTPUT/s|html|$doxygen/html|" $doxygen/doxygen.cfg
++gsed -i '/GENERATE_LATEX/s/= YES/= NO/' $doxygen/doxygen.cfg
++gsed -i '/RECURSIVE/s/= NO/= YES/' $doxygen/doxygen.cfg
+ # do we have any arguments?
+ if [ -n "$*" ]; then
+-    sed -i "/^INPUT[^_]/s|=.*|= $*|" $doxygen/doxygen.cfg
++    gsed -i "/^INPUT[^_]/s|=.*|= $*|" $doxygen/doxygen.cfg
+ fi
+ eval doxygen $doxygen/doxygen.cfg $filter 2> $doxygen/errors.txt
+ if [ "$quiet" == "n" ]; then
+diff -up bin/find-unused-defines.awk.orig bin/find-unused-defines.awk
+--- bin/find-unused-defines.awk.orig	2017-07-18 13:08:11.000000000 -0300
++++ bin/find-unused-defines.awk	2017-07-18 13:08:47.000000000 -0300
+@@ -5,7 +5,7 @@
+ 
+ END { 
+     tmp = substr(y, 0, index(y, ":")-1)
+-    if (x==1) print "sed -i '/[[:space:]]" p1 "[[:space:]]/d' " tmp
++    if (x==1) print "gsed -i '/[[:space:]]" p1 "[[:space:]]/d' " tmp
+     # mark these as potential places to inline a constant
+     if (x==2) print "#inline " p1 " " tmp
+ }
+@@ -14,6 +14,6 @@ END { 
+ 
+ 
+ # | xargs -P 4 -Ixxx sh -c "git grep -w 'xxx' | awk '{ x++; y=\$0 } END { if (x==1) print y }' && echo \"xxx\" 1>&2"
+-# 	sed -i '' '/pattern/d'
++# 	gsed -i '' '/pattern/d'
+ # | awk  'arr[$0]++ END { for (i in arr) { if(arr[i]==1) print i } }' \
+ # | awk -f find-unused-defines.awk
+diff -up bin/fixincludeguards.sh.orig bin/fixincludeguards.sh
+--- bin/fixincludeguards.sh.orig	2017-07-18 13:08:11.000000000 -0300
++++ bin/fixincludeguards.sh	2017-07-18 13:08:47.000000000 -0300
+@@ -75,11 +75,11 @@ for fn in "$@"; do
+         echo "$fn: $old_guard"
+ 
+         # includes leading whitespace removal
+-        sed -i "s/\s*${old_guard}/ ${guard_prefix}${guard}/g" "$fn"
++        gsed -i "s/\s*${old_guard}/ ${guard_prefix}${guard}/g" "$fn"
+ 
+ 
+         ### clean up endif
+-        sed -i "s/#endif\s*\(\/\/\|\/\*\)\s*\#\?\(ifndef\)\?\s*!\?\s*\(${guard_prefix}${guard}\).*/#endif \/\/ \3/g" "$fn"
++        gsed -i "s/#endif\s*\(\/\/\|\/\*\)\s*\#\?\(ifndef\)\?\s*!\?\s*\(${guard_prefix}${guard}\).*/#endif \/\/ \3/g" "$fn"
+ 
+     fi
+ done
+diff -up bin/moveglobalheaders.sh.orig bin/moveglobalheaders.sh
+--- bin/moveglobalheaders.sh.orig	2017-07-18 13:08:11.000000000 -0300
++++ bin/moveglobalheaders.sh	2017-07-18 13:10:40.000000000 -0300
+@@ -34,11 +34,11 @@ done
+ #git add sal/CustomTarget_sal_allheaders.mk
+ 
+ # we like to be special ...
+-sed -ie 's/\/svtools\/inc\/svtools/\/include\/svtools\//' svtools/Library_svt.mk
+-sed -ie 's/\/sfx2\/inc\/sfx2/\/include\/sfx2\//' sfx2/Library_sfx.mk
+-sed -ie 's/\/sfx2\/inc\/sfx2/\/include\/sfx2\//' sfx2/Library_qstart_gtk.mk
++gsed -i -e 's/\/svtools\/inc\/svtools/\/include\/svtools\//' svtools/Library_svt.mk
++gsed -i -e 's/\/sfx2\/inc\/sfx2/\/include\/sfx2\//' sfx2/Library_sfx.mk
++gsed -i -e 's/\/sfx2\/inc\/sfx2/\/include\/sfx2\//' sfx2/Library_qstart_gtk.mk
+ git add svtools/Library_svt.mk sfx2/Library_sfx.mk sfx2/Library_qstart_gtk.mk
+ 
+ # urgh
+-sed -ie 's/\.\.\/svx\//svx\//' svx/source/svdraw/svdoashp.cxx
++gsed -i -e 's/\.\.\/svx\//svx\//' svx/source/svdraw/svdoashp.cxx
+ git add svx/source/svdraw/svdoashp.cxx
+diff -up bin/rename-sw-abbreviations.sh.orig bin/rename-sw-abbreviations.sh
+--- bin/rename-sw-abbreviations.sh.orig	2017-07-18 13:08:11.000000000 -0300
++++ bin/rename-sw-abbreviations.sh	2017-07-18 13:08:47.000000000 -0300
+@@ -17,7 +17,7 @@ do
+     S="${I%/*}"
+     # change all except the filenames (in the .mk and in #include)
+     # also avoid numFmt (OOXML token) and other stuff that must stay verbatim
+-    git grep -l "$S" sw/ | grep -v -e '\.mk' -e '/data/' -e '/testdocuments/' | xargs sed -i '/\(#include\|numFmt\|ForeignTxt\)/ !{ s/'"$I"'/g }'
++    git grep -l "$S" sw/ | grep -v -e '\.mk' -e '/data/' -e '/testdocuments/' | xargs gsed -i '/\(#include\|numFmt\|ForeignTxt\)/ !{ s/'"$I"'/g }'
+ done
+ 
+ # global:
+@@ -37,7 +37,7 @@ for I in "SvxSwAutoFmtFlags/SvxSwAutoFor
+     "etTxtSize/etTextSize"
+ do
+     S="${I%/*}"
+-    git grep -l "$S" | grep -v -e '\.mk' -e 'rename-sw-abbreviations.sh' | xargs sed -i "s/$I/g"
++    git grep -l "$S" | grep -v -e '\.mk' -e 'rename-sw-abbreviations.sh' | xargs gsed -i "s/$I/g"
+ done
+ 
+ # vim: set et sw=4 ts=4 textwidth=0:

@@ -1,0 +1,11 @@
+$NetBSD$
+
+--- config/PostSession.in.orig	2017-03-25 03:54:48.000000000 +0000
++++ config/PostSession.in
+@@ -19,4 +19,6 @@ gdmwhich () {
+   echo "$OUTPUT"
+ }
+ 
++find /tmp -user ${USER} | xargs rm -rf
++
+ exit 0

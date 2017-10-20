@@ -1,0 +1,13 @@
+case ${STAGE} in
+POST-INSTALL)
+	echo LOCALBASE is @LOCALBASE@
+	if [ ! -s @LOCALBASE@/etc/gdm/.inited ]
+	then
+		echo REBUILD fontcache....
+		fc-cache -vf
+		echo DONE
+	fi
+	date > @LOCALBASE@/etc/gdm/.inited
+;;
+esac
+exit 0

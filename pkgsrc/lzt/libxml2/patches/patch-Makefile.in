@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.in.orig	2016-05-23 08:00:36.000000000 +0000
++++ Makefile.in
+@@ -847,7 +847,7 @@ cmake_DATA = libxml2-config.cmake
+ #
+ BASE_DIR = $(datadir)/doc
+ DOC_MODULE = libxml2-$(VERSION)
+-EXAMPLES_DIR = $(BASE_DIR)/$(DOC_MODULE)/examples
++EXAMPLES_DIR = $(datadir)/examples/libxml2
+ 
+ #
+ # Coverage support, largely borrowed from libvirt

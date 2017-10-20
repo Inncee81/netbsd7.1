@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/daemon
+man/html8/daemon.html
+man/man8/daemon.8

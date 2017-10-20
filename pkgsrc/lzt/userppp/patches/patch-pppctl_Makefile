@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- pppctl/Makefile.orig	2000-11-07 05:45:45.000000000 +0000
++++ pppctl/Makefile
+@@ -12,10 +12,6 @@ MAN8=		pppctl.8
+ MAN=		pppctl.8
+ .endif
+ 
+-# To install correctly:
+-BINDIR=/usr/sbin
+-BINOWN=root
+-
+ .include <bsd.prog.mk>
+ LDADD+=	-lutil
+ DPADD+= ${LIBUTIL}

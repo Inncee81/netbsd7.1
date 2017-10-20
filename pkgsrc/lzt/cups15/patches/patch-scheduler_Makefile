@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- scheduler/Makefile.orig	2011-05-11 22:17:34.000000000 +0000
++++ scheduler/Makefile
+@@ -140,6 +140,8 @@ install:	all install-data install-header
+ #
+ 
+ install-data:
++
++install-dirs:
+ 	echo Creating $(SERVERBIN)/driver...
+ 	$(INSTALL_DIR) -m 755 $(SERVERBIN)/driver
+ 	echo Creating $(SERVERROOT)...

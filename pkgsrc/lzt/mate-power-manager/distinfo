@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2016/05/21 19:13:18 youri Exp $
+
+SHA1 (mate-power-manager-1.14.0.tar.xz) = 286ac97658d18ea1fffa6e0a692a877727a44e41
+RMD160 (mate-power-manager-1.14.0.tar.xz) = 6db16df2a2d3a0285b36d966da32c6deccd07c8f
+SHA512 (mate-power-manager-1.14.0.tar.xz) = b1e6c5c0fe18b8e5d70ad66af450e86e7cf9fd5429973907618a742093fa9dec0c137e598f766824cb092d7c8c90a6d7116bc6b0417c81320dc21f8426d1eae2
+Size (mate-power-manager-1.14.0.tar.xz) = 3221144 bytes
+SHA1 (patch-applets_brightness_Makefile.am) = 5e07b1febcd4a956e8d56b6122979d5c4980f1f3
+SHA1 (patch-applets_inhibit_Makefile.am) = aeca4f5f4d412f5ff547bf8fc688874c3a3a27ec
+SHA1 (patch-autogen.sh) = 217d90d190fcddd6af7fef5dd9f88c61d3755a9f
+SHA1 (patch-configure) = cb0b1d50953ad45a8233d4da0c2ee6bc583d11ef
+SHA1 (patch-configure.ac) = 07fc7e9340a8e91e6e2f709a1fba05ba8b735671
+SHA1 (patch-src_Makefile.am) = 6e9181b2ad621578ae507c4b97d4dcb70adae791
+SHA1 (patch-src_Makefile.in) = b822e03e0e2539a4acc34b71680c0c3e08bac7ab
+SHA1 (patch-src_gpm-backlight-helper.c) = 4ea1a8bf16bd3a14dd261fe2f9b9f586e881ee08
+SHA1 (patch-src_gpm-control.c) = ba449a7d6d64577b6e0e02bf069bc8dcc8e32cd5
+SHA1 (patch-src_gpm-engine.c) = 634495a43dae1a27046561cc58e7a79d3b8cfba4
+SHA1 (patch-src_gpm-load.c) = 376270286173adc175b12354fd4ecb17bbfff71e
+SHA1 (patch-src_gpm-statistics.c) = 14200e65f84abc68e28ed91dca33917364f410a4

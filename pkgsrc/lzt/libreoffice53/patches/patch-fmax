@@ -1,0 +1,11 @@
+--- /tmp/libreoffice/vcl/unx/generic/gdi/cairotextrender.cxx	2017-01-26 20:22:46.000000000 -0200
++++ vcl/unx/generic/gdi/cairotextrender.cxx	2017-07-17 00:35:12.000000000 -0300
+@@ -314,7 +314,7 @@
+                     // the glyph’s baseline.
+                     cairo_text_extents_t aExt;
+                     cairo_glyph_extents(cr, &cairo_glyphs[nStartIndex], nLen, &aExt);
+-                    double nDescender = std::fmax(aExt.height + aExt.y_bearing, 0);
++                    double nDescender = fmax(aExt.height + aExt.y_bearing, 0);
+                     ydiff = (aExt.x_advance - nDescender) / nHeight;
+                 }
+                 else

@@ -1,0 +1,36 @@
+.include	"options.mk"
+
+EGDIR=		${PREFIX}/share/examples
+
+#.for R in printsearch runbatch
+#CONF_FILES_PERMS+=${EGDIR}/rc.d/${R} /etc/rc.d/${R} \
+#	${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
+#.endfor
+
+INSTALLATION_DIRS+=share/examples/mate 
+
+CONF_FILES+=${EGDIR}/mate/21-mate-resolv /libexec/dhcpcd-hooks
+
+pre-fetch:
+	mkdir -p ${WRKSRC}
+
+do-configure:
+	@true
+
+build-clean:
+	@true
+
+do-build:
+	@true
+
+post-install:
+	echo POST INSTALL
+	mkdir -p ${DESTDIR}${PREFIX} \
+		${DESTDIR}${PREFIX}/etc/rc.d
+	rsync --exclude CVS/ -avzHx --delete ${FILESDIR}/ ${DESTDIR}${PREFIX}
+cvs:
+	cvs up
+	cvs commit
+
+dorsync:
+	cd ..;sh dorsyncpackages mate

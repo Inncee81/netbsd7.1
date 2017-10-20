@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (PosteRazor-1.5.1-Source.zip) = b7c0187b7aacfe5c6bd19ecc2c2e80f233f73147
+RMD160 (PosteRazor-1.5.1-Source.zip) = 9068736e557bc12b142d12d381761e2adca26ea1
+SHA512 (PosteRazor-1.5.1-Source.zip) = 909bfc209be119fbea70ecb8a6508230161acc5ee586e4dfb5eafe151a4799aceec252e5d1c6d74a62660ab92001cceff35a6d154d2cbe3ec68b6df7986a2a6a
+Size (PosteRazor-1.5.1-Source.zip) = 268294 bytes
+SHA1 (patch-FlPosteRazorDialog.cpp) = 489bc3a0f5097273784f17c5c1721b0ea204ded5

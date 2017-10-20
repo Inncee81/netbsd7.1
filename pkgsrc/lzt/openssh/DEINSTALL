@@ -1,0 +1,13 @@
+case ${STAGE} in
+DEINSTALL)
+		/etc/rc.d/sshd stop
+;;
+POST-DEINSTALL)
+	cd /etc/rc.d
+	if [ -s sshd.orig ]
+	then
+		mv sshd.orig sshd
+		/etc/rc.d/sshd start
+	fi
+;;
+esac

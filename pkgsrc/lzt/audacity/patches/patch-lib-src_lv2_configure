@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- lib-src/lv2/configure.orig	2017-07-19 01:17:26.000000000 +0000
++++ lib-src/lv2/configure
+@@ -78,7 +78,7 @@ waf sord   --static --no-shared --no-uti
+ waf sratom --static --no-shared
+ waf lilv   --static --no-shared --no-utils
+ waf suil   --static --no-shared --no-qt
+-sed -i'' -e "s@suil/lib/suil-0@suil/build@" suil/build/suil_config.h
++gsed -i -e "s@suil/lib/suil-0@suil/build@" suil/build/suil_config.h
+ 
+ cat >.buildvars <<EOF
+ export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}"

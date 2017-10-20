@@ -1,0 +1,10 @@
+cd $(makevar WRKDIR)
+find libreoffice-5.2.4.2 -name "*.h" -o -name "*.mk" -o -name "Makefile*" -o -name "*.cxx" | \
+xargs grep "$1" | \
+awk -F: '{print $1}' | \
+sort -u | \
+while read p
+do
+	gsed -i "s/$1/$2/g" $p
+	echo $p DONE
+done

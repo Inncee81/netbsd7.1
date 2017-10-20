@@ -1,0 +1,11 @@
+/DESCR/1.1.1.1/Fri Nov 21 17:40:29 2008//
+D/patches////
+/PLIST.Linux/1.3/Mon Mar 26 01:01:32 2012//
+/PLIST.Darwin/1.2/Tue Feb 10 01:04:00 2015//
+/buildlink3.mk/1.16/Sun Apr 26 01:06:24 2015//
+/distinfo/1.27/Fri Sep 16 01:00:38 2016//
+/PLIST.wine32/1.2/Mon Sep 19 01:00:39 2016//
+/PLIST.wine64/1.2/Mon Sep 19 01:00:39 2016//
+/MESSAGE/1.3/Mon Dec 26 22:36:30 2016//
+/options.mk/1.10/Sat May 20 01:00:39 2017//
+/Makefile/1.68/Sat Sep  9 01:00:42 2017//

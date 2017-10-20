@@ -1,0 +1,12 @@
+/patch-doc_CMakeLists.txt/1.1/Wed Mar 21 21:14:47 2012//
+/patch-core_libs_dimg_filters_icc_iccmanager.h/1.2/Thu Apr  4 01:02:38 2013//
+/patch-core_app_album_albumwatch.cpp/1.1/Sat Nov 15 21:15:18 2014//
+/patch-core_libs_3rdparty_kmemoryinfo_kmemoryinfo_backend.cpp/1.4/Sun Nov 16 01:31:03 2014//
+/patch-CMakeLists.txt/1.3/Wed Nov  4 03:45:59 2015//
+/patch-core_CMakeLists.txt/1.1/Tue Nov  3 20:47:48 2015//
+/patch-core_README/1.1/Tue Nov  3 20:47:48 2015//
+/patch-core_app_utils_libopencv.h/1.1/Tue Nov  3 20:47:48 2015//
+/patch-core_libs_database_imgqsort_imgqsort.cpp/1.1/Tue Nov  3 20:47:48 2015//
+/patch-core_tests_imgqsort_detectblur_detectblur.cpp/1.2/Wed Nov  4 03:45:59 2015//
+/patch-core_tests_imgqsort_detectnoise_detectnoise.cpp/1.2/Wed Nov  4 03:45:59 2015//
+D

@@ -1,0 +1,145 @@
+diff -ru /tmp/gdm/config/gdm.conf.in ./config/gdm.conf.in
+--- /tmp/gdm/config/gdm.conf.in	2007-07-30 17:06:57.000000000 -0300
++++ ./config/gdm.conf.in	2017-07-26 18:16:51.000000000 -0300
+@@ -140,7 +140,7 @@
+ # compatibility reasons with 2.4.4.x.
+ #SessionDesktopDir=/etc/X11/sessions/:@dmconfdir@/Sessions/:@datadir@/gdm/BuiltInSessions/:@datadir@/xsessions/
+ # This is the default .desktop session.  One of the ones in SessionDesktopDir
+-#DefaultSession=gnome.desktop
++#DefaultSession=mate.desktop
+ # Better leave this blank and HOME will be used.  You can use syntax ~/ below
+ # to indicate home directory of the user.  You can also set this to something
+ # like /tmp if you don't want the authorizations to be in home directories.
+diff -ru /tmp/gdm/daemon/gdm.h ./daemon/gdm.h
+--- /tmp/gdm/daemon/gdm.h	2007-07-30 17:06:56.000000000 -0300
++++ ./daemon/gdm.h	2017-07-26 18:13:29.000000000 -0300
+@@ -241,7 +241,7 @@
+ #define GDM_KEY_SERV_AUTHDIR "daemon/ServAuthDir=" AUTHDIR
+ #define GDM_KEY_SESSION_DESKTOP_DIR "daemon/SessionDesktopDir=/etc/X11/sessions/:" DMCONFDIR "/Sessions/:" DATADIR "/gdm/BuiltInSessions/:" DATADIR "/xsessions/"
+ #define GDM_KEY_BASE_XSESSION "daemon/BaseXsession=" GDMCONFDIR "/Xsession"
+-#define GDM_KEY_DEFAULT_SESSION "daemon/DefaultSession=gnome.desktop"
++#define GDM_KEY_DEFAULT_SESSION "daemon/DefaultSession=mate.desktop"
+ #define GDM_KEY_SUSPEND "daemon/SuspendCommand=" SUSPEND_COMMAND
+ 
+ #define GDM_KEY_USER_AUTHDIR "daemon/UserAuthDir="
+diff -ru /tmp/gdm/docs/C/gdm.xml ./docs/C/gdm.xml
+--- /tmp/gdm/docs/C/gdm.xml	2007-07-30 17:16:17.000000000 -0300
++++ ./docs/C/gdm.xml	2017-07-26 18:16:51.000000000 -0300
+@@ -1944,7 +1944,7 @@
+           <varlistentry>
+             <term>DefaultSession</term>
+             <listitem>
+-              <synopsis>DefaultSession=gnome.desktop</synopsis>
++              <synopsis>DefaultSession=mate.desktop</synopsis>
+               <para>
+                 The session that is used by default if the user does not have
+                 a saved preference and has picked 'Last' from the list of
+@@ -4406,7 +4406,7 @@
+ 
+ <screen>
+ [Desktop]
+-Session=gnome
++Session=mate
+ Language=cs_CZ.UTF-8
+ </screen>
+ 
+diff -ru /tmp/gdm/docs/es/es.po ./docs/es/es.po
+--- /tmp/gdm/docs/es/es.po	2007-07-30 17:16:17.000000000 -0300
++++ ./docs/es/es.po	2017-07-26 18:16:51.000000000 -0300
+@@ -3282,8 +3282,8 @@
+ 
+ #: C/gdm.xml:1947(synopsis)
+ #, no-wrap
+-msgid "DefaultSession=gnome.desktop"
+-msgstr "DefaultSession=gnome.desktop"
++msgid "DefaultSession=mate.desktop"
++msgstr "DefaultSession=mate.desktop"
+ 
+ #: C/gdm.xml:1948(para)
+ msgid ""
+@@ -6864,12 +6864,12 @@
+ msgid ""
+ "\n"
+ "[Desktop]\n"
+-"Session=gnome\n"
++"Session=mate\n"
+ "Language=cs_CZ.UTF-8\n"
+ msgstr ""
+ "\n"
+ "[Desktop]\n"
+-"Session=gnome\n"
++"Session=mate\n"
+ "Language=es_ES.UTF-8\n"
+ 
+ #: C/gdm.xml:4413(para)
+diff -ru /tmp/gdm/docs/es/gdm.xml ./docs/es/gdm.xml
+--- /tmp/gdm/docs/es/gdm.xml	2007-07-30 17:16:17.000000000 -0300
++++ ./docs/es/gdm.xml	2017-07-26 18:16:51.000000000 -0300
+@@ -642,7 +642,7 @@
+           <varlistentry>
+             <term>DefaultSession</term>
+             <listitem>
+-              <synopsis>DefaultSession=gnome.desktop</synopsis>
++              <synopsis>DefaultSession=mate.desktop</synopsis>
+               <para>La sesión que se usará por omisión si el usuario no tiene una preferencia guardada y ha escogido «Última» desde la lista de sesiones. Note que «Última» no necesita mostrarse, vea la clave <filename>ShowLastSession</filename>.</para>
+             </listitem>
+           </varlistentry>
+@@ -2116,7 +2116,7 @@
+ 
+ <screen>
+ [Desktop]
+-Session=gnome
++Session=mate
+ Language=es_ES.UTF-8
+ </screen>
+ 
+diff -ru /tmp/gdm/docs/uk/gdm.xml ./docs/uk/gdm.xml
+--- /tmp/gdm/docs/uk/gdm.xml	2007-07-30 17:16:17.000000000 -0300
++++ ./docs/uk/gdm.xml	2017-07-26 18:16:51.000000000 -0300
+@@ -1379,7 +1379,7 @@
+           <varlistentry>
+             <term>DefaultSession</term>
+             <listitem>
+-              <synopsis>DefaultSession=gnome.desktop</synopsis>
++              <synopsis>DefaultSession=mate.desktop</synopsis>
+               <para>Сеанс, що використовується коли користувач у списку сеансів вибрав 'Останній' і не має збережених уподобань. Зауважте, сеанс 'Останній' не відображається, дивіться ключ <filename>ShowLastSession</filename>.</para>
+             </listitem>
+           </varlistentry>
+@@ -2986,7 +2986,7 @@
+ 
+ <screen>
+ [Desktop]
+-Session=gnome
++Session=mate
+ Language=cs_CZ.UTF-8
+ </screen>
+ 
+diff -ru /tmp/gdm/docs/uk/uk.po ./docs/uk/uk.po
+--- /tmp/gdm/docs/uk/uk.po	2007-07-30 17:16:17.000000000 -0300
++++ ./docs/uk/uk.po	2017-07-26 18:16:51.000000000 -0300
+@@ -957,8 +957,8 @@
+ 
+ #: ../C/gdm.xml:1583(synopsis)
+ #, no-wrap
+-msgid "DefaultSession=gnome.desktop"
+-msgstr "DefaultSession=gnome.desktop"
++msgid "DefaultSession=mate.desktop"
++msgstr "DefaultSession=mate.desktop"
+ 
+ #: ../C/gdm.xml:1584(para)
+ msgid "The session that is used by default if the user does not have a saved preference and has picked 'Last' from the list of sessions. Note that 'Last' need not be displayed, see the <filename>ShowLastSession</filename> key."
+@@ -3035,12 +3035,12 @@
+ msgid ""
+ "\n"
+ "[Desktop]\n"
+-"Session=gnome\n"
++"Session=mate\n"
+ "Language=cs_CZ.UTF-8\n"
+ msgstr ""
+ "\n"
+ "[Desktop]\n"
+-"Session=gnome\n"
++"Session=mate\n"
+ "Language=uk_UA.UTF-8\n"
+ "      "
+ 
